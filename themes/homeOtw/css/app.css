@@ -6722,15 +6722,13 @@ th.hide-for-touch {
   min-height: 320px;
 }
 
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  .row {
-    margin-left: 1.1em;
-    margin-right: 1.1em;
-  }
-}
-
 .headline {
   border-bottom: black 1px solid;
+}
+@media only screen and (max-width: 40em) {
+  .headline {
+    line-height: 1.9;
+  }
 }
 
 .timeline-icon {

@@ -5,6 +5,7 @@ class GitHubItem extends TimelineItem {
 	public function parseGitHubItem($item){
 		
 		$this->ID = $item['id'];
+		$this->Type = "GitHub";
 		//$this->PublishedAt = new SS_DateTime();
 		$this->PublishedAt = new SS_DateTime();
 		$this->PublishedAt->setValue($item['published']);

@@ -6,6 +6,7 @@ class TwitterItem extends TimelineItem {
 
 		// Attributes begin with capital letters and camel-cased for consistency
 		$this->ID = $item['id'];
+		$this->Type = "Twitter";
 		//$this->PublishedAt = $this->getPublishedDateTime($item);
 		//$this->PublishedAt = new SS_Datetime($item['created_at']); //called Published here for consistent sorting in homepageFeed().
 		$this->PublishedAt = new SS_DateTime();

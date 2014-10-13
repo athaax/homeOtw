@@ -65,20 +65,21 @@ class HomePage_Controller extends Page_Controller {
 		$xml = simplexml_load_string($html);
 		$json = json_encode($xml);
 		$gitHubArray = json_decode($json, TRUE);
+		
+		print_r($gitHubArray);
 		return $gitHubArray;
 	}
 	
 	public function parseGitHubFeed($gitHubArray) {
 		
 		$gitHubEntries = $gitHubArray['entry'];
-		//print_r($gitHubEntries);
 		$feed = new ArrayList();
 		
 		foreach ( $gitHubEntries as $entry ) {
 			$GitHubItem = new GitHubItem();
 			$feed->push( $GitHubItem->parseGitHubItem( $entry ) );
 		}
-				
+		
 		return $feed;
 	}
 	
@@ -106,7 +107,7 @@ class HomePage_Controller extends Page_Controller {
 		$tweetsJSON = json_encode($tweets);
 		$tweetsArray = json_decode($tweetsJSON, TRUE);
 		
-		print_r($tweetsArray);
+		//print_r($tweetsArray);
 		return $tweetsArray;
 	}
 	

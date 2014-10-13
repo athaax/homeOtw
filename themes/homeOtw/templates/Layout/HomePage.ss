@@ -6,12 +6,7 @@
 		$History
 		$GitHub
 		$Website
-	
-	
 	<% end_loop %>
-
-
-
 
 
 	<hr />
@@ -23,11 +18,13 @@
 				<a href="#"><img class="timeline-icon" src="{$ThemeDir}/images/icons/circle_twitter.png" /></a>
 				<a href="#"><img class="timeline-icon" src="{$ThemeDir}/images/icons/circle_pencil.png" /></a>
 			</h4>
-			<% loop $homepageFeed.limit(8) %>		
-				$Content
-				$PublishedAt.Format('g:ia \o\n l jS F Y')
-				<br>
-				<br>
+			<% loop $homepageFeed.limit(8) %>
+				
+				<div class="panel <% if $Type == 'Twitter' %>twitter<% else_if $Type == 'GitHub' %>github<% end_if %>">
+					$Content
+				</div>
+				<%-- $PublishedAt.Format('g:ia \o\n l jS F Y') --%>
+				
 			<% end_loop %>
 		</div>
 		<div class="large-5 medium-6 columns">

@@ -9,13 +9,18 @@
 
 .row {
 	@media #{$medium-only} { 
-		margin-left: 1.1em;
-		margin-right: 1.1em;
+		//margin-left: 1.1em;
+		//margin-right: 1.1em;
 	}
 }
 
 .headline {
 	border-bottom: black 1px solid;
+	@media #{$small-only} { 
+		line-height: 1.9;
+	}
+	
+	
 }
 
 .timeline-icon {
