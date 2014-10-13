@@ -1,6 +1,10 @@
 @import "settings";
 @import "foundation";
 
+// colors
+
+$twitter : #55ACEE;
+
 .main {
 	padding-top: 32px;
 	min-height: 320px;
@@ -29,4 +33,35 @@
 	float: right; 
 	max-height: 32px; 
 	max-width: 32px;
+}
+
+// git 'Content' comes with its own fucked styles that I figure I may as well just hack away
+.git {
+	background-color: $white-smoke;
+	background-image: url('../images/icons/github_png/GitHub-Mark-120px-plus.png');
+	background-size: auto;
+	background-position: right -50px top;
+	background-repeat: no-repeat;
+	.time {
+		display: none;
+	}
+	.details>a {
+		display: none;
+	}
+	.details ul {
+		list-style: none;
+		margin: 0;
+	}
+	.details ul li span {
+		padding-left: 1.1875rem;
+	}
+	
+}
+
+.tweet {
+	background-color: $twitter;
+	background-image: url('../images/icons/Twitter_logo_white.png');
+	background-size: contain;
+	background-position: right -50px top;
+	background-repeat: no-repeat;
 }

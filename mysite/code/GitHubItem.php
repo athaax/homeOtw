@@ -9,7 +9,7 @@ class GitHubItem extends TimelineItem {
 		//$this->PublishedAt = new SS_DateTime();
 		$this->PublishedAt = new SS_DateTime();
 		$this->PublishedAt->setValue($item['published']);
-		$this->Updated = $item['updated'];
+		//$this->Updated = $item['updated'];
 		$this->Title = $item['title']; //Orginally called "Title", may have namespace issues though. 
 		$this->Content = $item['content'];
 

@@ -1,11 +1,12 @@
 <div class="large-12 columns">
 
+	<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3 xlarge-block-gride-4">
 	<% loop projects() %>
+		<li>
 		$Title
-		$Content
-		$History
-		$GitHub
-		$Website
+		<img src="$Image.URL" />
+		$Content.summary
+		</li>
 	<% end_loop %>
 
 
@@ -19,12 +20,17 @@
 				<a href="#"><img class="timeline-icon" src="{$ThemeDir}/images/icons/circle_pencil.png" /></a>
 			</h4>
 			<% loop $homepageFeed.limit(8) %>
-				
-				<div class="panel <% if $Type == 'Twitter' %>twitter<% else_if $Type == 'GitHub' %>github<% end_if %>">
-					$Content
-				</div>
-				<%-- $PublishedAt.Format('g:ia \o\n l jS F Y') --%>
-				
+				<% if $Type == 'Twitter' %>
+					<div class="tweet panel">
+						<p>$Tweet</p>
+						<p>$PublishedAt.Format('g:ia \o\n l jS F Y')</p>
+					</div>
+				<% else_if $Type == 'GitHub' %>
+					<div class="git panel">
+						$Content
+						<p>Published at $PublishedAt.Format('g:ia \o\n l jS F Y')</p>
+					</div>
+				<% end_if %>
 			<% end_loop %>
 		</div>
 		<div class="large-5 medium-6 columns">

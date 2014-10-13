@@ -12,7 +12,7 @@ class Project extends Page {
 	);
 	
 	private static $many_many = array(
-        'Skills' => 'skill'
+        'Skills' => 'Skill'
     );
 	
 	function getCMSFields() {

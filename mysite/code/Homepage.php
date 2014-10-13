@@ -66,7 +66,7 @@ class HomePage_Controller extends Page_Controller {
 		$json = json_encode($xml);
 		$gitHubArray = json_decode($json, TRUE);
 		
-		print_r($gitHubArray);
+		//print_r($gitHubArray);
 		return $gitHubArray;
 	}
 	

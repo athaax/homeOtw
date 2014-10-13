@@ -6,7 +6,9 @@
 		"silverstripe/cms": "3.1.6",
 		"silverstripe/framework": "3.1.6",
 		"silverstripe/mathspamprotection": "dev-master",
-		"rywa/silverstripe-foundation-forms" : "dev-master"
+		"rywa/silverstripe-foundation-forms" : "dev-master",
+		"unclecheese/betterbuttons": "*"
+
 	},
 	"config": {
 		"process-timeout": 600	
