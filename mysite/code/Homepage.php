@@ -3,6 +3,13 @@ class HomePage extends Page {
 
 	private static $db = array(
 		"Biography" => "HTMLText",
+		"TwitterUser" => "Varchar",
+		"NumberOfTweets" => "Varchar",
+		"TwitterConsumerKey" => "Varchar",
+		"TwitterConsumerSecret" => "Varchar",
+		"TwitterAccessToken" => "Varchar",
+		"TwitterAccessTokenSecret" => "Varchar"
+		
 	);
 
 	private static $has_one = array(
@@ -12,7 +19,13 @@ class HomePage extends Page {
 	function getCMSFields() {
 		$fields = parent::getCMSFields();         
        	$fields->addFieldToTab('Root.Main', new HTMLEditorField('Biography'));
-       	$fields->addFieldToTab('Root.Main', new UploadField('Image', 'Bio Image'));	
+       	$fields->addFieldToTab('Root.Main', new UploadField('Image', 'Bio Image'));
+       	$fields->addFieldToTab('Root.Main', new TextField('TwitterUser', 'Twitter Handle'));
+       	$fields->addFieldToTab('Root.Main', new TextField('NumberOfTweets', 'Number of Tweets'));
+       	$fields->addFieldToTab('Root.Main', new TextField('TwitterConsumerKey', 'Twitter Consumer Key'));
+       	$fields->addFieldToTab('Root.Main', new TextField('TwitterConsumerSecret', 'Twitter Consumer Secret'));
+       	$fields->addFieldToTab('Root.Main', new TextField('TwitterAccessToken', 'Twitter Access Token'));
+       	$fields->addFieldToTab('Root.Main', new TextField('TwitterAccessTokenSecret', 'Twitter Access Token Secret'));	
 
         return $fields;
 	}
@@ -73,13 +86,13 @@ class HomePage_Controller extends Page_Controller {
 		//session_start();
 		//require_once("twitteroauth/twitteroauth/twitteroauth.php"); //Path to twitteroauth library
 		 
-		$twitteruser = "athaax";
-		$notweets = 10;
+		$twitteruser = $this->TwitterUser;
+		$notweets = $this->NumberOfTweets;
 		$trimuser = "true";
-		$consumerkey = "FhDJjPOfXBRiUpcR54LNsesFi";
-		$consumersecret = "X5cJQcOECT5AJnMhIgI8RdzYQI2T7bnuxZuLJHGaSTcAQTHswn";
-		$accesstoken = "20413662-c0rr1RVv86E7OhGtcAz3887vRnUdiUeo763V8SUdh";
-		$accesstokensecret = "QxBEySZJRdZyKLR1ZVUKPO9XtJs6H8iQaTMw6XPcIKrQA";
+		$consumerkey = $this->TwitterConsumerKey;
+		$consumersecret = $this->TwitterConsumerSecret;
+		$accesstoken = $this->TwitterAccessToken;
+		$accesstokensecret = $this->TwitterAccessTokenSecret;
 		 
 		function getConnectionWithAccessToken($cons_key, $cons_secret, $oauth_token, $oauth_token_secret) {
 		  $connection = new TwitterOAuth($cons_key, $cons_secret, $oauth_token, $oauth_token_secret);
@@ -93,7 +106,7 @@ class HomePage_Controller extends Page_Controller {
 		$tweetsJSON = json_encode($tweets);
 		$tweetsArray = json_decode($tweetsJSON, TRUE);
 		
-		//print_r($tweetsArray);
+		print_r($tweetsArray);
 		return $tweetsArray;
 	}
 	
