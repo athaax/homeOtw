@@ -1,0 +1,27 @@
+@import "settings";
+@import "foundation";
+
+.main {
+	padding-top: 32px;
+	min-height: 320px;
+}
+
+
+.row {
+	@media #{$medium-only} { 
+		margin-left: 1.1em;
+		margin-right: 1.1em;
+	}
+}
+
+.headline {
+	border-bottom: black 1px solid;
+}
+
+.timeline-icon {
+	padding: 1px;
+	margin-left: 3px;
+	float: right; 
+	max-height: 32px; 
+	max-width: 32px;
+}
