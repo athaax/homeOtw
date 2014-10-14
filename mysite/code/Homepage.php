@@ -153,8 +153,4 @@ class HomePage_Controller extends Page_Controller {
 		return $feedArray->reverse();
 	}
 	
-	public function projects() {
-		$projects = Project::get();
-		return $projects;
-	}
 }

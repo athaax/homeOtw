@@ -1,8 +1,9 @@
 {
-	"name": "silverstripe-foundation-theme",
-	"version": "1.1.6",
+	"name": "ss-angularjs-foundation",
+	"version": "1.0.0",
 	"private": "true",
 	"dependencies": {
-		"foundation": "zurb/bower-foundation"
+		"foundation": "zurb/bower-foundation",
+		"angular.js": "angular/angular.js"
 	}
 }

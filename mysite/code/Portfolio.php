@@ -1,20 +1,25 @@
 <?php
-class Page extends SiteTree {
+class Portfolio extends Page {
 
 	private static $db = array(
+
 	);
 
 	private static $has_one = array(
-	
 	);
+	
+	private static $many_many = array(
+    );
 	
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
-		return $fields;
+		
+        return $fields;
 	}
 
+
 }
-class Page_Controller extends ContentController {
+class Portfolio_Controller extends Page_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
@@ -41,10 +46,4 @@ class Page_Controller extends ContentController {
 		parent::init();
 
 	}
-	
-	public function Projects() {
-		$projects = Project::get();
-		return $projects;
-	}
-	
 }

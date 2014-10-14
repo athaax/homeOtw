@@ -28,24 +28,21 @@
 		</div>
 	</header>
 
-	<div class="main typography" role="main">
-		<div class="row">
-			$Layout
-		</div>
-	</div>
+	<% if $ClassName == "Portfolio" %>
+		<% include FullContainer Layout=$Layout %>
+	<% else %>
+		<% include Container Layout=$Layout %>
+	<% end_if %>
 
-	<nav role="navigation">
+	<footer id="footer" class="footer" role="contentinfo">
 		<div class="row">
-			<div class="large-12 columns">
+			<div class="small-6 columns">
 				<% include Breadcrumbs %>
 			</div>
-		</div>
-	</nav>
-
-	<footer class="footer" role="contentinfo">
-		<div class="row">
-			<div class="large-12 columns">
-				<p>&copy; $Now.Year $SiteConfig.Title</p>
+			<div class="small-6 columns">
+				<ul class="breadcrumbs">
+					<li class="right">&copy; $Now.Year $SiteConfig.Title</li>
+				</ul>
 			</div>
 		</div>
 	</footer>
