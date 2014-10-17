@@ -85,7 +85,7 @@ class HomePage_Controller extends Page_Controller {
 	
 	public function twitterFeed() {
 		//session_start();
-		//require_once("twitteroauth/twitteroauth/twitteroauth.php"); //Path to twitteroauth library
+	    //require_once("twitteroauth/twitteroauth/twitteroauth.php"); //Path to twitteroauth library
 		 
 		$twitteruser = $this->TwitterUser;
 		$notweets = $this->NumberOfTweets;

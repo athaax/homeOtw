@@ -18,9 +18,9 @@
       <ul class="off-canvas-list">
         <li><label>Portfolio</label></li>
         <% loop $Projects %>
-			<li><a href="/homeOtw/portfolio/project/$ID">$Title</a></li>
+			<li><a href="/homeOtw/portfolio/getProject/$ID">$Title</a></li>
 		<% end_loop %>
-			<li><a href="/homeOtw/portfolio/project/">Testing</a></li>
+			<li><a href="/homeOtw/portfolio/getProject/">Testing</a></li>
       </ul>
     </aside>
 

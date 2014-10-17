@@ -38,7 +38,7 @@ class Portfolio_Controller extends Page_Controller {
 	 */
 	 
 	private  static $allowed_actions = array (
-		//"project"
+		"project"
 	);
 	
 	
@@ -47,31 +47,14 @@ class Portfolio_Controller extends Page_Controller {
 	}
 	
 	
-	/*
-	public function project( $request ) {
-		//$otherClass = $this::$childPage;
-		//$objectID = Convert::raw2xml( $this->request->param( 'ID' ) );
-		//$source = $this->request->getVar( 'back' );
-
-		//We can '/show/ID' or '/show/object+name'
-		
-		//if ( $objectID ) {
-		
-			$object = Project::get()->filter(array(
-				'ID' => $request 
-				));
-
-			if ( $object ) {
-
-				$data = array (
-					"Object" => $object
-				);
-			}
+	
+	public function getProject( $id ) {
+		$object = Project::get()->filter(array(
+			'ID' => $id 
+			));
 			
-			return $this->Customise( $data );
-			
-		//}
+		return $json_encode($object);
 
 	}
-	*/
+	
 }

@@ -8,29 +8,11 @@
 		"silverstripe/mathspamprotection": "dev-master",
 		"rywa/silverstripe-foundation-forms" : "dev-master",
 		"unclecheese/betterbuttons": "*"
-
 	},
 	"config": {
 		"process-timeout": 600	
 	},
-	"minimum-stability": "dev",
-	
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/StudentLifeMarketingAndDesign/division-project"
-      
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar"
-        },     
-        {
-            "type": "vcs",
-            "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events"
-
-        }
-    ]
+	"minimum-stability": "dev"
 
 }
 
