@@ -38,12 +38,40 @@ class Portfolio_Controller extends Page_Controller {
 	 */
 	 
 	private  static $allowed_actions = array (
-	
+		//"project"
 	);
 	
 	
 	public function init() {
 		parent::init();
+	}
+	
+	
+	/*
+	public function project( $request ) {
+		//$otherClass = $this::$childPage;
+		//$objectID = Convert::raw2xml( $this->request->param( 'ID' ) );
+		//$source = $this->request->getVar( 'back' );
+
+		//We can '/show/ID' or '/show/object+name'
+		
+		//if ( $objectID ) {
+		
+			$object = Project::get()->filter(array(
+				'ID' => $request 
+				));
+
+			if ( $object ) {
+
+				$data = array (
+					"Object" => $object
+				);
+			}
+			
+			return $this->Customise( $data );
+			
+		//}
 
 	}
+	*/
 }

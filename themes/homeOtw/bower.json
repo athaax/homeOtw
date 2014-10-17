@@ -4,6 +4,6 @@
 	"private": "true",
 	"dependencies": {
 		"foundation": "zurb/bower-foundation",
-		"angular.js": "angular/angular.js"
+		"angular": "1.2.x"
 	}
 }

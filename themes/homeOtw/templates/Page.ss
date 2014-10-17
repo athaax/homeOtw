@@ -18,7 +18,7 @@
 	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
-	<script src="$ThemeDir/bower_components/modernizr/modernizr.js"></script>
+	<script src="$ThemeDir/bower_components/angular/angular.js"></script>
 </head>
 <body class="$ClassName.ATT">
 
@@ -57,6 +57,9 @@
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<script src="$ThemeDir/bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="$ThemeDir/bower_components/foundation/js/foundation.min.js"></script>
+	<script src="$ThemeDir/bower_components/angular.js/build/angular.js"></script>
+	<script src="$ThemeDir/javascript/portfolio.js"></script>
 	<script src="$ThemeDir/javascript/app.js"></script>
+
 </body>
 </html>
