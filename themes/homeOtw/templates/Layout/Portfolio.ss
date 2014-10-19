@@ -1,5 +1,5 @@
 <div class="off-canvas-wrap" data-offcanvas>
-  <div class="inner-wrap">
+  <div class="inner-wrap" ng-controller="PortfolioController as portfolio">
     <nav class="tab-bar">
       <section class="left-small">
         <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
@@ -18,18 +18,20 @@
       <ul class="off-canvas-list">
         <li><label>Portfolio</label></li>
         <% loop $Projects %>
-			<li><a href="/homeOtw/portfolio/getProject/$ID">$Title</a></li>
+			<li><button href="$ID" ng-click="getProject($ID)">$Title</button></li>
 		<% end_loop %>
-			<li><a href="/homeOtw/portfolio/getProject/">Testing</a></li>
       </ul>
     </aside>
 
-    <section class="main-section full-height" ng-controller="PortfolioController as portfolio">
+    <section class="main-section full-height" >
     	<div class="row">
     		<div class="medium-5 columns">
-				<p> {{portfolio.project.name}} </p>
-				<p> {{portfolio.project.content}} </p>
-				<p> {{portfolio.project.history}} </p>
+				<p> {{project.project.title}} </p>
+        <p> {{project.project.website}} </p>
+        <p> {{project.project.github}} </p>
+				<p> {{project.project.Content}} </p>
+				<p> {{project.History}} </p>
+        <p> {{project.project.History}} </p>
     		</div>
     		<div class="medium-7 columns">
 				<% loop projects().Limit(1) %>

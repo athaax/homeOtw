@@ -4,7 +4,11 @@ class Project extends Page {
 	private static $db = array(
 		"History" => "HTMLText",
 		"GitHub" => "Varchar(100)",
-		"Website" => "Varchar(100)"
+		"Website" => "Varchar(100)",
+		// using these fields as handles to HTMLText datatypes without the HTML.
+		//"HistoryClean" => "Text",
+		//"ContentClean" => "Text"
+		//Trying to get these fields written so they stay current
 	);
 
 	private static $has_one = array(
@@ -48,6 +52,22 @@ class Project extends Page {
 			return false;
 		}
 
+	}
+	
+	public function contentNoHtml() {
+		$content = new ViewableData();
+		//$content->getContent();
+		//$content->obj('Content');
+		$withHtml = $this->Content;
+		//strip_tags($withHtml);
+		return strip_tags($withHtml);
+		
+	}
+	
+	public function toJson() {
+		$result = JSONDataFormatter::convertDataObject($this);
+		return $result;
+	
 	}
 
 }

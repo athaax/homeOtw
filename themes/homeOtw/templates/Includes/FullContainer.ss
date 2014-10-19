@@ -1,4 +1,4 @@
-<div class="fullmain typography" role="main" ng-app="portfolio">
+<div class="fullmain typography" role="main">
 	<div class="full row">
 		$Layout
 	</div>
