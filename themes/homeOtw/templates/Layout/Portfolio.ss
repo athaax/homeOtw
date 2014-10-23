@@ -1,4 +1,4 @@
-<div class="off-canvas-wrap" data-offcanvas>
+<div class="off-canvas-wrap move-right" data-offcanvas>
   <div class="inner-wrap" ng-controller="PortfolioController as portfolio">
     <nav class="tab-bar">
       <section class="left-small">
@@ -6,19 +6,32 @@
       </section>
 
       <section class="middle tab-bar-section">
-        <h1 class="title">Foundation</h1>
+        <h1 class="title">Portfolio</h1>
+        <ul class="inline-list">
+          <%--
+          <li class="has-form">
+            <div class="row collapse">
+              <div class="large-8 small-9 columns">
+                <input type="text" placeholder="Find Stuff">
+              </div>
+              <div class="large-4 small-3 columns">
+                <a href="#" class="alert button expand">Search</a>
+              </div>
+            </div>
+          </li>
+          --%>
+        </ul>
       </section>
 
-      <section class="right-small">
-        <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
-      </section>
+      
+
     </nav>
 
     <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
         <li><label>Portfolio</label></li>
         <% loop $Projects %>
-			<li><button href="$ID" ng-click="getProject($ID)">$Title</button></li>
+			<li><a href="#" ng-click="getProject($ID)">$Title</a></li>
 		<% end_loop %>
       </ul>
     </aside>
@@ -26,16 +39,16 @@
     <section class="main-section full-height" >
     	<div class="row">
     		<div class="medium-5 columns">
-				<p> {{project.project.title}} </p>
-        <p> {{project.project.website}} </p>
-        <p> {{project.project.github}} </p>
+				<h1> {{project.project.title}} </h1>
+        <a href="{{project.project.website}}" class="button"> View Live </a>
+        <a href="{{project.project.github}}" class="button"> View on GitHub </a>
 				<p> {{project.project.Content}} </p>
 				<p> {{project.History}} </p>
         <p> {{project.project.History}} </p>
     		</div>
     		<div class="medium-7 columns">
 				<% loop projects().Limit(1) %>
-					<img src="{{portfolio.project.image}}" />
+					<img src="{{project.project.image}}" alt="Image for {{project.project.title}}" />
 				<% end_loop %>
 			</div>
     </section>

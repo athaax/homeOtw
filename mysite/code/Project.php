@@ -51,23 +51,12 @@ class Project extends Page {
 		}else{
 			return false;
 		}
-
 	}
 	
-	public function contentNoHtml() {
+	public function noHTML($field) {
 		$content = new ViewableData();
-		//$content->getContent();
-		//$content->obj('Content');
-		$withHtml = $this->Content;
-		//strip_tags($withHtml);
+		$withHtml = $this->$field;
 		return strip_tags($withHtml);
-		
-	}
-	
-	public function toJson() {
-		$result = JSONDataFormatter::convertDataObject($this);
-		return $result;
-	
 	}
 
 }

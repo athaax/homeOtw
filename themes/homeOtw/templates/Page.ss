@@ -21,12 +21,14 @@
 </head>
 <body class="$ClassName.ATT" <% if $ClassName == "Portfolio" %> ng-app="portfolio" <% end_if %> >
 
+	<% if $ClassName != "Portfolio" %>  
 	<header class="header" role="banner">
 		<div class="fixed contain-to-grid">
 			<% include TopBar %>
 		</div>
 	</header>
-
+	<% end_if %>
+	
 	<% if $ClassName == "Portfolio" %>
 		<% include FullContainer Layout=$Layout %>
 	<% else %>

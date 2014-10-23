@@ -19,7 +19,7 @@
 				<a href="#"><img class="timeline-icon right" src="{$ThemeDir}/images/icons/circle_twitter.png" /></a>
 				<a href="#"><img class="timeline-icon right" src="{$ThemeDir}/images/icons/circle_pencil.png" /></a>
 			</h4>
-			<% loop $homepageFeed.limit(8) %>
+			<% loop $webActivityFeed.limit(8) %>
 				<% if $Type == 'Twitter' %>
 					<div class="tweet panel">
 						<p>$Tweet</p>
@@ -35,8 +35,10 @@
 		</div>
 		<div class="large-5 medium-6 columns">
 			<h4 class="headline"> Biography </h4>
-			$Biography
+			<% with Biography %>
+				$Content
 			<img src="$Image.URL" />
+			<% end_with %>
 		</div>
 	</div>
 

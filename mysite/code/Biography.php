@@ -1,30 +1,32 @@
 <?php
-class HomePage extends Page {
+class Biography extends Page {
 
 	private static $db = array(
-		"BannerText" => "Varchar"
-		
+		"Name" => "Varchar"
+
 	);
 
 	private static $has_one = array(
-
+		'Image' => 'Image'
 	);
 	
 	private static $summary_fields = array(
-
+		'Biography.Name' => 'Bio Name',
+		'Biography.Biography' => 'Bio Bio'
 	);
-		
+	
 	function getCMSFields() {
-		$fields = parent::getCMSFields();  
-		//$fields->addFieldToTab('Root.Biography', $gridField);
-		$fields->addFieldToTab('Root.Main', new TextField('BannerText', 'Banner Text'), 'Content');
+		$fields = parent::getCMSFields();
 		
+		$fields->addFieldToTab('Root.Main', new TextField('Name', 'Name'), 'Content');
+       	$fields->addFieldToTab('Root.Main', new UploadField('Image', 'Bio Image'));
+
         return $fields;
 	}
 
 
 }
-class HomePage_Controller extends Page_Controller {
+class Biography_Controller extends Page_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
@@ -51,16 +53,6 @@ class HomePage_Controller extends Page_Controller {
 
 	}
 	
-	public function webActivityFeed() {
-		$activityFeed = new ActivityFeed();
-		$homepageFeed = $activityFeed->webActivityFeed();
-		
-		//print_r($homepageFeed);
-		return $homepageFeed;
-	}
-	
-	public function biography() {
-		return Biography::get()->First();
-	}
+
 	
 }
