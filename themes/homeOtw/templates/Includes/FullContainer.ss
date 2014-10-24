@@ -1,5 +1,3 @@
-<div class="fullmain typography" role="main">
-	<div class="full row">
-		$Layout
-	</div>
+<div class="full-main typography" role="main">
+	$Layout
 </div>

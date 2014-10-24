@@ -11,9 +11,10 @@ $twitter : #55ACEE;
 	padding-bottom: 30px;
 }
 
-.fullmain {
+.full-main {
+	//padding-top:22px;
 	min-height: 640px;
-	padding-bottom: 30px;
+	padding-bottom: 44px;
 }
 
 
@@ -25,10 +26,17 @@ $twitter : #55ACEE;
 }
 
 .full {
-   width: 100%;
-   margin-left: auto;
-   margin-right: auto;
-   max-width: initial;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: initial;
+}
+
+.fat {
+	width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: initial;
 }
 
 .main-section {
@@ -47,6 +55,53 @@ $twitter : #55ACEE;
 	
 	
 }
+
+
+//headers
+
+#intro {
+	height: 495px;
+	position: relative;
+	
+	#tumblr-box {
+		height: 100%;
+		border: solid black 3px;
+		border-right: 2px;
+		//background: url(https://38.media.tumblr.com/da774980b0f6cbe9ec736da50c820132/tumblr_nd6z6idCDJ1qbs0f7o1_500.jpg) 
+	    //-webkit-background-size: cover;
+	    //-moz-background-size: cover;
+	    //-o-background-size: cover;
+	    //background-size: cover;
+	    text-align: center;
+	    
+	    * {
+		  position: relative;
+		  top: 30%;
+		  transform: translateY(-22%);
+		}
+	}
+
+	#intro-blurb {
+		//position: relative;
+		height: 100%;
+		border: solid black 3px;
+		//border-left: 2px;
+		text-align: center;
+		
+		> * {
+			  position: relative;
+			  top: 30%;
+			  //transform: translateY(-22%);
+		}
+	}
+
+
+	
+	
+}
+
+
+
 
 
 // Footer Styles

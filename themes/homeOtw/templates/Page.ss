@@ -15,12 +15,13 @@
 	<% if $Image %>
 	<meta property="og:image" content="<% with $Image.SetSize(500,500) %>$AbsoluteURL.ATT<% end_with %>" />
 	<% end_if %>
-	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
+	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico?ver=2" />
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
 </head>
 <body class="$ClassName.ATT" <% if $ClassName == "Portfolio" %> ng-app="portfolio" <% end_if %> >
 
+	<%--
 	<% if $ClassName != "Portfolio" %>  
 	<header class="header" role="banner">
 		<div class="fixed contain-to-grid">
@@ -28,11 +29,12 @@
 		</div>
 	</header>
 	<% end_if %>
+	--%>
 	
 	<% if $ClassName == "Portfolio" %>
 		<% include FullContainer Layout=$Layout %>
 	<% else %>
-		<% include Container Layout=$Layout %>
+		<% include FullContainer Layout=$Layout %>
 	<% end_if %>
 
 	<footer id="footer" class="footer" role="contentinfo">

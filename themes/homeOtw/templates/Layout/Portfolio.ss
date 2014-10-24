@@ -1,3 +1,5 @@
+<div class="full row">
+  
 <div class="off-canvas-wrap move-right" data-offcanvas>
   <div class="inner-wrap" ng-controller="PortfolioController as portfolio">
     <nav class="tab-bar">
@@ -23,8 +25,6 @@
         </ul>
       </section>
 
-      
-
     </nav>
 
     <aside class="left-off-canvas-menu">
@@ -44,12 +44,12 @@
           <a href="{{project.project.website}}" class="button"> View Live </a>
           <a href="{{project.project.github}}" class="button"> View on GitHub </a>
           <section>
-            <h2>Contributions</h2>
-            <p> {{project.project.History}} </p>
+            <h2 class="headline"> Background </h2>
+            <p> {{project.project.Content}} </p>
           </section>
           <section>
-            <h2> Background </h2>
-            <p> {{project.project.Content}} </p>
+            <h2 class="headline">Contributions</h2>
+            <p> {{project.project.History}} </p>
           </section>
         </div>
         <div class="medium-7 columns">
@@ -58,30 +58,32 @@
 
 			</div>
 
+      <%--
       <div class="row">
         <div class="small-12 columns">
           <ul class="inline-list">
             <li ng-repeat="commit in project.project.ContributionFeed">
-                <%-- need plugin to render html... trying to keep this lightweight 
+                <!-- need plugin to render html... trying to keep this lightweight 
                 ---- I want to display commits I've made on this project, however API is returning 
                 ---- ALL commits made to this repo, and it's not coming back very atomically.
                 ---- NOTE: I'm currently stripping content HTML tags in GitHubFeed.php
-                --%>
-                <%--<div ng-bind-html-unsafe="commit.Content"></div>--%>
+                -->
+                <!--<div ng-bind-html-unsafe="commit.Content"></div>-->
                 <!--<p>{{commit.ID}}</p>-->
                 <div class="git panel" style="max-width: 200px;">
                   <p>{{commit.Content}}</p>
                   <p>Published at $PublishedAt.Format('g:ia \o\n l jS F Y')</p>
-                </div>
-                
-                
+                </div>  
             </li>
           </ul>
-        </div>
+        </div>    
       </div>
+      --%>
     </section>
 
   <a class="exit-off-canvas"></a>
 
   </div>
+</div>
+
 </div>
