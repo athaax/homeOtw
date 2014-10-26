@@ -13,7 +13,7 @@ $(document).foundation({
   
 
  
-  
+  $('#portfolio-body').show();
   
   
   

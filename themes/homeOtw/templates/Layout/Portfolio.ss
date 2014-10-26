@@ -6,21 +6,12 @@
       </section>
 
       <section class="middle tab-bar-section">
-        <h1 class="title">Portfolio</h1>
+      <h1> Projects </h1>
+      <%-- doesn't show? 
         <ul class="inline-list">
-          <%--
-          <li class="has-form">
-            <div class="row collapse">
-              <div class="large-8 small-9 columns">
-                <input type="text" placeholder="Find Stuff">
-              </div>
-              <div class="large-4 small-3 columns">
-                <a href="#" class="alert button expand">Search</a>
-              </div>
-            </div>
-          </li>
-          --%>
+          <li><h1><a href="#" class="white">Something</a></h1></li>
         </ul>
+      --%>
       </section>
 
       
@@ -37,7 +28,7 @@
     </aside>
 
     <section class="main-section full-height" >
-    	<div class="row">
+    	<div class="row hide" id="portfolio-body">
     		<div class="medium-5 columns">
 				<h1> {{project.project.title}} </h1>
         <a href="{{project.project.website}}" class="button"> View Live </a>
