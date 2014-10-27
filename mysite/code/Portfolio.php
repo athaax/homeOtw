@@ -85,6 +85,7 @@ class Portfolio_Controller extends Page_Controller {
 		$data["project"]["github"] = $dataObject->GitHub;
 		$data["project"]["website"] = $dataObject->Website;
 		$data["project"]["image"] = $dataObject->Image()->Filename;
+		$data["project"]["ContributionFeed"] = $dataObject->gitHubContributionFeed();
 
  		return json_encode($data);
  	}

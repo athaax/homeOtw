@@ -4,7 +4,8 @@ class Project extends Page {
 	private static $db = array(
 		"History" => "HTMLText",
 		"GitHub" => "Varchar(100)",
-		"Website" => "Varchar(100)",
+		"RepoName" => "Varchar(100)",
+		"Website" => "Varchar(100)"
 		// using these fields as handles to HTMLText datatypes without the HTML.
 		//"HistoryClean" => "Text",
 		//"ContentClean" => "Text"
@@ -30,6 +31,7 @@ class Project extends Page {
         );              
         $fields->addFieldToTab('Root.Skills', $skillsField);
         $fields->addFieldToTab('Root.Main', new TextField('GitHub', 'GitHub', 'Project Repo Link'), "Content");
+        $fields->addFieldToTab('Root.Main', new TextField('RepoName', 'GitHub Repo Name'), "Content");
         $fields->addFieldToTab('Root.Main', new TextField('Website', 'Website', 'Project Live URL'), "Content");
        	$fields->addFieldToTab('Root.Main', new HTMLEditorField('History'));
        	$fields->addFieldToTab('Root.Main', new HTMLEditorField('History'));
@@ -57,6 +59,23 @@ class Project extends Page {
 		$content = new ViewableData();
 		$withHtml = $this->$field;
 		return strip_tags($withHtml);
+	}
+	
+	public function gitHubContributionFeed() {
+		$author = 'athaax';
+		$repo = $this->RepoName;
+		
+		$ghFeed = new GitHubFeed();
+		//syntax for api feed of project commits filtering by author
+		$ghArray = $ghFeed->gitHubArray('https://github.com/' . $repo .'/commits/master.atom?author=' . $author);
+		$ghList = $ghFeed->getGitHubFeed($ghArray);
+		
+		$ghNestedArray = $ghList->toNestedArray();
+		
+		//print_r(gettype($ghList));
+		
+		return $ghNestedArray;
+		
 	}
 
 }

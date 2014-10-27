@@ -2,22 +2,27 @@
 class GitHubFeed extends ActivityFeed {
 
 
-	public function getGitHubFeed() {
+	public function getGitHubFeed($gitHubArray = null) {
 		
-		$gitHubArray = $this->gitHubArray();
+		if (empty($gitHubArray)) {
+			$gitHubArray = $this->gitHubArray();
+		} 
 		
 		$gitHubEntries = $gitHubArray['entry'];
+
 		$feed = new ArrayList();
 		
 		foreach ( $gitHubEntries as $item ) {
 			$feed->push( $this->parseGitHubItem( $item ) );
 		}
 		
+		//$feed->toArray();
+		//print_r($feed);
 		return $feed;
 	}
 
-	public function gitHubArray() {
-		$html = file_get_contents('https://github.com/athaax.atom');
+	public function gitHubArray($exactfeed = "https://github.com/athaax.atom") {
+		$html = file_get_contents($exactfeed);
 		$xml = simplexml_load_string($html);
 		$json = json_encode($xml);
 		$gitHubArray = json_decode($json, TRUE);
@@ -28,16 +33,39 @@ class GitHubFeed extends ActivityFeed {
 
 	public function parseGitHubItem($item){
 	
+		//print_r($item);
 		$commit = new DataObject();
-		
-		$commit->ID = $item['id'];
 		$commit->Type = "GitHub";
-		//commit->PublishedAt = new SS_DateTime();
 		$commit->PublishedAt = new SS_DateTime();
-		$commit->PublishedAt->setValue($item['published']);
-		//commit->Updated = $item['updated'];
-		$commit->Title = $item['title']; //Orginally called "Title", may have namespace issues though. 
-		$commit->Content = $item['content'];
+		if (isset($item['published'])) {		
+			$commit->PublishedAt->setValue($item['published']);
+		} else {
+			$commit->PublishedAt->setValue( time() );
+		}
+
+		$attributes = [
+			'ID' => 'id',
+			'Updated' => 'updated',
+			'Title' => 'title',
+			'Content' => 'content'
+			
+		];
+		
+		foreach ($attributes as $key => $att) {		
+			
+			if (isset($item[$att])) {		
+				$commit->$key = $item[$att];	
+			}
+		}
+		
+		// strip tags...ladaladida
+		
+		if (isset($commit->Content)) {
+			$with = $commit->Content;
+			$without = strip_tags($with);
+			
+			$commit->Content = $without;
+		}
 
 		return $commit;
 	}
