@@ -1,5 +1,5 @@
 <div class="full row" id="intro">
-	<div class="large-6 columns" id="tumblr-box" style="background: url('http://fc09.deviantart.net/fs71/i/2010/220/f/b/Fallow_Deer_00___August_10_by_mszafran.jpg') no-repeat center center; -webkit-background-size: cover;
+	<div class="medium-6 columns" id="tumblr-box" style="background: url('http://fc09.deviantart.net/fs71/i/2010/220/f/b/Fallow_Deer_00___August_10_by_mszafran.jpg') no-repeat center center; -webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
@@ -10,7 +10,7 @@
   	<h1>Image</h2>
 
 	</div>
-	<div class="large-6 columns" id="intro-blurb">
+	<div class="medium-6 columns" id="intro-blurb">
 		<h1> Hello, I'm Jonathan </h1>
 		<p>
 			Nascent full-stack web developer,
@@ -31,38 +31,33 @@
 </div>
 
 <div class="fat row">
-	<div class="medium-4 columns">
-
-	</div>
-	<div class="medium-4 columns">
-
-	</div>
-	<div class="medium-4 columns">
-
-
-	</div>
-</div>
-
-<div class="row" data-magellan-destination="haps">
-	<div class="large-7 medium-6 columns">
+	<div class="small-12 columns">
 		<h4 class="headline"> Happenings 
 			<a href="#"><img class="timeline-icon right" src="{$ThemeDir}/images/icons/github_png/GitHub-Mark-32px.png" /></a>
 			<a href="#"><img class="timeline-icon right" src="{$ThemeDir}/images/icons/circle_twitter.png" /></a>
 			<a href="#"><img class="timeline-icon right" src="{$ThemeDir}/images/icons/circle_pencil.png" /></a>
 		</h4>
+		<ul class="inline-list">
 		<% loop $webActivityFeed.limit(8) %>
 			<% if $Type == 'Twitter' %>
-				<div class="tweet panel">
+				<li class="tweet panel">
 					<p>$Tweet</p>
 					<p>$PublishedAt.Format('g:ia \o\n l jS F Y')</p>
-				</div>
+				</li>
 			<% else_if $Type == 'GitHub' %>
-				<div class="git panel">
+				<li class="git panel">
 					$Content
 					<p>Published at $PublishedAt.Format('g:ia \o\n l jS F Y')</p>
-				</div>
+				</li>
 			<% end_if %>
 		<% end_loop %>
+		<ul>
+	</div>
+</div>
+
+<div class="row" data-magellan-destination="haps">
+	<div class="large-7 medium-6 columns">
+
 	</div>
 	<div class="large-5 medium-6 columns">
 		<h4 class="headline"> Biography </h4>
