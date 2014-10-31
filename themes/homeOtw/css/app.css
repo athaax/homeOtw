@@ -7688,11 +7688,10 @@ th.hide-for-touch {
 #intro {
   height: 495px;
   position: relative;
+  border-bottom: 1px outset silver;
 }
 #intro #tumblr-box {
   height: 100%;
-  border: solid black 3px;
-  border-right: 2px;
   text-align: center;
 }
 #intro #tumblr-box * {
@@ -7702,7 +7701,6 @@ th.hide-for-touch {
 }
 #intro #intro-blurb {
   height: 100%;
-  border: solid black 3px;
   text-align: center;
 }
 #intro #intro-blurb > * {

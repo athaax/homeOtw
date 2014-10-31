@@ -62,11 +62,11 @@ $twitter : #55ACEE;
 #intro {
 	height: 495px;
 	position: relative;
-	
+	border-bottom: 1px outset silver;	
 	#tumblr-box {
 		height: 100%;
-		border: solid black 3px;
-		border-right: 2px;
+		//border: solid black 3px;
+		//border-right: 2px;
 		//background: url(https://38.media.tumblr.com/da774980b0f6cbe9ec736da50c820132/tumblr_nd6z6idCDJ1qbs0f7o1_500.jpg) 
 	    //-webkit-background-size: cover;
 	    //-moz-background-size: cover;
@@ -84,7 +84,7 @@ $twitter : #55ACEE;
 	#intro-blurb {
 		//position: relative;
 		height: 100%;
-		border: solid black 3px;
+		//border: solid black 3px;
 		//border-left: 2px;
 		text-align: center;
 		

@@ -11,14 +11,7 @@ $(document).foundation({
     close_on_click : false
   }
   
-
  
-  $('#portfolio-body').show();
-  
-
-  
-  
-  
   
   
 });
