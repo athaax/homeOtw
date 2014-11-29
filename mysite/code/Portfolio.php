@@ -74,6 +74,7 @@ class Portfolio_Controller extends Page_Controller {
 		* TODO:
 		* Rewrite this function to accept calls for skills and other dataobjects
 		* related to Portfolio
+		* ALSO: fix gitHubContributionFeed
 		*/
 		
  		$data = array();
@@ -85,7 +86,16 @@ class Portfolio_Controller extends Page_Controller {
 		$data["project"]["github"] = $dataObject->GitHub;
 		$data["project"]["website"] = $dataObject->Website;
 		$data["project"]["image"] = $dataObject->Image()->Filename;
-		$data["project"]["ContributionFeed"] = $dataObject->gitHubContributionFeed();
+		
+		$skills = $dataObject->Skills();
+		foreach ($skills as $skill) {
+			$data["project"]["Skills"][] = $skill->Name;
+			$data["project"]["Skills"][$skill->Name] = $skill->ID;
+			
+		}
+		//$data["project"]["Skills"] = $dataObject->Image()->Filename;
+
+		//$data["project"]["ContributionFeed"] = $dataObject->gitHubContributionFeed();
 
  		return json_encode($data);
  	}

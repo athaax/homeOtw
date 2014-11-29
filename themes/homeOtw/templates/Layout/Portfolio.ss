@@ -3,14 +3,16 @@
 <div class="off-canvas-wrap move-right" data-offcanvas>
   <div class="inner-wrap" ng-controller="PortfolioController as portfolio">
     <nav class="tab-bar">
+
       <section class="left-small">
         <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
       </section>
 
       <section class="middle tab-bar-section">
       <h1> Projects </h1>
-      <%-- doesn't show? 
-        <ul class="inline-list">
+
+      <%-- doesn not show? 
+        <ul class="button-group">
           <li><h1><a href="#" class="white">Something</a></h1></li>
         </ul>
       --%>
@@ -29,12 +31,22 @@
 
     <section class="main-section full-height" >
 
-    	<div class="row hide" id="portfolio-body">
+    	<div class="row" id="portfolio-body">
 
     		<div class="medium-5 columns">
   				<h1> {{project.project.title}} </h1>
-          <a href="{{project.project.website}}" class="button"> View Live </a>
-          <a href="{{project.project.github}}" class="button"> View on GitHub </a>
+  				<ul class="button-group">
+  					<li><a href="{{project.project.website}}" class="radius small button">View Live</a></li>
+  					<li><a href="{{project.project.github}}" class="radius small button">View on GitHub</a></li>
+  				</ul>
+          <section>
+            <h2 class="headline"> Skills </h2>
+            <ul class="button-group">
+	            <li ng-repeat="skill in project.project.Skills">
+            	<a style="margin-right: 3px;" ng-click="getSkill('{{ID}}')" class="tiny radius button"> {{skill}} </a>
+	            </li>
+            </ul>
+          </section>
           <section>
             <h2 class="headline"> Background </h2>
             <p> {{project.project.Content}} </p>

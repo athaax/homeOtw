@@ -20,14 +20,33 @@ app.controller('PortfolioController', function($scope, $http) {
     
     	$http.get('http://localhost:8888/homeotw/portfolio/getProject/' + $projectID).success(function(data, status, headers, config) {
     	$scope.project = data;
+    	console.log('much success');
     	console.log(status);
         console.log(data);
     }).error(function(data, status, headers, config) {
+	    console.log('error');
     	console.log(status);
     	console.log(data);
     });
 	    
     };
+    
+    $scope.getSkill = function($skill_name) {
+    	//console.log($projectID);
+    
+    	$http.get('http://localhost:8888/homeotw/portfolio/getSkill/' + $skill_name).success(function(data, status, headers, config) {
+    	$scope.project = data;
+    	console.log('much success');
+    	console.log(status);
+        console.log(data);
+    }).error(function(data, status, headers, config) {
+	    console.log('error');
+    	console.log(status);
+    	console.log(data);
+    });
+	    
+    };
+
 	
 });
 
