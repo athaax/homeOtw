@@ -89,8 +89,7 @@ class Portfolio_Controller extends Page_Controller {
 		
 		$skills = $dataObject->Skills();
 		foreach ($skills as $skill) {
-			$data["project"]["Skills"][] = $skill->Name;
-			$data["project"]["Skills"][$skill->Name] = $skill->ID;
+			$data["project"]["Skills"][$skill->ID] = $skill->Name;
 			
 		}
 		//$data["project"]["Skills"] = $dataObject->Image()->Filename;

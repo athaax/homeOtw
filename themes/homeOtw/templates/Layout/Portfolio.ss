@@ -34,16 +34,18 @@
     	<div class="row" id="portfolio-body">
 
     		<div class="medium-5 columns">
-  				<h1> {{project.project.title}} </h1>
-  				<ul class="button-group">
-  					<li><a href="{{project.project.website}}" class="radius small button">View Live</a></li>
-  					<li><a href="{{project.project.github}}" class="radius small button">View on GitHub</a></li>
-  				</ul>
+	    		<section style="text-align: center;">
+	  				<h1> {{project.project.title}} </h1>
+	  				<ul class="button-group round" style="display: inline-block;">
+	  					<li><a href="{{project.project.website}}" class="radius small button">View Live</a></li>
+	  					<li><a href="{{project.project.github}}" class="radius small button">View on GitHub</a></li>
+	  				</ul>
+	    		</section>
           <section>
             <h2 class="headline"> Skills </h2>
-            <ul class="button-group">
-	            <li ng-repeat="skill in project.project.Skills">
-            	<a style="margin-right: 3px;" ng-click="getSkill('{{ID}}')" class="tiny radius button"> {{skill}} </a>
+            <ul class="skill-list">
+	            <li ng-repeat="(key, value) in project.project.Skills">
+            		<a ng-click="getSkill({{key}})" class="tiny button"> {{value}} </a>
 	            </li>
             </ul>
           </section>

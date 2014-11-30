@@ -1,15 +1,20 @@
-<div class="full row" id="intro">
+<div class="full row" id="intro" style="background: url({$ThemeDir}/images/header1.png) no-repeat center center; -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;">
+
+	
+	
+	
+	<%--
 	<% with Biography %>
 	<div class="large-6 columns" id="tumblr-box" style="background: url($Image.URL) no-repeat center center; -webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
-  	background-size: cover;
-  	<%--
-  	-webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9)) opacity(.7);
-  	filter: blur(20px) drop-shadow(16px 16px 10px rgba(0,0,0,0.9)) --%>">
-  			<% end_with %>
+  	background-size: cover;">
+  	<% end_with %>
 
-  	<%--<h1>Image</h2>--%>
+  	<h1>Image</h2>
 
 	</div>
 	<div class="large-6 columns" id="intro-blurb">
@@ -30,6 +35,7 @@
 		</div>
 
 	</div>
+	--%>
 </div>
 
 <div class="fat row">
@@ -45,21 +51,21 @@
 	</div>
 </div>
 
-<div class="row" data-magellan-destination="haps">
+<div class="fat row" data-magellan-destination="haps">
 	<div class="large-6 medium-6 columns">
-		<h4 class="headline"> Biography </h4>
+		<h3 class="headline"> Biography </h3>
 		<% with Biography %>
 			$Content
 		<%--<img src="$Image.URL" />--%>
 		<% end_with %>
 	</div>
-	<div class="large-6 medium-6 columns">
-		<h4 class="headline"> Happenings 
+	<div class="large-6 medium-6  columns">
+		<h3 class="headline"> Happenings 
 			<a href="#"><img class="timeline-icon right" src="{$ThemeDir}/images/icons/github_png/GitHub-Mark-32px.png" /></a>
 			<a href="#"><img class="timeline-icon right" src="{$ThemeDir}/images/icons/circle_twitter.png" /></a>
 			<a href="#"><img class="timeline-icon right" src="{$ThemeDir}/images/icons/circle_pencil.png" /></a>
-		</h4>
-		<% loop $webActivityFeed.limit(8) %>
+		</h3>
+		<% loop $webActivityFeed.limit(3) %>
 			<% if $Type == 'Twitter' %>
 				<div class="tweet panel">
 					<p>$Tweet</p>
@@ -77,14 +83,16 @@
 </div>
 
 <div class="fat row">
-	<h1 class="headline"> Portfolio <span> see full collection </span></h1>
-	<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3 xlarge-block-gride-4">
-	<% loop projects() %>
-		<li>
-		<h2>$Title</h2>
-		<img src="$Image.URL" />
-		$Content.summary
-		</li>
-	<% end_loop %>
-	<ul>
+	<div class="large-12  columns">
+		<h2 class="headline"> Portfolio </h2>
+		<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3 xlarge-block-gride-4">
+		<% loop projects().Limit(3) %>
+			<li>
+			<h3>$Title</h3>
+			<img src="$Image.URL" />
+			$Content.summary
+			</li>
+		<% end_loop %>
+		</ul>
+	</div>
 <div>

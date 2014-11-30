@@ -5,16 +5,25 @@
 
 $twitter : #55ACEE;
 
+h1 {
+	font-family: 'nexarustsans-black01-webfont', Roboto, Arial, sans-serif;
+	line-height: .88;
+	}
+
+
 .main {
 	padding-top: 32px;
 	min-height: 320px;
 	padding-bottom: 30px;
+
 }
 
 .full-main {
 	//padding-top:22px;
 	min-height: 640px;
 	padding-bottom: 44px;
+	background-image: url(../images/topography.png);
+
 }
 
 
@@ -36,7 +45,16 @@ $twitter : #55ACEE;
 	width: 90%;
     margin-left: auto;
     margin-right: auto;
-    max-width: initial;
+    max-width: 1200px;
+}
+
+.rectangle {
+	max-height: 500px;
+	//background-color: grey;
+}
+
+.outlined {
+	border: solid 1px black;
 }
 
 .main-section {
@@ -48,7 +66,7 @@ $twitter : #55ACEE;
 }
 
 .headline {
-	border-bottom: black 1px solid;
+	border-bottom: $white-smoke 1px solid;
 	@media #{$small-only} { 
 		line-height: 1.9;
 	}
@@ -62,7 +80,7 @@ $twitter : #55ACEE;
 #intro {
 	height: 495px;
 	position: relative;
-	border-bottom: 1px outset silver;	
+	//border-bottom: 4px inset $oil;	
 	#tumblr-box {
 		height: 100%;
 		//border: solid black 3px;
@@ -183,10 +201,17 @@ $twitter : #55ACEE;
 }
 
 
-
+	ul.tag-list {
+		padding: 15px 0;
+		padding-bottom: 0;
+		
+		li {
+			margin-left: .25rem;
+		}
+	}
 // portfolio styles
 
-.portfolio {
+.portfolio-body {
 	h1, h2 {
 		font-size: $h1-font-size;
 	}
@@ -200,11 +225,25 @@ $twitter : #55ACEE;
 			font-size: $h3-font-reduction;
 		}
 	}
-
-
-
-
-
+	
+	.skill-list {
+		ul {
+			padding: 15px 0;
+			padding-bottom: 0;
+			margin: 0 auto 1.0625rem auto;
+			margin-left: -1.375rem;
+			margin-right: 0;
+			list-style: none;
+			overflow: hidden;
+			
+			li {
+				list-style: none;
+				float: left;
+				display: block;
+				margin-left: .25rem;
+			}		
+		}
+	}
 
 	.portnav {
 		border-right: 1px solid $jet;
@@ -220,3 +259,23 @@ $twitter : #55ACEE;
 		
 	}
 }
+
+	.skill-list {
+		padding: 15px 0;
+		padding-bottom: 0;
+		margin: 1rem 0;
+		list-style: none;
+		overflow: hidden;
+		
+		li {
+			list-style: none;
+			float: left;
+			display: block;
+			margin-left: .33rem;
+			margin-bottom: .33rem;
+			
+			.button {
+				margin-bottom: .11rem;
+			}
+		}		
+	}

@@ -86,14 +86,34 @@ $include-html-global-classes: $include-html-classes;
 // c. Global
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
+//project fonts:
+
+@font-face {
+  font-family: 'prada-webfont';
+  src: url('../fonts/prada-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/prada-webfont.eot?#efix') format('embedded-opentype'), /* IE6-IE8 */
+  	   /* url('../fonts/prada-webfont.woff2') format('woff2'), SUPER Modern Browsers */
+       url('../fonts/prada-webfont.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/prada-webfont.ttf')  format('truetype') /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'nexarustsans-black01-webfont';
+  src: url('../fonts/nexarustsans-black01-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/nexarustsans-black01-webfont.eot?#efix') format('embedded-opentype'), /* IE6-IE8 */
+  	   /* url('../fonts/prada-webfont.woff2') format('woff2'), SUPER Modern Browsers */
+       url('../fonts/nexarustsans-black01-webfont.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/nexarustsans-black01-webfont.ttf')  format('truetype') /* Safari, Android, iOS */
+}
+
 // We use these to define default font stacks
-// $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-// $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+ $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+ $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
-// $font-weight-normal: normal !default;
-// $font-weight-bold: bold !default;
+ $font-weight-normal: normal !default;
+ $font-weight-bold: bold !default;
 
  $white       : #FFFFFF;
  $ghost       : #FAFAFA;
@@ -116,18 +136,18 @@ $include-html-global-classes: $include-html-classes;
  $black       : #000000;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
-// $secondary-color: #e7e7e7;
+ $primary-color: #7F9E88;
+ $secondary-color: #AD7C68;
 // $alert-color: #f04124;
-// $success-color: #43AC6A;
+ $success-color: #43AC6A;
 // $warning-color: #f08a24;
-// $info-color: #a0d3e8;
+ $info-color: #a0d3e8;
 
 // We use these to control various global styles
-// $body-bg: $white;
-// $body-font-color: $jet;
-// $body-font-family: $font-family-sans-serif;
-// $body-font-weight: $font-weight-normal;
+ $body-bg: $white;
+ $body-font-color: $white-smoke;
+ $body-font-family: $font-family-sans-serif;
+ $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
 // We use this to control font-smoothing
@@ -195,21 +215,21 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-// $header-font-family: $body-font-family;
+ $header-font-family: 'prada-webfont', Roboto, Arial, sans-serif;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
-// $header-font-color: $jet;
+ $header-font-color: $silver;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;
-// $header-text-rendering: optimizeLegibility;
+ $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
- $h1-font-size: rem-calc(44);
- $h2-font-size: rem-calc(37);
- $h3-font-size: rem-calc(27);
- $h4-font-size: rem-calc(23);
- $h5-font-size: rem-calc(18);
+ $h1-font-size: rem-calc(75);
+ $h2-font-size: rem-calc(47);
+ $h3-font-size: rem-calc(37);
+ $h4-font-size: rem-calc(29);
+ $h5-font-size: rem-calc(20);
  $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
@@ -234,8 +254,8 @@ $include-html-global-classes: $include-html-classes;
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: $font-weight-normal;
-// $paragraph-font-size: 1rem;
-// $paragraph-line-height: 1.6;
+ $paragraph-font-size: 1.10rem;
+ $paragraph-line-height: 1.5;
 // $paragraph-margin-bottom: rem-calc(20);
 // $paragraph-aside-font-size: rem-calc(14);
 // $paragraph-aside-line-height: 1.35;
@@ -259,9 +279,9 @@ $include-html-global-classes: $include-html-classes;
 // $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
 
 // We use these to style the <hr> element
-// $hr-border-width: 1px;
-// $hr-border-style: solid;
-// $hr-border-color: $gainsboro;
+ $hr-border-width: 1px;
+ $hr-border-style: solid;
+ $hr-border-color: $white;
 // $hr-margin: rem-calc(20);
 
 // We use these to style lists
@@ -421,10 +441,10 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-button-classes: $include-html-classes;
 
 // We use these to build padding for buttons.
-// $button-tny: rem-calc(10);
-// $button-sml: rem-calc(14);
-// $button-med: rem-calc(16);
-// $button-lrg: rem-calc(18);
+ $button-tny: rem-calc(10);
+ $button-sml: rem-calc(14);
+ $button-med: rem-calc(16);
+ $button-lrg: rem-calc(18);
 
 // We use this to control the display property.
 // $button-display: inline-block;
@@ -434,21 +454,21 @@ $include-html-global-classes: $include-html-classes;
 // $button-font-family: $body-font-family;
 // $button-font-color: $white;
 // $button-font-color-alt: $oil;
-// $button-font-tny: rem-calc(11);
-// $button-font-sml: rem-calc(13);
-// $button-font-med: rem-calc(16);
-// $button-font-lrg: rem-calc(20);
-// $button-font-weight: $font-weight-normal;
-// $button-font-align: center;
+ $button-font-tny: rem-calc(13);
+ $button-font-sml: rem-calc(16);
+ $button-font-med: rem-calc(20);
+ $button-font-lrg: rem-calc(25);
+ $button-font-weight: $font-weight-normal;
+ $button-font-align: center;
 
 // We use these to control various hover effects.
-// $button-function-factor: -20%;
+ $button-function-factor: -20%;
 
 // We use these to control button border and hover styles.
 // $button-border-width: 0px;
 // $button-border-style: solid;
-// $button-bg-color: $primary-color;
-// $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
+ $button-bg-color: $primary-color;
+ $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
 // $secondary-button-border-color: $secondary-button-bg-hover;
@@ -471,8 +491,8 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-button-classes: $include-html-classes;
 
 // Sets the margin for the right side by default, and the left margin if right-to-left direction is used
-// $button-bar-margin-opposite: rem-calc(10);
-// $button-group-border-width: 1px;
+ $button-bar-margin-opposite: rem-calc(18);
+ $button-group-border-width: 1px;
 
 // 07. Clearing
 // - - - - - - - - - - - - - - - - - - - - - - - - -
