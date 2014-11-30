@@ -52,20 +52,20 @@
 </div>
 
 <div class="fat row" data-magellan-destination="haps">
-	<div class="large-6 medium-6 columns">
+	<div class="large-6 medium-6 biography columns">
 		<h3 class="headline"> Biography </h3>
 		<% with Biography %>
 			$Content
 		<%--<img src="$Image.URL" />--%>
 		<% end_with %>
 	</div>
-	<div class="large-6 medium-6  columns">
+	<div class="large-6 medium-6 happenings columns">
 		<h3 class="headline"> Happenings 
 			<a href="#"><img class="timeline-icon right" src="{$ThemeDir}/images/icons/github_png/GitHub-Mark-32px.png" /></a>
 			<a href="#"><img class="timeline-icon right" src="{$ThemeDir}/images/icons/circle_twitter.png" /></a>
 			<a href="#"><img class="timeline-icon right" src="{$ThemeDir}/images/icons/circle_pencil.png" /></a>
 		</h3>
-		<% loop $webActivityFeed.limit(3) %>
+		<% loop $webActivityFeed.limit(9) %>
 			<% if $Type == 'Twitter' %>
 				<div class="tweet panel">
 					<p>$Tweet</p>
@@ -85,11 +85,11 @@
 <div class="fat row">
 	<div class="large-12  columns">
 		<h2 class="headline"> Portfolio </h2>
-		<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3 xlarge-block-gride-4">
+		<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3 xlarge-block-gride-4">
 		<% loop projects().Limit(3) %>
 			<li>
-			<h3>$Title</h3>
-			<img src="$Image.URL" />
+			<h3><a href="{$BaseHref}portfolio">$Title</a></h3>
+			<a href="{$BaseHref}portfolio"> <img src="$Image.URL" /> </a>
 			$Content.summary
 			</li>
 		<% end_loop %>

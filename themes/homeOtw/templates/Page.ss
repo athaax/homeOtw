@@ -21,7 +21,7 @@
 </head>
 <body class="$ClassName.ATT" <% if $ClassName == "Portfolio" %> ng-app="portfolio" <% end_if %> >
 
-	<%--
+	
 	<% if $ClassName != "Portfolio" %>  
 	<header class="header" role="banner">
 		<div class="fixed contain-to-grid">
@@ -29,7 +29,7 @@
 		</div>
 	</header>
 	<% end_if %>
-	--%>
+	
 	
 	<% if $ClassName == "Portfolio" %>
 		<% include FullContainer Layout=$Layout %>
@@ -39,10 +39,10 @@
 
 	<footer id="footer" class="footer" role="contentinfo">
 		<div class="row">
-			<div class="small-6 columns">
+			<div class="small-8 medium-6 large-7 columns">
 				<% include Breadcrumbs %>
 			</div>
-			<div class="small-6 columns">
+			<div class="small-4 medium-6 large-5 hide-for-small-only columns">
 				<ul class="breadcrumbs">
 					<li class="right">&copy; $Now.Year $SiteConfig.Title</li>
 				</ul>

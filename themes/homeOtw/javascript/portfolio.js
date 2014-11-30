@@ -14,6 +14,7 @@ app.config(function ($routeProvider) {
 */
 app.controller('PortfolioController', function($scope, $http) {
 	window.MY_SCOPE = $scope;
+	
 	$scope.project;    
     $scope.getProject = function($projectID) {
     	//console.log($projectID);
@@ -48,6 +49,11 @@ app.controller('PortfolioController', function($scope, $http) {
     };
 
 	
+	var init = function() {
+		
+	}
+	
+	init()
 });
 
 
