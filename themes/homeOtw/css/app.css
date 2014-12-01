@@ -7814,7 +7814,7 @@ h1 {
   background-size: auto;
   background-position: right -50px top;
   background-repeat: no-repeat;
-  border-color: black;
+  border-color: black solid;
 }
 .git .time {
   display: none;

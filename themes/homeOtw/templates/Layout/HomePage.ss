@@ -95,4 +95,22 @@
 		<% end_loop %>
 		</ul>
 	</div>
-<div>
+</div>
+
+<div class="fat row">
+	<div class="large-12 columns">
+		<h2 class="headline"> Contact </h2>
+		<div class="row">
+			<div class="large-4 columns">
+				<h3>Email</h3>
+				<div class="panel"> Jonathan-Solis@uiowa.edu</div>
+			</div>
+			<div class="large-4 columns">
+				<h3>Direct</h3>
+			</div>
+			<div class="large-4 columns">
+				<h3>Twitter</h3>
+			</div>
+		</div>
+	</div>
+</div>

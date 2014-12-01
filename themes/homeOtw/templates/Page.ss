@@ -38,8 +38,8 @@
 	<% end_if %>
 
 	<footer id="footer" class="footer" role="contentinfo">
-		<div class="row">
-			<div class="small-8 medium-6 large-7 columns">
+		<div class="fat row">
+			<div class="small-8 medium-6 large-7 columns ">
 				<% include Breadcrumbs %>
 			</div>
 			<div class="small-4 medium-6 large-5 hide-for-small-only columns">
