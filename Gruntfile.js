@@ -62,7 +62,7 @@ module.exports = function(grunt) {
         }
       },
       css: {
-        files: ['<%=globalConfig.themeDir %>/scss/*.scss', '<%=globalConfig.themeDir %>/scss/**/*.scss', 'division-project/scss/*.scss','division-project/scss/**/*.scss'],
+        files: ['<%=globalConfig.themeDir %>/scss/*.scss', '<%=globalConfig.themeDir %>/scss/**/*.scss' ],
         tasks: ['sass'],
         options: {
           spawn: true,
