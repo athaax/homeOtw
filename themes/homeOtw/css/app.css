@@ -65,7 +65,7 @@ body {
 
 body {
   background: white;
-  color: whitesmoke;
+  color: #333333;
   padding: 0;
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -6408,7 +6408,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "prada-webfont", Roboto, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #efefef;
+  color: #333333;
   text-rendering: optimizeLegibility;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
@@ -6416,12 +6416,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-size: 60%;
-  color: whitesmoke;
+  color: #7a7a7a;
   line-height: 0;
 }
 
 h1 {
-  font-size: 4.0625rem;
+  font-size: 3.6875rem;
 }
 
 h2 {
@@ -6446,7 +6446,7 @@ h6 {
 
 .subheader {
   line-height: 1.4;
-  color: whitesmoke;
+  color: #7a7a7a;
   font-weight: normal;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
@@ -6562,7 +6562,7 @@ abbr,
 acronym {
   text-transform: uppercase;
   font-size: 90%;
-  color: whitesmoke;
+  color: #333333;
   cursor: help;
 }
 
@@ -6582,20 +6582,20 @@ blockquote {
 blockquote cite {
   display: block;
   font-size: 0.8125rem;
-  color: #f3f3f3;
+  color: #626262;
 }
 blockquote cite:before {
   content: "\2014 \0020";
 }
 blockquote cite a,
 blockquote cite a:visited {
-  color: #f3f3f3;
+  color: #626262;
 }
 
 blockquote,
 blockquote p {
   line-height: 1.5;
-  color: whitesmoke;
+  color: #7a7a7a;
 }
 
 /* Microformats */
@@ -6631,7 +6631,7 @@ blockquote p {
   }
 
   h1 {
-    font-size: 4.6875rem;
+    font-size: 4.3125rem;
   }
 
   h2 {
@@ -7662,6 +7662,10 @@ h1 {
   line-height: .88;
 }
 
+.rust {
+  font-family: 'nexarustsans-black01-webfont', Roboto, Arial, sans-serif !important;
+}
+
 .main {
   padding-top: 32px;
   min-height: 320px;
@@ -7671,7 +7675,6 @@ h1 {
 .full-main {
   min-height: 640px;
   padding-bottom: 44px;
-  background-image: url(../images/topography.png);
 }
 
 .full {
@@ -7679,6 +7682,12 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   max-width: initial;
+  padding-bottom: 10px;
+  /*
+  -webkit-box-shadow: 0px 4px 6px -6px black;
+     -moz-box-shadow: 0px 4px 6px -6px black;
+     */
+  box-shadow: 0px 8px 20px -15px black;
 }
 
 .fat {
@@ -7767,6 +7776,19 @@ h1 {
   top: 30%;
 }
 
+.skill-image {
+  max-height: 180px;
+  max-width: 180px;
+  display: block;
+  margin: auto;
+  padding: 7px 0;
+}
+.skill-image img {
+  height: auto;
+  max-width: 100%;
+  border-radius: 50%;
+}
+
 .footer {
   background-color: #777777;
   text-transform: uppercase;
@@ -7847,7 +7869,7 @@ ul.tag-list li {
 }
 
 .portfolio-body h1, .portfolio-body h2 {
-  font-size: 4.6875rem;
+  font-size: 4.3125rem;
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
   .portfolio-body h1, .portfolio-body h2 {

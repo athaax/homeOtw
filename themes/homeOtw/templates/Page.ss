@@ -18,15 +18,14 @@
 	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico?ver=2" />
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
+	<link rel="stylesheet" href="$ThemeDir/css/MetroJs.css" />
 </head>
 <body class="$ClassName.ATT" <% if $ClassName == "Portfolio" %> ng-app="portfolio" <% end_if %> >
 
 	
 	<% if $ClassName != "Portfolio" %>  
-	<header class="header" role="banner">
-		<div class="fixed contain-to-grid">
-			<% include TopBar %>
-		</div>
+	<header class="header contain-to-grid" role="banner">
+		<%-- include TopBar --%>
 	</header>
 	<% end_if %>
 	
@@ -60,6 +59,7 @@
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<script src="$ThemeDir/bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="$ThemeDir/bower_components/foundation/js/foundation.min.js"></script>
+	<script src="$ThemeDir/javascript/MetroJS.min.js"></script>
 	<% if $ClassName == "Portfolio" %>
 	 <script src="$ThemeDir/bower_components/angular/angular.js"></script>
 	 <script src="$ThemeDir/bower_components/angular-route/angular-route.js"></script>

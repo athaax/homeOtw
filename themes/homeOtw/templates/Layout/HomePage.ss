@@ -1,8 +1,33 @@
-<div class="full row" id="intro" style="background: url({$ThemeDir}/images/header1.png) no-repeat center center; -webkit-background-size: cover;
+<div class="full row">
+	<div class="medium-6 columns skill-coins">
+		<div class="flippy live-tile" data-mode="flip">
+			<div>
+				<div class="skill-image"><img src="{$ThemeDir}/images/sublime.png" alt="sublime" class="text-center" /></div>
+				<h3 class="text-center">Designer</h3>
+			</div>
+			<div>
+				<p>Designing is fun!</p>
+			</div>
+		</div>
+		<div class="flippy live-tile" data-mode="flip">
+			<div>
+				<div class="skill-image"><img src="{$ThemeDir}/images/coda.png" alt="coda" /></div>
+				<h3 class="text-center rust">Developer</h3>
+			</div>
+			<div>
+				<ul>
+					<li>PHP</li>
+					<li>Python</li>
+
+				</ul>
+			</div>
+		</div>
+  	</div>
+  	<div class="medium-6 columns" id="intro" style="background: url(http://images.clipartof.com/small/11010-Orange-Man-With-An-Attitude-His-Arms-Crossed-Leaning-Against-A-Wall-Clipart-Illustration.jpg) no-repeat center center; -webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;">
-
+  	</div>
 	
 	
 	
