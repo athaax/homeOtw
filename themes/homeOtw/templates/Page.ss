@@ -20,7 +20,7 @@
 	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
 	<link rel="stylesheet" href="$ThemeDir/css/MetroJs.css" />
 </head>
-<body class="$ClassName.ATT" <% if $ClassName == "Portfolio" %> ng-app="portfolio" <% end_if %> >
+<body class="$ClassName.ATT" ng-app="portfolio" >
 
 	
 	<% if $ClassName != "Portfolio" %>  
@@ -60,11 +60,8 @@
 	<script src="$ThemeDir/bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="$ThemeDir/bower_components/foundation/js/foundation.min.js"></script>
 	<script src="$ThemeDir/javascript/MetroJS.min.js"></script>
-	<% if $ClassName == "Portfolio" %>
-	 <script src="$ThemeDir/bower_components/angular/angular.js"></script>
-	 <script src="$ThemeDir/bower_components/angular-route/angular-route.js"></script>
-	 <script src="$ThemeDir/javascript/portfolio.js"></script>
-	<% end_if %>
-	<script src="$ThemeDir/javascript/app.js"></script>
+	<script src="$ThemeDir/bower_components/angular/angular.js"></script>
+	<script src="$ThemeDir/bower_components/angular-route/angular-route.js"></script>
+	<script src="$ThemeDir/build/build-src.js"></script>
 </body>
 </html>

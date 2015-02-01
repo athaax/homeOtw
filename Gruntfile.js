@@ -14,12 +14,12 @@ module.exports = function(grunt) {
     sass: {
       dist: { 
         files: {
-          '<%=globalConfig.themeDir %>/css/master.css' : '<%=globalConfig.themeDir %>/scss/master.scss'
+          '<%=globalConfig.themeDir %>/css/app.css' : '<%=globalConfig.themeDir %>/scss/app.scss'
         },                  // Target
         options: {              // Target options
           style: 'compressed',
-          sourcemap: 'true',
-          //loadPath: ['division-project/scss']
+          //sourcemap: 'true',
+          loadPath: '<%=globalConfig.themeDir %>/bower_components/foundation/scss/'
         }
       }
     },
@@ -28,13 +28,7 @@ module.exports = function(grunt) {
 
     concat: {
       js:{
-        src: ['division-project/bower_components/jquery/jquery.js',
-          'division-project/bower_components/jquery.equalheights/jquery.equalheights.js',
-          'division-project/bower_components/fitvids/jquery.fitvids.js',
-          'division-project/bower_components/flexslider/jquery.flexslider.js',
-          'division-bar/js/division-bar.js',
-          '<%=globalConfig.themeDir %>/js/*.js', 
-          'division-project/js/*.js'],
+        src: [ '<%=globalConfig.themeDir %>/javascript/*.js' ],
         dest: '<%=globalConfig.themeDir %>/build/build-src.js'
       }
     },

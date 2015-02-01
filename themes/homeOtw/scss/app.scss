@@ -1,5 +1,15 @@
 @import "settings";
-@import "foundation";
+
+@import "foundation/components/grid";
+@import "foundation/components/block-grid";
+@import "foundation/components/visibility";
+@import "foundation/components/dropdown";
+@import "foundation/components/dropdown-buttons";
+@import "foundation/components/buttons";
+@import "foundation/components/type";
+@import "foundation/components/forms";
+
+@import "monroe";
 
 // colors
 
@@ -53,7 +63,7 @@ h1 {
 }
 
 .fat {
-	width: 90%;
+	width: 88%;
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
@@ -86,12 +96,11 @@ h1 {
 }
 
 .biography {
-	max-height: 700px;
+	max-height: 100px;
 
 }
 
 .happenings {
-	max-height: 700px;
 	overflow-y: auto;
 }
 
