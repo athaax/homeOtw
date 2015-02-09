@@ -111,13 +111,15 @@ $(function() {
         allNavs();
     });
 
+    /*
     $(".navmenu-fixed-right.offcanvas, .navmenu-fixed-left.offcanvas").swipe({
         swipe: function(event, direction) {
             $(".navmenu-fixed-right.offcanvas").offcanvas('toggle');
         },
         threshold: 100
     });
-
+    */
+    
 });
 
 

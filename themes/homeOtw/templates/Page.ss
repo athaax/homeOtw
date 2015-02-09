@@ -36,6 +36,7 @@
 		<% include FullContainer Layout=$Layout %>
 	<% end_if %>
 
+	
 	<footer id="footer" class="footer" role="contentinfo">
 		<div class="fat row">
 			<div class="small-8 medium-6 large-7 columns ">
