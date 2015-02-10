@@ -38,7 +38,7 @@
 
 	
 	<footer id="footer" class="footer" role="contentinfo">
-		<div class="fat row">
+		<div class="full row">
 			<div class="small-8 medium-6 large-7 columns ">
 				<% include Breadcrumbs %>
 			</div>

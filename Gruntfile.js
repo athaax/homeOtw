@@ -17,9 +17,8 @@ module.exports = function(grunt) {
           '<%=globalConfig.themeDir %>/css/app.css' : '<%=globalConfig.themeDir %>/scss/app.scss'
         },                  // Target
         options: {              // Target options
-          style: 'compressed',
-          //sourcemap: 'true',
-          loadPath: '<%=globalConfig.themeDir %>/bower_components/foundation/scss/'
+          style: 'expanded',
+          loadPath: ['<%=globalConfig.themeDir %>/bower_components/foundation/scss/']
         }
       }
     },
@@ -62,7 +61,7 @@ module.exports = function(grunt) {
           spawn: true,
         }
       }
-    },
+    }
 
   });
 
