@@ -1,17 +1,25 @@
 (function() {
 
 var app = angular.module('portfolio', ['ngRoute']);
-/*
-app.config(function ($routeProvider) {
-	$routeProvider.when('/',
-		{
-			templateUrl: "portfolio.html",
-			controller: "PortfolioController"	
-			
-		}
-	);
-});
-*/
+
+
+//perf
+app.config(['$routeProvider',
+  function($routeProvider) {
+    $routeProvider.
+      when('/homeOtw', {
+        templateUrl: '../angularPartials/home.html',
+        controller: 'HomeController'
+      }).
+      when('/homeOtw/portfolio/', {
+        templateUrl: '../angularPartials/portfolio.html',
+        controller: 'PortfolioController'
+      }).
+      otherwise({
+        redirectTo: '/'
+      });
+  }]);
+
 app.controller('PortfolioController', function($scope, $http) {
 	window.MY_SCOPE = $scope;
 	
@@ -54,6 +62,12 @@ app.controller('PortfolioController', function($scope, $http) {
 	}
 	
 	init()
+});
+
+
+app.controller('HomeController', function($scope, $http) {
+    window.MY_SCOPE = $scope;
+
 });
 
 

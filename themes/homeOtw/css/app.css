@@ -8628,6 +8628,10 @@ html {
   background-size: cover;
 }
 
+body {
+  background: none;
+}
+
 h1 {
   font-family: 'nexarustsans-black01-webfont', Roboto, Arial, sans-serif;
   line-height: .88;
@@ -8646,6 +8650,13 @@ h1 {
 .full-main {
   min-height: 640px;
   padding-bottom: 44px;
+}
+
+.hero-content {
+  background: -webkit-linear-gradient(#000000 25.83%, rgba(0, 0, 0, 0.47) 67.22%);
+  padding: 10px 15px;
+  border: solid 1px white;
+  color: white;
 }
 
 .full {
@@ -8795,6 +8806,9 @@ h1 {
 .footer .breadcrumbs > * {
   color: #333333;
   font-size: inherit;
+}
+.footer > .full {
+  padding-bottom: 0;
 }
 .footer > * not .row {
   padding: 0.5625rem 0.875rem 0.5625rem;

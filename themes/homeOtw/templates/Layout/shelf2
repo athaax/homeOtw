@@ -1,0 +1,103 @@
+
+    	<div class="row" id="portfolio-body" >
+
+    		<div class="medium-5 columns">
+	    		<section style="text-align: center;">
+	  				<h1> {{project.project.title}} </h1>
+	  				<ul class="button-group round" style="display: inline-block;">
+	  					<li><a href="{{project.project.website}}" class="radius small button">View Live</a></li>
+	  					<li><a href="{{project.project.github}}" class="radius small button">View on GitHub</a></li>
+	  				</ul>
+	    		</section>
+          <section>
+            <h2 class="headline"> Skills </h2>
+            <ul class="skill-list">
+	            <li ng-repeat="(key, value) in project.project.Skills">
+            		<a ng-click="getSkill({{key}})" class="tiny button"> {{value}} </a>
+	            </li>
+            </ul>
+          </section>
+          <section>
+            <h2 class="headline"> Background </h2>
+            <p> {{project.project.Content}} </p>
+          </section>
+          <section>
+            <h2 class="headline">Contributions</h2>
+            <p> {{project.project.History}} </p>
+          </section>
+        </div>
+        <div class="medium-7 columns">
+    			<img src="{{project.project.image}}" alt="Image for {{project.project.title}}" />
+        </div>
+
+			</div>
+
+            <%--
+      <div class="row">
+        <div class="small-12 columns">
+          <ul class="inline-list">
+            <li ng-repeat="commit in project.project.ContributionFeed">
+                <!-- need plugin to render html... trying to keep this lightweight 
+                ---- I want to display commits I've made on this project, however API is returning 
+                ---- ALL commits made to this repo, and it's not coming back very atomically.
+                ---- NOTE: I'm currently stripping content HTML tags in GitHubFeed.php
+                -->
+                <!--<div ng-bind-html-unsafe="commit.Content"></div>-->
+                <!--<p>{{commit.ID}}</p>-->
+                <div class="git panel" style="max-width: 200px;">
+                  <p>{{commit.Content}}</p>
+                  <p>Published at $PublishedAt.Format('g:ia \o\n l jS F Y')</p>
+                </div>  
+            </li>
+          </ul>
+        </div>    
+      </div>
+      --%>
+
+
+
+
+      <div class="full row" id="introduction">
+  <nav id="navMain" class="nav-main hidden-xs">
+      <ul class="nav">
+          <li class="brand home">
+              <a href="/">
+                  <span class="sr-only">Organizing for Action</span></a>
+          </li>
+      <li class=" dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="">Jonathan</a>
+        <%--
+          <ul class="dropdown-menu" role="menu">
+          <li class="">
+            <a href="/climate-change/">Climate Change</a>    
+          </li>
+          </ul>
+          --%>
+        </li>
+
+      <li class=" dropdown">
+    
+        <a class="dropdown-toggle" data-toggle="dropdown" href="{$BaseHref}/portfolio">Work</a>
+      
+      </li>
+
+      <li class=" dropdown">
+    
+        <a class="dropdown-toggle" data-toggle="dropdown" href="">Follow Me</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<div class="row" style="transform: translateY(44%);">
+  <div class="medium-6 columns">
+    <div class="hero-content">
+    <p>Farm-to-table normcore semiotics pickled, cold-pressed ugh tousled Tumblr. Crucifix taxidermy keytar direct trade banjo irony cred Banksy, retro wolf chambray Cosby sweater jean shorts. Carles taxidermy food truck 3 wolf moon cornhole. Cardigan artisan VHS, street art kale chips Banksy plaid four loko beard Thundercats freegan. Cardigan pour-over Portland Etsy, selvage Odd Future single-origin coffee pop-up PBR&B. Pop-up gastropub chambray four loko. Pinterest single-origin coffee artisan, Shoreditch lo-fi Cosby sweater letterpress kogi banh mi yr pork belly irony church-key Godard heirloom.</p>
+      <p>Farm-to-table normcore semiotics pickled, cold-pressed ugh tousled Tumblr. Crucifix taxidermy keytar direct trade banjo irony cred Banksy, retro wolf chambray Cosby sweater jean shorts. Carles taxidermy food truck 3 wolf moon cornhole. Cardigan artisan VHS, street art kale chips Banksy plaid four loko beard Thundercats freegan. Cardigan pour-over Portland Etsy, selvage Odd Future single-origin coffee pop-up PBR&B. Pop-up gastropub chambray four loko. Pinterest single-origin coffee artisan, Shoreditch lo-fi Cosby sweater letterpress kogi banh mi yr pork belly irony church-key Godard heirloom.</p>
+    </div>
+  </div>
+<div class="medium-6 columns">
+    <div class="hero-content">
+      <img src="{$ThemeDir}/images/mebackground.jpg" />
+    </div>
+  </div>
+</div>

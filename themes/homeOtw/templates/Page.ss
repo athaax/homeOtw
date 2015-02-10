@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="$ContentLocale.ATT" dir="$i18nScriptDirection.ATT">
+<html class="no-js" lang="$ContentLocale.ATT" dir="$i18nScriptDirection.ATT" ng-app="portfolio" >
 <head>
 	<% base_tag %>
 	<meta charset="utf-8" />
@@ -12,30 +12,27 @@
 	<meta property="og:title" content="$Title.ATT" />
 	<meta property="og:description" content="$MetaDescription.ATT" />
 	<meta property="og:url" content="$AbsoluteLink.ATT" />
-	<% if $Image %>
-	<meta property="og:image" content="<% with $Image.SetSize(500,500) %>$AbsoluteURL.ATT<% end_with %>" />
-	<% end_if %>
 	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico?ver=2" />
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
 	<link rel="stylesheet" href="$ThemeDir/css/MetroJs.css" />
-</head>
-<body class="$ClassName.ATT" ng-app="portfolio" >
 
-	
+	<script src="{$ThemeDir}/bower_components/angular/angular.js"></script>
+	<script src="{$ThemeDir}/bower_components/angular-route/angular-route.js"></script>
+
+
+</head>
+<body class="$ClassName.ATT">
+
+	<%--
 	<% if $ClassName != "Portfolio" %>  
 	<header class="header contain-to-grid" role="banner">
-		<%-- include TopBar --%>
+		include TopBar 
 	</header>
 	<% end_if %>
-	
-	
-	<% if $ClassName == "Portfolio" %>
-		<% include FullContainer Layout=$Layout %>
-	<% else %>
-		<% include FullContainer Layout=$Layout %>
-	<% end_if %>
+	--%>
 
+	<% include FullContainer Layout=$Layout %>
 	
 	<footer id="footer" class="footer" role="contentinfo">
 		<div class="full row">
@@ -62,9 +59,9 @@
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<script src="$ThemeDir/bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="$ThemeDir/bower_components/foundation/js/foundation.min.js"></script>
-	<script src="$ThemeDir/javascript/MetroJS.min.js"></script>
-	<script src="$ThemeDir/bower_components/angular/angular.js"></script>
-	<script src="$ThemeDir/bower_components/angular-route/angular-route.js"></script>
+	<%--<script src="$ThemeDir/javascript/MetroJS.min.js"></script>--%>
+
 	<script src="$ThemeDir/build/build-src.js"></script>
+
 </body>
 </html>
