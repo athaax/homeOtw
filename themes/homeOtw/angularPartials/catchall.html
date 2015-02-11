@@ -1,2 +1,113 @@
-<h1>CATCHALL</H1><H2>CATCHALL</H2><H3>CATCHALL</H3>
-      
+ 
+       
+     
+      <div class="row">
+     
+         
+        <div class="large-7 columns antiquewhite">
+     
+          <h3>Get in Touch!</h3>
+          <p>We'd love to hear from you. You can either reach out to us as a whole and one of our awesome team members will get back to you, or if you have a specific question reach out to one of our staff. We love getting email all day <em>all day</em>.</p>
+     
+          <div class="section-container tabs" data-section>
+            <section class="section">
+              <h5 class="title "><a href="#panel1">Contact Me</a></h5>
+              <div class="content" data-slug="panel1">
+                <form>
+                  <div class="row collapse">
+                    <div class="large-2 columns">
+                      <label class="inline">Your Name</label>
+                    </div>
+                    <div class="large-10 columns">
+                      <input type="text" id="yourName" placeholder="Jane Smith">
+                    </div>
+                  </div>
+                  <div class="row collapse">
+                    <div class="large-2 columns">
+                      <label class="inline"> Your Email</label>
+                    </div>
+                    <div class="large-10 columns">
+                      <input type="text" id="yourEmail" placeholder="jane@smithco.com">
+                    </div>
+                  </div>
+                  <label>What's up?</label>
+                  <textarea rows="4"></textarea>
+                  <button type="submit" class="radius button">Submit</button>
+                </form>
+              </div>
+            </section>
+            <section class="section">
+              <h5 class="title"><a href="#panel2">Specific Person</a></h5>
+              <div class="content" data-slug="panel2">
+                              </div>
+            </section>
+          </div>
+        </div>
+     
+         
+     
+     
+         
+     
+     
+        <div class="large-5 columns">
+		<h3 class="headline"> Happenings 
+			<a href="#"><img class="timeline-icon right" src="themes/homeOtw/images/icons/github_png/GitHub-Mark-32px.png" /></a>
+			<a href="#"><img class="timeline-icon right" src="themes/homeOtw/images/icons/circle_twitter.png" /></a>
+			<a href="#"><img class="timeline-icon right" src="themes/homeOtw/images/icons/circle_pencil.png" /></a>
+		</h3>
+		<% loop $webActivityFeed.limit(3) %>
+			<% if $Type == 'Twitter' %>
+				<div class="tweet panel">
+					<p>$Tweet</p>
+					<p>$PublishedAt.Format('g:ia \o\n l jS F Y')</p>
+				</div>
+			<% else_if $Type == 'GitHub' %>
+				<div class="git panel">
+					$Content
+					<p>Published at $PublishedAt.Format('g:ia \o\n l jS F Y')</p>
+				</div>
+			<% end_if %>
+		<% end_loop %>
+		</div>
+         
+      </div>
+     
+       
+     
+     
+       
+     
+      <footer class="row">
+        <div class="large-12 columns">
+          <hr/>
+          <div class="row">
+            <div class="large-6 columns">
+              <p>© Copyright no one at all. Go to town.</p>
+            </div>
+            <div class="large-6 columns">
+              <ul class="inline-list right">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+     
+       
+     
+     
+     
+       
+     
+      <div class="reveal-modal" id="mapModal">
+        <h4>Where We Are</h4>
+        <p><img src="http://placehold.it/800x600"/></p>
+     
+         
+        <a href="#" class="close-reveal-modal">×</a>
+      </div>
+    

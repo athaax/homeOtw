@@ -20,25 +20,27 @@
 $twitter : #55ACEE;
 
 html { 
-  //background: url('http://lorempixel.com/1400/1000/') no-repeat center center fixed; 
-  //background: url(../images/mebackground.jpg) no-repeat center center fixed; 
-  //background-color: rgba(77, 170, 171, 0.61);
+	//background: url('http://lorempixel.com/1400/1000/') no-repeat center center fixed;
+  	//background: url(../images/mebackground.jpg) no-repeat center center fixed; 
+  	//background-color: rgba(77, 170, 171, 0.61);
   
-  //background: url('../images/vintageocean2.jpg') no-repeat center center fixed;
-  //height: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  	//background: url('../images/vintageocean2.jpg') no-repeat center center fixed;
+  	//height: 100%;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
 }
 
 body {
-	background: url('../images/vintageocean2.jpg') no-repeat center center fixed;
-  //height: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	//background: url('../images/vintageocean2.jpg') no-repeat center center fixed;
+	//background-color: $heavysugar;
+	background-color: $white-smoke;
+	//height: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .off-canvas-wrap {
@@ -51,6 +53,10 @@ body {
 	margin-bottom: 10px;
 	//background-color: rgba(250,235,215,0.66);
 	background-color: rgba(78,81,121,.89);
+	color: white;
+	h1,h2,h3,h4,h5,h6 {
+		color: $heavysugar;
+	}
 }
 
 h1 {
@@ -111,9 +117,9 @@ h1 {
 	padding-bottom: 10px;
 	/*
 	-webkit-box-shadow: 0px 4px 6px -6px black;
-	   -moz-box-shadow: 0px 4px 6px -6px black;
-	   */
-	        box-shadow: 0px 8px 20px -15px black;
+	-moz-box-shadow: 0px 4px 6px -6px black;
+	*/
+	box-shadow: 0px 8px 20px -15px black;
 
 }
 
@@ -146,13 +152,11 @@ h1 {
 	@media #{$small-only} { 
 		line-height: 1.9;
 	}
-	
-	
+
 }
 
 .biography {
 	max-height: 100px;
-
 }
 
 .happenings {
@@ -268,11 +272,19 @@ h1 {
 	}
 }
 
-
+#job-icons {
+	> * {
+	text-align: center;
+	}
+	img {
+		max-height: 175px;
+	}
+}
 
 // Footer Styles
 .footer {
-	background-color: $calipoppy;
+	//background-color: $calipoppy;
+	background-color: #333;
 	text-transform: uppercase;
 	color: $silver;
 	position: fixed;  //lets stick our footer to the bottom for a nice, full page app feel
