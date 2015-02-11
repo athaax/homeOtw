@@ -26,6 +26,8 @@ $(document).foundation({
   }
 });
 
+
+
 var $tiles = $(".flippy").liveTile({ 
     playOnHover:true,
     repeatCount: 0,
@@ -199,27 +201,35 @@ $(function() {
 
 var app = angular.module('portfolio', ['ngRoute']);
 
-
 //perf
 app.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      when('/homeOtw', {
-        templateUrl: '../angularPartials/home.html',
+      when('/', {
+        templateUrl: 'themes/homeOtw/angularPartials/home.html',
         controller: 'HomeController'
       }).
-      when('/homeOtw/portfolio/', {
-        templateUrl: '../angularPartials/portfolio.html',
+      when('/portfolio/', {
+        templateUrl: 'themes/homeOtw/angularPartials/portfolioCover.html',
         controller: 'PortfolioController'
       }).
-      otherwise({
-        redirectTo: '/'
+      when('/portfolio/project', {
+        templateUrl: 'themes/homeOtw/angularPartials/portfolio.html',
+        controller: 'PortfolioController'
+      }).
+      when('/about', {
+        templateUrl: 'themes/homeOtw/angularPartials/catchall.html'
+      }).otherwise({
+         redirectTo: '/#/'
       });
   }]);
 
 app.controller('PortfolioController', function($scope, $http) {
 	window.MY_SCOPE = $scope;
-	
+    
+    $scope.$on('$routeChangeSuccess', function(event,current,previous) {
+    });
+
 	$scope.project;    
     $scope.getProject = function($projectID) {
     	//console.log($projectID);
@@ -229,10 +239,13 @@ app.controller('PortfolioController', function($scope, $http) {
     	console.log('much success');
     	console.log(status);
         console.log(data);
+        $(document).foundation('equalizer', 'reflow');
+
     }).error(function(data, status, headers, config) {
 	    console.log('error');
     	console.log(status);
     	console.log(data);
+
     });
 	    
     };
@@ -255,7 +268,8 @@ app.controller('PortfolioController', function($scope, $http) {
 
 	
 	var init = function() {
-		
+		        $(document).foundation('equalizer', 'reflow');
+
 	}
 	
 	init()

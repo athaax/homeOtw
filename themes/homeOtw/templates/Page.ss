@@ -17,9 +17,6 @@
 	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
 	<link rel="stylesheet" href="$ThemeDir/css/MetroJs.css" />
 
-	<script src="{$ThemeDir}/bower_components/angular/angular.js"></script>
-	<script src="{$ThemeDir}/bower_components/angular-route/angular-route.js"></script>
-
 
 </head>
 <body class="$ClassName.ATT">
@@ -32,7 +29,7 @@
 	<% end_if %>
 	--%>
 
-	<% include FullContainer Layout=$Layout %>
+	<% include FullContainer %>
 	
 	<footer id="footer" class="footer" role="contentinfo">
 		<div class="full row">
@@ -61,7 +58,11 @@
 	<script src="$ThemeDir/bower_components/foundation/js/foundation.min.js"></script>
 	<%--<script src="$ThemeDir/javascript/MetroJS.min.js"></script>--%>
 
+	<script src="{$ThemeDir}/bower_components/angular/angular.js"></script>
+	<script src="{$ThemeDir}/bower_components/angular-route/angular-route.js"></script>
+
 	<script src="$ThemeDir/build/build-src.js"></script>
+
 
 </body>
 </html>

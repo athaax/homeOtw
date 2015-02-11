@@ -10,6 +10,13 @@
   /* IE9 Compat Modes */
   src: url("../fonts/nexarustsans-black01-webfont.eot?#efix") format("embedded-opentype"), url("../fonts/nexarustsans-black01-webfont.woff") format("woff"), url("../fonts/nexarustsans-black01-webfont.ttf") format("truetype");
 }
+@font-face {
+  font-family: 'limelightregular';
+  src: url("../fonts/limelight-webfont.eot");
+  src: url("../fonts/limelight-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/limelight-webfont.woff2") format("woff2"), url("../fonts/limelight-webfont.woff") format("woff"), url("../fonts/limelight-webfont.ttf") format("truetype"), url("../fonts/limelight-webfont.svg#limelightregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 meta.foundation-version {
   font-family: "/5.5.1/";
 }
@@ -82,10 +89,10 @@ body {
 
 body {
   background: #FFFFFF;
-  color: #333333;
+  color: #EFF5F3;
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Futura", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1.5;
@@ -1442,7 +1449,7 @@ select {
   color: #222222;
   padding: 1rem;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Futura", Helvetica, Roboto, Arial, sans-serif;
   font-size: 1rem;
 }
 .accordion .accordion-navigation > a:hover, .accordion dd > a:hover {
@@ -2009,7 +2016,7 @@ button, .button {
   border-style: solid;
   border-width: 0;
   cursor: pointer;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Futura", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -3570,7 +3577,7 @@ select {
   border-color: #cccccc;
   padding: 0.5rem;
   font-size: 0.875rem;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Futura", Helvetica, Roboto, Arial, sans-serif;
   color: rgba(0, 0, 0, 0.75);
   line-height: normal;
   border-radius: 0;
@@ -4155,7 +4162,7 @@ kbd {
 
 .label {
   font-weight: normal;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Futura", Helvetica, Roboto, Arial, sans-serif;
   text-align: center;
   text-decoration: none;
   line-height: 1;
@@ -4639,7 +4646,7 @@ ul.pagination li {
   color: #EEEEEE;
   font-weight: normal;
   font-size: 1rem;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Futura", Helvetica, Roboto, Arial, sans-serif;
 }
 .pricing-table .price {
   background-color: #F6F6F6;
@@ -4648,7 +4655,7 @@ ul.pagination li {
   color: #333333;
   font-weight: normal;
   font-size: 2rem;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Futura", Helvetica, Roboto, Arial, sans-serif;
 }
 .pricing-table .description {
   background-color: #FFFFFF;
@@ -4955,7 +4962,7 @@ ul.pagination li {
   padding: 0.875rem 0;
   list-style-type: none;
   list-style-position: outside;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Futura", Helvetica, Roboto, Arial, sans-serif;
 }
 .side-nav li {
   margin: 0 0 0.4375rem 0;
@@ -4975,7 +4982,7 @@ ul.pagination li {
 .side-nav li.active > a:first-child:not(.button) {
   color: #a5bbac;
   font-weight: normal;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Futura", Helvetica, Roboto, Arial, sans-serif;
 }
 .side-nav li.divider {
   border-top: 1px solid;
@@ -5128,7 +5135,7 @@ ul.pagination li {
   float: left;
   margin-left: 1rem;
   margin-bottom: 0;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Futura", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   font-size: 0.875rem;
   color: #999999;
@@ -5361,7 +5368,7 @@ table tr td {
   background-color: #EFEFEF;
   color: #222222;
   padding: 1rem 2rem;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Futura", Helvetica, Roboto, Arial, sans-serif;
   font-size: 1rem;
 }
 .tabs dd > a:hover, .tabs .tab-title > a:hover {
@@ -5562,7 +5569,7 @@ meta.foundation-mq-topbar {
 /* Wrapped around .top-bar to contain to grid width */
 .contain-to-grid {
   width: 100%;
-  background: #333333;
+  background: #4C696C;
 }
 .contain-to-grid .top-bar {
   margin-bottom: 0;
@@ -5596,7 +5603,7 @@ meta.foundation-mq-topbar {
   height: 2.8125rem;
   line-height: 2.8125rem;
   position: relative;
-  background: #333333;
+  background: #4C696C;
   margin-bottom: 0;
 }
 .top-bar ul {
@@ -5695,7 +5702,7 @@ meta.foundation-mq-topbar {
   background: transparent;
 }
 .top-bar.expanded .title-area {
-  background: #333333;
+  background: #4C696C;
 }
 .top-bar.expanded .toggle-topbar a {
   color: #888888;
@@ -5720,7 +5727,7 @@ meta.foundation-mq-topbar {
 }
 .top-bar-section .divider,
 .top-bar-section [role="separator"] {
-  border-top: solid 1px #1a1a1a;
+  border-top: solid 1px #263436;
   clear: both;
   height: 1px;
   width: 100%;
@@ -5734,7 +5741,7 @@ meta.foundation-mq-topbar {
   color: #FFFFFF;
   padding: 12px 0 12px 0;
   padding-left: 0.9375rem;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Futura", Helvetica, Roboto, Arial, sans-serif;
   font-size: 0.8125rem;
   font-weight: normal;
   text-transform: none;
@@ -5961,7 +5968,7 @@ meta.foundation-mq-topbar {
 
 @media only screen and (min-width: 40.063em) {
   .top-bar {
-    background: #333333;
+    background: #4C696C;
     overflow: visible;
   }
   .top-bar:before, .top-bar:after {
@@ -5994,7 +6001,7 @@ meta.foundation-mq-topbar {
     top: 0.53125rem;
   }
   .top-bar.expanded {
-    background: #333333;
+    background: #4C696C;
   }
 
   .contain-to-grid .top-bar {
@@ -6026,7 +6033,7 @@ meta.foundation-mq-topbar {
   .top-bar-section li:not(.has-form) a:not(.button) {
     padding: 0 0.9375rem;
     line-height: 2.8125rem;
-    background: #333333;
+    background: #4C696C;
   }
   .top-bar-section li:not(.has-form) a:not(.button):hover {
     background-color: #555555;
@@ -6126,13 +6133,13 @@ meta.foundation-mq-topbar {
   .top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"] {
     border-bottom: none;
     border-top: none;
-    border-right: solid 1px #4e4e4e;
+    border-right: solid 1px #5e8185;
     clear: none;
     height: 2.8125rem;
     width: 0;
   }
   .top-bar-section .has-form {
-    background: #333333;
+    background: #4C696C;
     padding: 0 0.9375rem;
     height: 2.8125rem;
   }
@@ -6406,13 +6413,13 @@ a img {
 p {
   font-family: inherit;
   font-weight: normal;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
   text-rendering: optimizeLegibility;
 }
 p.lead {
-  font-size: 1.31875rem;
+  font-size: 1.21875rem;
   line-height: 1.6;
 }
 p aside {
@@ -6423,7 +6430,7 @@ p aside {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "prada-webfont", Roboto, Arial, sans-serif;
+  font-family: "limelightregular", Roboto, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   color: #333333;
@@ -6511,7 +6518,7 @@ code {
 ul,
 ol,
 dl {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
   list-style-position: outside;
@@ -6580,7 +6587,7 @@ abbr,
 acronym {
   text-transform: uppercase;
   font-size: 90%;
-  color: #333333;
+  color: #EFF5F3;
   cursor: help;
 }
 
@@ -6702,7 +6709,7 @@ blockquote p {
 
 .tab-bar {
   -webkit-backface-visibility: hidden;
-  background: #333333;
+  background: #4C696C;
   color: #FFFFFF;
   height: 2.8125rem;
   line-height: 2.8125rem;
@@ -6723,7 +6730,7 @@ blockquote p {
   height: 2.8125rem;
   position: absolute;
   top: 0;
-  border-right: solid 1px #1a1a1a;
+  border-right: solid 1px #263436;
   left: 0;
 }
 
@@ -6732,7 +6739,7 @@ blockquote p {
   height: 2.8125rem;
   position: absolute;
   top: 0;
-  border-left: solid 1px #1a1a1a;
+  border-left: solid 1px #263436;
   right: 0;
 }
 
@@ -6866,7 +6873,7 @@ ul.off-canvas-list li a {
   transition: background 300ms ease;
 }
 ul.off-canvas-list li a:hover {
-  background: #242424;
+  background: #354a4c;
 }
 
 .move-right > .inner-wrap {
@@ -8621,7 +8628,6 @@ th.hide-for-touch {
 }
 
 html {
-  background: url("http://lorempixel.com/1400/1000/") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -8629,11 +8635,22 @@ html {
 }
 
 body {
-  background: none;
+  background: url("../images/vintageocean2.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.antiquewhite {
+  border: white dashed 2px;
+  padding: 5px 15px;
+  margin-bottom: 10px;
+  background-color: rgba(78, 81, 121, 0.89);
 }
 
 h1 {
-  font-family: 'nexarustsans-black01-webfont', Roboto, Arial, sans-serif;
+  font-family: 'limelightregular', Roboto, Arial, sans-serif;
   line-height: .88;
 }
 
@@ -8648,12 +8665,19 @@ h1 {
 }
 
 .full-main {
-  min-height: 640px;
-  padding-bottom: 44px;
+  /*
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;	
+  */
+  min-height: 100%;
+  margin-bottom: 33px;
 }
 
 .hero-content {
-  background: -webkit-linear-gradient(#000000 25.83%, rgba(0, 0, 0, 0.47) 67.22%);
+  background: -webkit-linear-gradient(#000000 0.83%, rgba(0, 0, 0, 0.47) 67.22%);
   padding: 10px 15px;
   border: solid 1px white;
   color: white;
@@ -8692,7 +8716,7 @@ h1 {
 }
 
 .full-height {
-  height: 100vh;
+  height: 100%;
 }
 
 .headline {
@@ -8779,7 +8803,7 @@ h1 {
 }
 
 .footer {
-  background-color: #777777;
+  background-color: #A53239;
   text-transform: uppercase;
   color: #EFEFEF;
   position: fixed;
@@ -8804,7 +8828,7 @@ h1 {
   color: #EEEEEE;
 }
 .footer .breadcrumbs > * {
-  color: #333333;
+  color: #EFF5F3;
   font-size: inherit;
 }
 .footer > .full {

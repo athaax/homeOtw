@@ -1,11 +1,11 @@
-<div class="full-main full row typography" role="main">
+<div class="full-main full  typography" role="main">
 		  
 		<div class="off-canvas-wrap" data-offcanvas>
 		  <div class="inner-wrap" ng-controller="PortfolioController as portfolio">
-		    <nav class="tab-bar">
+		    <nav class="tab-bar" >
 
 		      <section class="left-small">
-		        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+		        <a class="left-off-canvas-toggle menu-icon" href=""><span></span></a>
 		      </section>
 
 		      <section class="middle tab-bar-section">
@@ -13,13 +13,13 @@
 				<nav class="top-bar" data-topbar role="navigation">
 				  <ul class="title-area inline-list">
 				    <li class="nav-name">
-				      <h1><a href="{$BaseHref}">Jonathan</a></h1>
+				      <h1><a href="#/">Jonathan</a></h1>
 				    </li>
 				    <li class="nav-name">
-				      <h1><a href="{$BaseHref}portfolio">Portfolio</a></h1>
+				      <h1><a href="#portfolio">Portfolio</a></h1>
 				    </li>
 				    <li class="nav-name">
-				      <h1><a href="{$BaseHref}about">Find Me</a></h1>
+				      <h1><a href="#about">Find Me</a></h1>
 				    </li>
 				    <%-- soon enough, soon enough...
 				    <li class="nav-name">
@@ -48,7 +48,7 @@
 		        <li><label>Portfolio</label></li>
 		        <% loop $Projects %>
 					<%--<li><a href="#" ng-click="getProject($ID)">$Title</a></li>--%>
-		          <li><a href="#" ng-click="getProject($ID)">$Image</a></li>
+		          <li><a href="#portfolio/project" ng-click="getProject($ID)">$Image</a></li>
 				<% end_loop %>
 		      </ul>
 		    </aside>
