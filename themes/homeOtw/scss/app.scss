@@ -263,7 +263,9 @@ h1 {
 }
 
 #portfolio-body {
-	
+	> .row {
+		margin-bottom: 10px;
+	}
 }
 
 

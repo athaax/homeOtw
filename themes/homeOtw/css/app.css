@@ -8802,6 +8802,10 @@ h1 {
   border-radius: 50%;
 }
 
+#portfolio-body > .row {
+  margin-bottom: 10px;
+}
+
 .footer {
   background-color: #A53239;
   text-transform: uppercase;
