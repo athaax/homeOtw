@@ -51,24 +51,21 @@
      
      
         <div class="large-5 columns" ng-controller="FindMeController as Find">
-		<h3 class="headline"> Happenings 
-			<a href="#"><img class="timeline-icon right" src="themes/homeOtw/images/icons/github_png/GitHub-Mark-32px.png" /></a>
-			<a href="#"><img class="timeline-icon right" src="themes/homeOtw/images/icons/circle_twitter.png" /></a>
-			<a href="#"><img class="timeline-icon right" src="themes/homeOtw/images/icons/circle_pencil.png" /></a>
-		</h3>
-		<% loop $webActivityFeed.limit(3) %>
-			<% if $Type == 'Twitter' %>
-				<div class="tweet panel">
-					<p>$Tweet</p>
-					<p>$PublishedAt.Format('g:ia \o\n l jS F Y')</p>
-				</div>
-			<% else_if $Type == 'GitHub' %>
-				<div class="git panel">
-					$Content
-					<p>Published at $PublishedAt.Format('g:ia \o\n l jS F Y')</p>
-				</div>
-			<% end_if %>
-		<% end_loop %>
+			<h3 class="headline"> Happenings 
+				<a href="#"><img class="timeline-icon right" src="themes/homeOtw/images/icons/github_png/GitHub-Mark-32px.png" /></a>
+				<a href="#"><img class="timeline-icon right" src="themes/homeOtw/images/icons/circle_twitter.png" /></a>
+				<a href="#"><img class="timeline-icon right" src="themes/homeOtw/images/icons/circle_pencil.png" /></a>
+			</h3>
+			<div class="tweet panel" ng-repeat="tweet in Find.Tweets">
+				<p>{{Content}}</p>
+				<p>{{Published}}</p>
+			</div>
+	
+			<div class="git panel" ng-repeat="commit in Find.Commits">
+				<p>{{Content}}</p>
+				<p>{{Published}}</p>
+			</div>
+
 		</div>
          
       </div>
