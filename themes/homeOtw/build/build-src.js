@@ -219,7 +219,7 @@ app.config(['$routeProvider',
       }).
       when('/about', {
         templateUrl: 'themes/homeOtw/angularPartials/catchall.html',
-        controller: 'StalkMeController'
+        controller: 'FindMeController'
       }).otherwise({
          redirectTo: '/#/'
       });
@@ -282,7 +282,7 @@ app.controller('HomeController', function($scope, $http) {
 
 });
 
-app.controller("StalkMeController", function($scope, $http) {
+app.controller("FindMeController", function($scope, $http) {
     window.MY_SCOPE = $scope;
  
     $scope.getHappenings = function() {
