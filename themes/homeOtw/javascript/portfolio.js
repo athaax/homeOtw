@@ -98,8 +98,7 @@ app.controller("FindMeController", function($scope, $http) {
 
     ]
     
-            
- 
+
     $scope.getHappenings = function() {
         $http.get('http://localhost:8888/homeotw/api')
             .success( function(data, status, headers, config) {
@@ -108,15 +107,8 @@ app.controller("FindMeController", function($scope, $http) {
             .error( function( data, status, headers, config) {
 
             });
-    }
+    };
 
-    
-    var init = function() {
-                $(document).foundation('equalizer', 'reflow');
-
-    }
-    
-    init()
 });
 
 
