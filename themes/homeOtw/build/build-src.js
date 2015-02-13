@@ -219,7 +219,7 @@ app.config(['$routeProvider',
       }).
       when('/about', {
         templateUrl: 'themes/homeOtw/angularPartials/catchall.html',
-        controller: 'StalkMeController'
+        controller: 'FindMeController'
       }).otherwise({
          redirectTo: '/#/'
       });
@@ -282,11 +282,25 @@ app.controller('HomeController', function($scope, $http) {
 
 });
 
-app.controller("StalkMeController", function($scope, $http) {
+app.controller("FindMeController", function($scope, $http) {
     window.MY_SCOPE = $scope;
+
+    $scope.tweets = [
+        {
+            content: "this is a tweet",
+            published: "12/14/84"
+        },
+        {
+            content: "this is a tBETTER weet",
+            published: "0999914/84"
+        }
+
+    ]
+    
+            
  
     $scope.getHappenings = function() {
-        $http.get('http://localhost:8888/homeotw/homepage/webActivityFeed')
+        $http.get('http://localhost:8888/homeotw/api')
             .success( function(data, status, headers, config) {
 
             })
@@ -294,41 +308,6 @@ app.controller("StalkMeController", function($scope, $http) {
 
             });
     }
-
-    $scope.getProject = function($projectID) {
-        //console.log($projectID);
-    
-        $http.get('http://localhost:8888/homeotw/portfolio/getProject/' + $projectID).success(function(data, status, headers, config) {
-        $scope.project = data;
-        console.log('much success');
-        console.log(status);
-        console.log(data);
-        $(document).foundation('equalizer', 'reflow');
-
-    }).error(function(data, status, headers, config) {
-        console.log('error');
-        console.log(status);
-        console.log(data);
-
-    });
-        
-    };
-    
-    $scope.getSkill = function($skillID) {
-        //console.log($projectID);
-    
-        $http.get('http://localhost:8888/homeotw/portfolio/getSkill/' + $skillID).success(function(data, status, headers, config) {
-        $scope.project = data;
-        console.log('much success');
-        console.log(status);
-        //console.log(data);
-    }).error(function(data, status, headers, config) {
-        console.log('error');
-        console.log(status);
-        console.log(data);
-    });
-        
-    };
 
     
     var init = function() {
