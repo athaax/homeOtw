@@ -27,6 +27,12 @@ $(document).foundation({
 });
 
 
+var windowHeight = window.innerHeight;
+if ( ($(".full-height").height()) < windowHeight) {
+	$(".full-height").css("min-height", windowHeight);
+}
+
+
 
 var $tiles = $(".flippy").liveTile({ 
     playOnHover:true,
@@ -209,10 +215,6 @@ app.config(['$routeProvider',
         templateUrl: 'themes/homeOtw/angularPartials/home.html',
         controller: 'HomeController'
       }).
-      when('/portfolio/', {
-        templateUrl: 'themes/homeOtw/angularPartials/portfolioCover.html',
-        controller: 'PortfolioController'
-      }).
       when('/portfolio/project', {
         templateUrl: 'themes/homeOtw/angularPartials/portfolio.html',
         controller: 'PortfolioController'
@@ -227,11 +229,7 @@ app.config(['$routeProvider',
 
 app.controller('PortfolioController', function($scope, $http) {
 	window.MY_SCOPE = $scope;
-    
-    $scope.$on('$routeChangeSuccess', function(event,current,previous) {
-    });
 
-	$scope.project;    
     $scope.getProject = function($projectID) {
     	//console.log($projectID);
     
@@ -246,10 +244,8 @@ app.controller('PortfolioController', function($scope, $http) {
 	    console.log('error');
     	console.log(status);
     	console.log(data);
-
-    });
-	    
-    };
+        });
+	};
     
     $scope.getSkill = function($skillID) {
     	//console.log($projectID);
@@ -269,7 +265,7 @@ app.controller('PortfolioController', function($scope, $http) {
 
 	
 	var init = function() {
-		        $(document).foundation('equalizer', 'reflow');
+		//$(document).foundation('equalizer', 'reflow');
 
 	}
 	
@@ -285,6 +281,8 @@ app.controller('HomeController', function($scope, $http) {
 app.controller("FindMeController", function($scope, $http) {
     window.MY_SCOPE = $scope;
 
+   
+    /*
     $scope.tweets = [
         {
             content: "this is a tweet",
@@ -296,17 +294,27 @@ app.controller("FindMeController", function($scope, $http) {
         }
 
     ]
-    
+    */
 
-    $scope.getHappenings = function() {
-        $http.get('http://localhost:8888/homeotw/api')
+    $scope.getActivityFeed = function() {
+        $http.get('http://localhost:8888/homeotw/api/getActivityFeed/twitter')
             .success( function(data, status, headers, config) {
-
+                $scope.activityFeed = data;
+                console.log(status);
+                //var newWindow = window.open();
+                //newWindow.document.write(data);
             })
             .error( function( data, status, headers, config) {
+                console.log(status);
+                var newWindow = window.open();
+                //newWindow.document.write(data);
 
             });
     };
+    
+    $scope.init = $scope.getActivityFeed();
+    $scope.init();
+
 
 });
 

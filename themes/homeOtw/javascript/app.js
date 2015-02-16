@@ -13,6 +13,12 @@ $(document).foundation({
 });
 
 
+var windowHeight = window.innerHeight;
+if ( ($(".full-height").height()) < windowHeight) {
+	$(".full-height").css("min-height", windowHeight);
+}
+
+
 
 var $tiles = $(".flippy").liveTile({ 
     playOnHover:true,

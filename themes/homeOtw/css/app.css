@@ -8681,7 +8681,6 @@ h1 {
   min-height: 100%;	
   */
   min-height: 100%;
-  margin-bottom: 33px;
 }
 
 .hero-content {
@@ -8696,7 +8695,6 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   max-width: initial;
-  padding-bottom: 10px;
   /*
   -webkit-box-shadow: 0px 4px 6px -6px black;
   -moz-box-shadow: 0px 4px 6px -6px black;

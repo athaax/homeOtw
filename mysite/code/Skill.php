@@ -9,7 +9,7 @@ class Skill extends DataObject {
         'Projects' => 'Project'
     );
     
-	function getCMSFields() {
+	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		return $fields;
 	}

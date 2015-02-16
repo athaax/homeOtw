@@ -1,15 +1,11 @@
 <?php
-class Project extends Page {
+class Project extends DataObject {
 
 	private static $db = array(
-		"History" => "HTMLText",
+		"Contribution" => "HTMLText",
 		"GitHub" => "Varchar(100)",
 		"RepoName" => "Varchar(100)",
 		"Website" => "Varchar(100)"
-		// using these fields as handles to HTMLText datatypes without the HTML.
-		//"HistoryClean" => "Text",
-		//"ContentClean" => "Text"
-		//Trying to get these fields written so they stay current
 	);
 
 	private static $has_one = array(
@@ -19,8 +15,14 @@ class Project extends Page {
 	private static $many_many = array(
         'Skills' => 'Skill'
     );
+    
+    private static $summary_fields = array(
+	    "ID" => "ID",
+	    "Title" => "Title",
+	    "Created" => "Added"
+    );
 	
-	function getCMSFields() {
+	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		
 		$skillsField = new GridField(
@@ -28,15 +30,17 @@ class Project extends Page {
             'Skills',
             $this->Skills(),
             GridFieldConfig_RelationEditor::create()
-        );              
-        $fields->addFieldToTab('Root.Skills', $skillsField);
-        $fields->addFieldToTab('Root.Main', new TextField('GitHub', 'GitHub', 'Project Repo Link'), "Content");
-        $fields->addFieldToTab('Root.Main', new TextField('RepoName', 'GitHub Repo Name'), "Content");
-        $fields->addFieldToTab('Root.Main', new TextField('Website', 'Website', 'Project Live URL'), "Content");
-       	$fields->addFieldToTab('Root.Main', new HTMLEditorField('History'));
-       	$fields->addFieldToTab('Root.Main', new HTMLEditorField('History'));
-       	$fields->addFieldToTab('Root.Main', new UploadField('Image', 'Project Image'));	
-
+        );    
+                  
+        $fields->addFieldToTab('Root.Main', new TextField('GitHub', 'GitHub', 'Project Repo Link'));
+        $fields->addFieldToTab('Root.Main', new TextField('RepoName', 'GitHub Repo Name'));
+        $fields->addFieldToTab('Root.Main', new TextField('Website', 'Website', 'Project Live URL'));
+        
+        $fields->addFieldToTab('Root.Main', new UploadField('Image', 'Project Image'));	
+        $fields->addFieldToTab('Root.Main', new HTMLEditorField('Contribution', "Contribution"));
+        $fields->addFieldToTab('Root.Main', new HTMLEditorField('Content', "Project Background"));
+        
+		$fields->addFieldToTab('Root.Skills', $skillsField);
 
         return $fields;
 	}

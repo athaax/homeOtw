@@ -17,7 +17,7 @@ class HomePage extends Page {
 	function getCMSFields() {
 		$fields = parent::getCMSFields();  
 		//$fields->addFieldToTab('Root.Biography', $gridField);
-		$fields->addFieldToTab('Root.Main', new TextField('BannerText', 'Banner Text'), 'Content');
+		$fields->addFieldToTab('Root.Main', new TextField('BannerText', 'Banner Text'));
 		
         return $fields;
 	}
@@ -52,11 +52,8 @@ class HomePage_Controller extends Page_Controller {
 	}
 	
 	public function webActivityFeed() {
-		$activityFeed = new ActivityFeed();
-		$homepageFeed = $activityFeed->webActivityFeed();
-		
-		//print_r($homepageFeed);
-		return $homepageFeed;
+
+		//return ActivityFeed::webActivityFeed();
 	}
 	
 	public function biography() {

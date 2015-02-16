@@ -16,7 +16,7 @@
 				      <h1><a href="#/">Jonathan</a></h1>
 				    </li>
 				    <li class="nav-name">
-				      <h1><a href="#portfolio">Portfolio</a></h1>
+				      <h1><a href="#" class="left-off-canvas-toggle" ng-click="">Portfolio</a></h1>
 				    </li>
 				    <li class="nav-name">
 				      <h1><a href="#about">Find Me</a></h1>
@@ -62,6 +62,18 @@
 		  	<a class="exit-off-canvas"></a>
 
 		  </div>
+		  <footer id="footer" class="footer" role="contentinfo">
+			<div class="full row">
+				<div class="small-8 medium-6 large-7 columns ">
+					<% include Breadcrumbs %>
+				</div>
+				<div class="small-4 medium-6 large-5 hide-for-small-only columns">
+					<ul class="breadcrumbs">
+						<li class="right">&copy; $Now.Year $SiteConfig.Title</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
 		</div>
-
+		
 </div>

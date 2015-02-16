@@ -31,18 +31,7 @@
 
 	<% include FullContainer %>
 	
-	<footer id="footer" class="footer" role="contentinfo">
-		<div class="full row">
-			<div class="small-8 medium-6 large-7 columns ">
-				<% include Breadcrumbs %>
-			</div>
-			<div class="small-4 medium-6 large-5 hide-for-small-only columns">
-				<ul class="breadcrumbs">
-					<li class="right">&copy; $Now.Year $SiteConfig.Title</li>
-				</ul>
-			</div>
-		</div>
-	</footer>
+
 
 	<%--Login Modal--%>
 	<%--
