@@ -8,45 +8,33 @@
         </li>
 		<li class=" dropdown">
 	
-			<a class="dropdown-toggle" data-toggle="dropdown" href="/">Issues</a>
+			<a class="dropdown-toggle" data-toggle="dropdown" href="/">Work</a>
 		
-	   		<ul class="dropdown-menu" role="menu">
-				<li class="">
-					<a href="/climate-change/">Climate Change</a>	   
-				</li>
-				<li class="">	
-					<a href="/immigration-reform/">Comprehensive Immigration Reform</a>   
-				</li>
-				<li class="">
-					<a href="/economy/">Economic Opportunity</a>   
-				</li>
-				<li class="">
-					<a href="/lgbt-equality/">Expanding Equality</a>
-				</li>
-				<li class="">
-	
-					<a href="/gun-violence-prevention/">Gun Violence Prevention</a>
-				</li>
-				<li class="">
-					<a href="/obamacare/">Health Care</a>
-				</li>
-				<li class="">
-					<a href="/women/">Stand with Women</a>
-				</li>
-	   		</ul>
+	 
 	   	</li>
 
 		<li class=" dropdown">
 	
-			<a class="dropdown-toggle" data-toggle="dropdown" href="/about-ofa/">About</a>
+			<a class="dropdown-toggle" data-toggle="dropdown" href="">Activity</a>
     
 		</li>
 
 		<li class=" dropdown">
 	
-			<a class="dropdown-toggle" data-toggle="dropdown" href="/get-involved/share/">Get Involved</a>
+			<a class="dropdown-toggle" data-toggle="dropdown" href="">Jonathan</a>
 		</li>
 	</ul>
-		
 </nav>
+
+</div>
+<div class="row">
+	<div class="medium-12 columns">
+		<ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-6">
+
+<% loop $Projects %>
+		<li style="padding: 0;">$Image</li>
+<% end_loop %>
+	</ul>
+
+	</div>
 </div>
