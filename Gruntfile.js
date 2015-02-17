@@ -17,9 +17,8 @@ module.exports = function(grunt) {
           '<%=globalConfig.themeDir %>/css/app.css' : '<%=globalConfig.themeDir %>/scss/app.scss'
         },                  // Target
         options: {              // Target options
-          style: 'compressed',
-          //sourcemap: 'true',
-          loadPath: '<%=globalConfig.themeDir %>/bower_components/foundation/scss/'
+          style: 'expanded',
+          loadPath: ['<%=globalConfig.themeDir %>/bower_components/foundation/scss/']
         }
       }
     },
@@ -28,7 +27,7 @@ module.exports = function(grunt) {
 
     concat: {
       js:{
-        src: [ '<%=globalConfig.themeDir %>/javascript/*.js' ],
+        src: [ '<%=globalConfig.themeDir %>/javascript/*.js', '<%=globalConfig.themeDir %>/javascript/**/*.js' ],
         dest: '<%=globalConfig.themeDir %>/build/build-src.js'
       }
     },
@@ -49,7 +48,7 @@ module.exports = function(grunt) {
     
     watch: {
       scripts: {
-        files: ['<%=globalConfig.themeDir %>/js/*.js', '<%=globalConfig.themeDir %>/js/**/*.js'],
+        files: ['<%=globalConfig.themeDir %>/javascript/*.js', '<%=globalConfig.themeDir %>/javascript/**/*.js'],
         tasks: ['concat', 'uglify'],
         options: {
           spawn: true,
@@ -62,7 +61,7 @@ module.exports = function(grunt) {
           spawn: true,
         }
       }
-    },
+    }
 
   });
 

@@ -1,5 +1,7 @@
 @import "settings";
+@import "foundation";
 
+/*
 @import "foundation/components/grid";
 @import "foundation/components/block-grid";
 @import "foundation/components/visibility";
@@ -8,15 +10,57 @@
 @import "foundation/components/buttons";
 @import "foundation/components/type";
 @import "foundation/components/forms";
+*/
 
 @import "monroe";
 
 // colors
 
+
 $twitter : #55ACEE;
 
+html { 
+	//background: url('http://lorempixel.com/1400/1000/') no-repeat center center fixed;
+  	//background: url(../images/mebackground.jpg) no-repeat center center fixed; 
+  	//background-color: rgba(77, 170, 171, 0.61);
+  
+  	//background: url('../images/vintageocean2.jpg') no-repeat center center fixed;
+  	//height: 100%;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+body {
+	//background: url('../images/vintageocean2.jpg') no-repeat center center fixed;
+	//background-color: $heavysugar;
+	background-color: $white-smoke;
+	//height: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.off-canvas-wrap {
+	//height: 100%;
+}
+
+.antiquewhite {
+	border: white dashed 2px;
+	padding: 5px 15px;
+	margin-bottom: 10px;
+	//background-color: rgba(250,235,215,0.66);
+	background-color: rgba(78,81,121,.89);
+	color: white;
+	h1,h2,h3,h4,h5,h6 {
+		color: $heavysugar;
+	}
+}
+
 h1 {
-	font-family: 'nexarustsans-black01-webfont', Roboto, Arial, sans-serif;
+	font-family: 'limelightregular', Roboto, Arial, sans-serif;
 	line-height: .88;
 	}
 
@@ -34,10 +78,27 @@ h1 {
 
 .full-main {
 	//padding-top:22px;
-	min-height: 640px;
-	padding-bottom: 44px;
+	//background-color: rgba(0, 0, 0, 0.12) ;
+	/*
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100%;	
+	*/
+
+	min-height: 100%;
+	//padding-bottom: 44px;
+	//margin-bottom: 33px;
 	//background-image: url(../images/topography.png);
 
+}
+
+.hero-content {
+	background: -webkit-linear-gradient(#000000 .83%, rgba(0,0,0,0.47) 67.22%);
+	padding: 10px 15px;
+	border: solid 1px white;
+	color: white;
 }
 
 
@@ -53,12 +114,12 @@ h1 {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: initial;
-	padding-bottom: 10px;
+	//padding-bottom: 10px;
 	/*
 	-webkit-box-shadow: 0px 4px 6px -6px black;
-	   -moz-box-shadow: 0px 4px 6px -6px black;
-	   */
-	        box-shadow: 0px 8px 20px -15px black;
+	-moz-box-shadow: 0px 4px 6px -6px black;
+	*/
+	box-shadow: 0px 8px 20px -15px black;
 
 }
 
@@ -83,7 +144,7 @@ h1 {
 }
 
 .full-height {
-	height: 100vh;
+	height: 100%;
 }
 
 .headline {
@@ -91,13 +152,11 @@ h1 {
 	@media #{$small-only} { 
 		line-height: 1.9;
 	}
-	
-	
+
 }
 
 .biography {
 	max-height: 100px;
-
 }
 
 .happenings {
@@ -207,12 +266,25 @@ h1 {
 	}
 }
 
+#portfolio-body {
+	> .row {
+		margin-bottom: 10px;
+	}
+}
 
-
+#job-icons {
+	> * {
+	text-align: center;
+	}
+	img {
+		max-height: 175px;
+	}
+}
 
 // Footer Styles
 .footer {
-	background-color: $monsoon;
+	//background-color: $calipoppy;
+	background-color: #333;
 	text-transform: uppercase;
 	color: $silver;
 	position: fixed;  //lets stick our footer to the bottom for a nice, full page app feel
@@ -239,9 +311,14 @@ h1 {
 			color: $smoke;
 		}
 		> * {
-			color: $oil;
+			color: $heavysugar;
 			font-size: inherit;
 		}
+	}
+	
+	> .full {
+		padding-bottom: 0;
+		
 	}
 	
 	> * not .row {

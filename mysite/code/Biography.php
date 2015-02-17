@@ -2,7 +2,7 @@
 class Biography extends Page {
 
 	private static $db = array(
-		"Name" => "Varchar"
+		"Name" => "Varchar(55)"
 
 	);
 

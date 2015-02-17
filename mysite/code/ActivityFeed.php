@@ -1,7 +1,7 @@
 <?php
 class ActivityFeed extends DataObject {
 	
-	public function webActivityFeed() {
+	public static function webActivityFeed() {
 		
 		$activityFeed = array();
 	
@@ -30,9 +30,8 @@ class ActivityFeed extends DataObject {
 		foreach ($activityFeed as $item) {
 			$feedArray->push($item);
 		}
-	
+		
 		return $feedArray->reverse();
 	}
-
 
 }

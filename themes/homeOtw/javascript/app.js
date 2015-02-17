@@ -12,6 +12,14 @@ $(document).foundation({
   }
 });
 
+
+var windowHeight = window.innerHeight;
+if ( ($(".full-height").height()) < windowHeight) {
+	$(".full-height").css("min-height", windowHeight);
+}
+
+
+
 var $tiles = $(".flippy").liveTile({ 
     playOnHover:true,
     repeatCount: 0,
@@ -111,13 +119,15 @@ $(function() {
         allNavs();
     });
 
+    /*
     $(".navmenu-fixed-right.offcanvas, .navmenu-fixed-left.offcanvas").swipe({
         swipe: function(event, direction) {
             $(".navmenu-fixed-right.offcanvas").offcanvas('toggle');
         },
         threshold: 100
     });
-
+    */
+    
 });
 
 
