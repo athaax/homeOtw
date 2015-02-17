@@ -50,7 +50,9 @@
 					<%--<li><a href="#" ng-click="getProject($ID)">$Title</a></li>--%>
 		          <li><a href="#portfolio/project" ng-click="getProject($ID)">$Image</a></li>
 				<% end_loop %>
+
 		      </ul>
+		      <hr>
 		    </aside>
 
 		    <section class="main-section full-height" >

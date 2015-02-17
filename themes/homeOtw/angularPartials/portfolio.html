@@ -2,7 +2,7 @@
 <div class="row" id="portfolio-body" class="hero-content">
 	<div class="medium-12 columns">
 		<div class="row" data-equalizer>
-	    	<div class="medium-5 columns" data-equalizer-watch>
+	    	<div class="medium-6 large-5 columns" data-equalizer-watch>
 				<section style="text-align: center;" >
 					<h1> {{project.project.title}} </h1>
 					<ul class="button-group round" style="display: inline-block;">
@@ -11,12 +11,17 @@
     				</ul>
 				</section>
 			</div>
-			<div class="medium-7 columns" data-equalizer-watch>
+			<div class="medium-6 large-7 columns" >
 		    	<img src="{{project.project.image}}" alt="Image for {{project.project.title}}" />
 		    </div>
 	    </div> <!-- end row -->
-		<div class='row' data-equalizer >
-	        <div class="medium-5 columns">
+		<div class='row'  >
+	        <div class="medium-7 columns">
+	        	<section class="panel">
+					<h3 class="headline">Contributions</h2>
+					<p> {{project.project.Contribution}} </p>
+				</section>
+	        	<!--
 				<section class="panel"  data-equalizer-watch>
 					<h2 class="headline"> Skills </h2>
 					<ul class="skill-list">
@@ -25,20 +30,23 @@
 					  </li>
 					</ul>
 				</section >
+				-->
 			</div>
-			<div class="medium-7 columns" >
-				<section class="panel"  data-equalizer-watch>
-					<h2 class="headline"> Background </h2>
+			<div class="medium-5 columns" >
+				<section class="panel"  >
+					<h3 class="headline"> Background </h2>
 					<p> {{project.project.Content}} </p>
 				</section>
 			</div>
 		</div>	
 		<div class="row">
 			<div class="medium-8 columns end">
+			<!--
 				<section class="panel">
 					<h2 class="headline">Contributions</h2>
 					<p> {{project.project.History}} </p>
 				</section>
+			-->
 			</div>
 		</div>      
     </div>

@@ -1,5 +1,5 @@
 <?php
-class Project extends DataObject {
+class Project extends Page {
 
 	private static $db = array(
 		"Contribution" => "HTMLText",

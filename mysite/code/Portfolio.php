@@ -82,7 +82,7 @@ class Portfolio_Controller extends Page_Controller {
 		$data["project"]["Content"] = $dataObject->noHTML('Content');
 		$data["project"]["id"] = $dataObject->ID;
 		$data["project"]["title"] = $dataObject->Title;
-		$data["project"]["History"] = $dataObject->noHTML('History');
+		$data["project"]["Contribution"] = $dataObject->noHTML('Contribution');
 		$data["project"]["github"] = $dataObject->GitHub;
 		$data["project"]["website"] = $dataObject->Website;
 		$data["project"]["image"] = $dataObject->Image()->Filename;

@@ -24,16 +24,19 @@ app.config(['$routeProvider',
 
 app.controller('PortfolioController', function($scope, $http) {
 	window.MY_SCOPE = $scope;
+            $(document).foundation('equalizer', 'reflow');
 
     $scope.getProject = function($projectID) {
     	//console.log($projectID);
-    
+        $(document).foundation('equalizer', 'reflow');
+
     	$http.get('http://localhost:8888/homeotw/portfolio/getProject/' + $projectID).success(function(data, status, headers, config) {
     	$scope.project = data;
     	console.log('much success');
     	console.log(status);
         console.log(data);
         $(document).foundation('equalizer', 'reflow');
+
 
     }).error(function(data, status, headers, config) {
 	    console.log('error');
@@ -61,6 +64,7 @@ app.controller('PortfolioController', function($scope, $http) {
 	
 	var init = function() {
 		//$(document).foundation('equalizer', 'reflow');
+        $(document).foundation('equalizer', 'reflow');
 
 	}
 	
