@@ -45,7 +45,7 @@
 
 		    <aside class="left-off-canvas-menu">
 		      <ul class="off-canvas-list">
-		        <li><label>Portfolio</label></li>
+		        <li><label>Portfolio </label></li>
 		        <% loop $Projects %>
 					<%--<li><a href="#" ng-click="getProject($ID)">$Title</a></li>--%>
 		          <li><a href="#portfolio/project" ng-click="getProject($ID)">$Image</a></li>
