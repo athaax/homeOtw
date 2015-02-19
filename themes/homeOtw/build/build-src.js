@@ -222,7 +222,11 @@ app.config(['$routeProvider',
       when('/about', {
         templateUrl: 'themes/homeOtw/angularPartials/catchall.html',
         controller: 'FindMeController'
-      }).otherwise({
+      }).
+      when('/security', {
+        templateUrl: 'themes/homeOtw/angularPartials/login.html'
+      }).
+      otherwise({
          //redirectTo: '/#/'
       });
   }]);
@@ -319,8 +323,7 @@ app.controller("FindMeController", function($scope, $http) {
     };
     
     $scope.init = function() {
-        $(document).foundation();
- 
+
     }
 
     $scope.init();

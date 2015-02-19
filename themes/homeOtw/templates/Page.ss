@@ -29,20 +29,18 @@
 	</header>
 	<% end_if %>
 	--%>
-
-	<% include FullContainer %>
+		<%--Login Modal--%>
 	
-
-
-	<%--Login Modal--%>
 	
 	<div id="login-form-modal" class="reveal-modal medium" data-reveal>
 		<h2>Login</h2>
 		$LoginForm
 		<a class="close-reveal-modal">&#215;</a>
 	</div>
-	
 
+
+	<% include FullContainer %>
+	
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<script src="$ThemeDir/bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="$ThemeDir/bower_components/foundation/js/foundation.min.js"></script>

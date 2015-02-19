@@ -70,7 +70,7 @@
 			</div>
 			<div class="small-4 medium-6 large-5 hide-for-small-only columns">
 				<ul class="breadcrumbs">
-					<li class="right">&copy; $Now.Year $SiteConfig.Title</li>
+					<li class="right"><a data-reveal-id="login-form-modal">&copy;</a> $Now.Year $SiteConfig.Title</li>
 				</ul>
 			</div>
 		</div>
