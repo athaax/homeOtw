@@ -13,6 +13,7 @@
 	<meta property="og:description" content="$MetaDescription.ATT" />
 	<meta property="og:url" content="$AbsoluteLink.ATT" />
 	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico?ver=2" />
+	<script src="{$ThemeDir}/bower_components/modernizr/modernizr.js"></script>
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
 	<link rel="stylesheet" href="$ThemeDir/css/MetroJs.css" />
@@ -34,13 +35,13 @@
 
 
 	<%--Login Modal--%>
-	<%--
+	
 	<div id="login-form-modal" class="reveal-modal medium" data-reveal>
 		<h2>Login</h2>
 		$LoginForm
 		<a class="close-reveal-modal">&#215;</a>
 	</div>
-	--%>
+	
 
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<script src="$ThemeDir/bower_components/jquery/dist/jquery.min.js"></script>
@@ -51,7 +52,6 @@
 	<script src="{$ThemeDir}/bower_components/angular-route/angular-route.js"></script>
 
 	<script src="$ThemeDir/build/build-src.js"></script>
-
 
 </body>
 </html>

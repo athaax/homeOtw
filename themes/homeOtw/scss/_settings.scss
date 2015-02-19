@@ -153,6 +153,9 @@ $include-html-global-classes: $include-html-classes;
  $solitude	  : #4C696C;
  $deepindigo  : #4E5179;
  $calipoppy   : #A53239;
+ $parisblue   : #52616D;
+ $parisblack  : #2C343B;
+ $parisred    : #C44741;
  
 
 // We use these as default colors throughout
@@ -295,7 +298,7 @@ $include-html-global-classes: $include-html-classes;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
-// $anchor-font-color: $primary-color;
+ $anchor-font-color: $parisred;
 // $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
 
 // We use these to style the <hr> element
@@ -842,7 +845,7 @@ $include-html-global-classes: $include-html-classes;
 
 // $include-html-off-canvas-classes: $include-html-classes;
 
- $tabbar-bg: $solitude;
+ $tabbar-bg: $parisblue;
 // $tabbar-height: rem-calc(45);
 // $tabbar-icon-width: $tabbar-height;
 // $tabbar-line-height: $tabbar-height;
@@ -992,6 +995,7 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to control the background and border styles
 // $panel-bg: scale-color($white, $lightness: -5%);
+   $panel-bg: white;
 // $panel-border-style: solid;
 // $panel-border-size: 1px;
 
@@ -1401,7 +1405,7 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
- $topbar-bg-color: $solitude;
+ $topbar-bg-color: $parisblue;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
