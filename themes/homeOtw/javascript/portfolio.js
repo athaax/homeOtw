@@ -17,8 +17,12 @@ app.config(['$routeProvider',
       when('/about', {
         templateUrl: 'themes/homeOtw/angularPartials/catchall.html',
         controller: 'FindMeController'
-      }).otherwise({
-         redirectTo: '/#/'
+      }).
+      when('/security', {
+        templateUrl: 'themes/homeOtw/angularPartials/login.html'
+      }).
+      otherwise({
+         //redirectTo: '/#/'
       });
   }]);
 
@@ -79,7 +83,8 @@ app.controller('HomeController', function($scope, $http) {
 
 app.controller("FindMeController", function($scope, $http) {
     window.MY_SCOPE = $scope;
-
+    $(document).foundation('tooltip', 'reflow');
+    console.log('findmecalled');
    
     /*
     $scope.tweets = [
@@ -96,6 +101,7 @@ app.controller("FindMeController", function($scope, $http) {
     */
 
     $scope.getActivityFeed = function() {
+
         $http.get('http://localhost:8888/homeotw/api/getActivityFeed/twitter')
             .success( function(data, status, headers, config) {
                 $scope.activityFeed = data;
@@ -105,15 +111,17 @@ app.controller("FindMeController", function($scope, $http) {
             })
             .error( function( data, status, headers, config) {
                 console.log(status);
-                var newWindow = window.open();
+                //var newWindow = window.open();
                 //newWindow.document.write(data);
 
             });
     };
     
-    $scope.init = $scope.getActivityFeed();
-    $scope.init();
+    $scope.init = function() {
 
+    }
+
+    $scope.init();
 
 });
 
