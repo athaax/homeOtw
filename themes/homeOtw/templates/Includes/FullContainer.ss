@@ -54,8 +54,13 @@
 	    </aside>
 
 	    <section class="main-section full-height" >
+	    	<div class="full row translucent">
+	    		<div class="small-12 columns ">
+	   				<ng-view> </ng-view>
 
-	   		<ng-view> </ng-view>
+	    		</div>
+	    	</div>
+
 
 	    </section>
 
