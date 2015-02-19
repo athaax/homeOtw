@@ -48,8 +48,16 @@
 
 	<script src="{$ThemeDir}/bower_components/angular/angular.js"></script>
 	<script src="{$ThemeDir}/bower_components/angular-route/angular-route.js"></script>
-
 	<script src="$ThemeDir/build/build-src.js"></script>
+
+<script>
+
+		
+</script>
+ 
+
+	
+
 
 </body>
 </html>

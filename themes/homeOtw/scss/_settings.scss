@@ -323,11 +323,11 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to style blockquotes
 // $blockquote-font-color: scale-color($header-font-color, $lightness: 35%);
-// $blockquote-padding: rem-calc(9 20 0 19);
-// $blockquote-border: 1px solid $gainsboro;
-// $blockquote-cite-font-size: rem-calc(13);
-// $blockquote-cite-font-color: scale-color($header-font-color, $lightness: 23%);
-// $blockquote-cite-link-color: $blockquote-cite-font-color;
+ $blockquote-padding: rem-calc(5 20 0 18);
+ $blockquote-border: 1px solid scale-color($parisblue, $lightness: 11%);;
+ $blockquote-cite-font-size: rem-calc(11);
+ $blockquote-cite-font-color: scale-color($header-font-color, $lightness: 11%);
+ $blockquote-cite-link-color: scale-color($blockquote-cite-font-color, $lightness: 11%);
 
 // Acronym styles
 // $acronym-underline: 1px dotted $gainsboro;

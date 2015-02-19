@@ -116,13 +116,17 @@ h1 {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: initial;
-	//padding-bottom: 10px;
-	/*
-	-webkit-box-shadow: 0px 4px 6px -6px black;
-	-moz-box-shadow: 0px 4px 6px -6px black;
-	*/
-	box-shadow: 0px 8px 20px -15px black;
 
+}
+
+.responsive {
+	width: 100%;
+	height: auto;
+	max-height: 500px;
+}
+
+.no-padding {
+	padding: 0 !important;
 }
 
 .push-bottom {
@@ -141,18 +145,46 @@ h1 {
 	//background-color: grey;
 }
 
+
+
+.panel {
+	
+	box-shadow: 10px 0px 25px 0px $parisblack, -10px 0px 25px 0px $parisblack;
+
+}
+
+.goodquote {
+	max-width: 475px;
+	margin: 0 auto;
+	//padding: 10%;
+	position: absolute;
+	@media #{$medium-up} { 
+		bottom: 40%;
+		left: 11%
+	}
+	
+	@media #{$small-only} {
+		position: relative;
+		
+	}
+
+}
+
+
 .outlined {
 	border: solid 1px black;
 }
 
 .main-section {
 	//padding: 1.5em;
-	margin-top: 1em;
+	//margin-top: 1em;
 }
 
 .full-height {
 	height: 100%;
 }
+
+
 
 .headline {
 	border-bottom: $white-smoke 1px solid;
@@ -285,6 +317,9 @@ h1 {
 	}
 	img {
 		max-height: 175px;
+	}
+	li {
+		//background-color: $heavysugar;
 	}
 }
 

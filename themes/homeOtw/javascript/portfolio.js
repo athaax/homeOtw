@@ -78,6 +78,14 @@ app.controller('PortfolioController', function($scope, $http) {
 
 app.controller('HomeController', function($scope, $http) {
     window.MY_SCOPE = $scope;
+   // $(document).foundation();
+    $(document).foundation('equalizer', 'reflow');
+
+   // check if all async requests are done. 
+
+
+
+
 
 });
 
