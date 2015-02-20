@@ -8,11 +8,19 @@
 //@import "foundation/components/dropdown";
 @import "foundation/components/dropdown-buttons";
 @import "foundation/components/buttons";
+@import "foundation/components/split-buttons";
+@import "foundation/components/button-groups.scss";
+@import "foundation/components/top-bar";
 @import "foundation/components/type";
 @import "foundation/components/forms";
+@import "foundation/components/breadcrumbs";
+@import "foundation/components/offcanvas";
+@import "foundation/components/reveal";
+@import "foundation/components/panels";
+@import "foundation/components/inline-lists";
 
 
-@import "monroe";
+//@import "monroe";
 @import "goodreads";
 
 // colors
@@ -195,7 +203,7 @@ h1 {
 	border-bottom: 3px inset $calipoppy;
 }
 .diamonds {
-	background: url('../images/subtlepatterns/whitediamond_@2x.png') center center fixed;
+	background: url('../images/subtlepatterns/whitediamond_@2x.png') center center;
 }
 
 

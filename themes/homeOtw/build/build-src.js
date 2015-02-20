@@ -208,7 +208,7 @@ function reflow(pathvar, status) {
 	$(document).foundation('equalizer', 'reflow');
 }
 
-function loadScript( url, callback ) {
+window.loadScript = function loadScript( url, callback ) {
   var script = document.createElement( "script" )
   script.type = "text/javascript";
   if(script.readyState) {  //IE
@@ -230,7 +230,7 @@ function loadScript( url, callback ) {
 
 
 // call the function...
-loadScript('https://www.goodreads.com/review/custom_widget/3575393.currently-reading?cover_position=left&cover_size=medium&num_books=5&order=a&shelf=currently-reading&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=date_added&widget_bg_color=FFFFFF&widget_bg_transparent=&widget_border_width=1&widget_id=1424323252&widget_text_color=000000&widget_title_size=medium&widget_width=medium',
+window.loadScript('https://www.goodreads.com/review/custom_widget/3575393.currently-reading?cover_position=left&cover_size=medium&num_books=5&order=a&shelf=currently-reading&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=date_added&widget_bg_color=FFFFFF&widget_bg_transparent=&widget_border_width=1&widget_id=1424323252&widget_text_color=000000&widget_title_size=medium&widget_width=medium',
  function() {
 	$(document).foundation('equalizer', 'reflow');
 });
@@ -320,7 +320,12 @@ app.controller('HomeController', function($scope, $http) {
     window.MY_SCOPE = $scope;
    // $(document).foundation();
     $(document).foundation('equalizer', 'reflow');
-
+    $(".navButton").removeClass("active");
+    $("#homeButton").addClass("active");
+    window.loadScript('https://www.goodreads.com/review/custom_widget/3575393.currently-reading?cover_position=left&cover_size=medium&num_books=5&order=a&shelf=currently-reading&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=date_added&widget_bg_color=FFFFFF&widget_bg_transparent=&widget_border_width=1&widget_id=1424323252&widget_text_color=000000&widget_title_size=medium&widget_width=medium',
+     function() {
+        $(document).foundation('equalizer', 'reflow');
+    });
    // check if all async requests are done. 
 
 
@@ -333,21 +338,8 @@ app.controller("FindMeController", function($scope, $http) {
     window.MY_SCOPE = $scope;
     $(document).foundation('tooltip', 'reflow');
     console.log('findmecalled');
-   
-    /*
-    $scope.tweets = [
-        {
-            content: "this is a tweet",
-            published: "12/14/84"
-        },
-        {
-            content: "this is a tBETTER weet",
-            published: "0999914/84"
-        }
-
-    ]
-    */
-
+    $(".navButton").removeClass("active");
+    $("#aboutButton").addClass("active");
     $scope.getActivityFeed = function() {
 
         $http.get('http://localhost:8888/homeotw/api/getActivityFeed/twitter')

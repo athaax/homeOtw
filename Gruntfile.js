@@ -11,14 +11,15 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     
     //compile the sass
-    libsass: {
+    sass: {
       dist: { 
         files: {
           '<%=globalConfig.themeDir %>/css/app.css' : '<%=globalConfig.themeDir %>/scss/app.scss'
         },                  // Target
         options: {              // Target options
-          style: 'expanded',
+          style: 'compact',
           loadPath: ['<%=globalConfig.themeDir %>/bower_components/foundation/scss/']
+          //sourcemap: 'auto'
         }
       }
     },
@@ -37,7 +38,7 @@ module.exports = function(grunt) {
 
     uglify: {
       options: {
-        mangle: true
+        mangle: false
       },
       my_target:{
         files:{
@@ -68,15 +69,12 @@ module.exports = function(grunt) {
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  //grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-libsass');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-simple-watch');
 
-
-
   // Default task(s).
   // Note: order of tasks is very important
-  grunt.registerTask('default', ['libsass', 'concat', 'uglify', 'watch']);
+  grunt.registerTask('default', ['sass', 'concat', 'uglify', 'watch']);
 
 };
