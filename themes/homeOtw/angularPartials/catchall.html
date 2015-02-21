@@ -46,24 +46,26 @@
 		</h3>
 		<aside id="twitterWidg">
 			<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/athaax" data-widget-id="568263214022930432">Tweets by @athaax</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+ 	twttr.widgets.load();</script>
+
 		</aside>
+
 		<script>
+		/*
 			if (window.twitterWidgetHtml) {
 				$('#twitterWidg').html(window.twitterWidgetHtml);
+				twttr.widgets.load()
+
 			} else {
 
 				function cacheTweets() {
 					window.twitterWidgetHtml = $("#twitterWidg").html();
 				}
-				!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";js.setAttribute('onload', "twttr.events.bind('rendered',function(e) {cacheTweets()});");fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-
-
-
-
-		
+				!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";js.setAttribute('onload', "twttr.events.bind('rendered',function(e) {cacheTweets()});");fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");		
 			}
 
-
+		*/
 		</script>
 		<!--
 		<div class="tweet panel" ng-repeat="tweet in tweets">

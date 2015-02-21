@@ -58,6 +58,10 @@ body {
 	//height: 100%;
 }
 
+#main-column {
+
+}
+
 .antiquewhite {
 	border: white dashed 2px;
 	padding: 5px 15px;
@@ -165,8 +169,8 @@ h1 {
 }
 
 .text-shadow {
-	color: white; 
-	text-shadow: white 0.1em 0.1em 0.2em;
+	color: black; 
+	text-shadow: $parisblack 0.1em 0.1em 0.2em;
 }
 
 .rectangle {
@@ -186,6 +190,7 @@ h1 {
 	max-width: 475px;
 	margin:11px auto;
 	//padding: 10%;
+	/*
 	position: absolute;
 	@media #{$medium-up} { 
 		bottom: 40%;
@@ -196,14 +201,20 @@ h1 {
 		position: relative;
 		
 	}
+	*/
+}
 
+.square {
+	height: 50px;
+	width: 100%;
+	background: blue;
 }
 
 .heading {
 	border-bottom: 3px inset $calipoppy;
 }
 .diamonds {
-	background: url('../images/subtlepatterns/whitediamond_@2x.png') center center;
+	background: url('../images/subtlepatterns/whitediamond_@2x.png') center center repeat;
 }
 
 
@@ -214,6 +225,8 @@ h1 {
 .main-section {
 	//padding: 1.5em;
 	//margin-top: 1em;
+	//max-width: 1200px;
+	//margin: 0 auto;
 }
 
 .full-height {
