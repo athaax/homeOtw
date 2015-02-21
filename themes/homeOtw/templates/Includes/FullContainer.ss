@@ -82,7 +82,7 @@
 	    --%>
 	    <%-- begin main-section --%>
 	    <section class="main-section full-height" >
-	    	<main class="full row ">
+	    	<main class="full row collapse">
 	    		<div class="small-12 column" id="main-column">
 
 	   				<div class="row tb-padding lr-padding heading diamonds">
