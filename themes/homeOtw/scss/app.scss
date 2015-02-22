@@ -170,7 +170,7 @@ h1 {
 
 .text-shadow {
 	color: black; 
-	text-shadow: $parisblack 0.1em 0.1em 0.2em;
+	text-shadow: $parisblue 0.01em 0.01em 0.02em;
 }
 
 .rectangle {
@@ -370,12 +370,23 @@ h1 {
 	li {
 		//border-left: solid 1px $solitude;
 		//border-right: solid 1px $solitude;
-		//background: scale-color(white, $lightness: 10%);
+		background: scale-color(white, $lightness: 10%);
+		padding: 0;
+		
+		:hover {
+		
+		}
+		
+		a {
+			display: block;
+			padding: 11px 17px;
+		}
 	}
 
 	li:not(:last-child) {
-		//border-bottom: dashed 1px $solitude;	
+		border-right: solid 1px $solitude;	
 	}
+	
 }
 
 // Footer Styles

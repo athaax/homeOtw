@@ -3,28 +3,14 @@
       <div class="row">
         <div class="large-12 columns">
           <h4>Work</h4>
-          <p>Click on each image!</p>
 
+        </ul>
           <ul class="clearing-thumbs small-block-grid-1 medium-block-grid-2 large-block-grid-4" data-clearing>
-            <li>
-              <a href="http://placehold.it/800x500&text=[img]">
-              <img data-caption="caption here..." src="http://placehold.it/800x500&text=[img]"></a>
+            <li ng-repeat="proj in projects">
+              <a ng-click="getProject({{proj.id}})">
+              <img data-caption="{{proj.title}}" ng-src="{{proj.image.path}}"></a>
             </li>
-            <li>
-              <a href="http://placehold.it/800x500&text=[img]"><img data-caption="caption 2 here..." src="http://placehold.it/800x500&text=[img]"></a>
-            </li>
-            <li>
-              <a href="http://placehold.it/800x500&text=[img]"><img data-caption="caption 3 here..." src="http://placehold.it/800x500&text=[img]"></a>
-            </li>
-            <li>
-              <a href="http://placehold.it/800x500&text=[img]"><img data-caption="caption 4 here..." src="http://placehold.it/800x500&text=[img]"></a>
-            </li>
-            <li>
-              <a href="http://placehold.it/800x500&text=[img]"><img data-caption="caption 5 here..." src="http://placehold.it/800x500&text=[img]"></a>
-            </li>       
-            <li>
-              <a href="http://placehold.it/800x500&text=[img]"><img data-caption="caption 6 here..." src="http://placehold.it/800x500&text=[img]"></a>
-            </li> 
+           
           </ul>
         </div>
       </div>

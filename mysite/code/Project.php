@@ -81,5 +81,9 @@ class Project extends Page {
 		return $ghNestedArray;
 		
 	}
+	
+	public function canView($member = NULL) {
+		return true;
+	}
 
 }

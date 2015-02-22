@@ -112,10 +112,25 @@
 						</div>
 					</div>
 
+					<div class="full row collapse heading" data-equalizer>
+						<div class="small-12 column" data-equalizer-watch>
+							<ul class="small-block-grid-3" id="job-icons">
+								
+								<!-- <li><img class="shadow" src="http://placehold.it/1000x400&text=[%20img%201%20]"/></li> -->
+								<li><a><span style='color:black; text-align:center;'>Blog</span></a></li>
+								<li><a href="#portfolio"><span style='color:black; text-align:center;'>Portfolio</span></a></li>
+								<li><a href="#about"><span  style='color:black;'>Find Me</span></a></li>
+								
+							</ul>	 
+							
+						</div>
+
+					</div> 
+
 	   				<ng-view> </ng-view>
 
-	   				<div class=" row " style="min-height: 100px;">
-						<div class="small-5 small-centered columns  ">
+	   				<div class=" row " style="min-height: 100px; max-width: 1200px;">
+						<div class="small-12 medium-5 end columns  ">
 							
 							<blockquote class="goodquote">
 							  	<div id="gr_quote_body" class="text-shadow">

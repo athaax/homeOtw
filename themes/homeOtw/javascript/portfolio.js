@@ -10,6 +10,10 @@ app.config(['$routeProvider',
         templateUrl: 'themes/homeOtw/angularPartials/home.html',
         controller: 'HomeController'
       }).
+      when('/portfolio', {
+        templateUrl: 'themes/homeOtw/angularPartials/portfolioCover.html',
+        controller: 'PortfolioController'
+      }).
       when('/portfolio/project', {
         templateUrl: 'themes/homeOtw/angularPartials/portfolio.html',
         controller: 'PortfolioController'
@@ -48,6 +52,28 @@ app.controller('PortfolioController', function($scope, $http) {
     	console.log(data);
         });
 	};
+
+    $scope.getProjects = function($projectID) {
+        //console.log($projectID);
+        //$(document).foundation('equalizer', 'reflow');
+
+        $http.get('http://localhost:8888/homeotw/portfolio/getProjects/').success(function(data, status, headers, config) {
+            $scope.projects = data;
+            console.log('much success');
+            console.log(status);
+            window.open("data:text/json," + encodeURIComponent(data), "_blank");
+            //newWindow.document.write(data);
+
+        }).error(function(data, status, headers, config) {
+            console.log('error');
+            console.log(status);
+            var newWindow = window.open();
+            newWindow.document.write(data);
+            });
+        };
+
+
+
     
     $scope.getSkill = function($skillID) {
     	//console.log($projectID);
@@ -67,8 +93,7 @@ app.controller('PortfolioController', function($scope, $http) {
 
 	
 	var init = function() {
-		//$(document).foundation('equalizer', 'reflow');
-        $(document).foundation('equalizer', 'reflow');
+        $scope.getProjects();
 
 	}
 	

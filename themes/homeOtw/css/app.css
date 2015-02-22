@@ -1348,7 +1348,7 @@ min-height: 100%;
 
 .translucent { background: rgba(255, 255, 255, 0.3); }
 
-.text-shadow { color: black; text-shadow: #2C343B 0.1em 0.1em 0.2em; }
+.text-shadow { color: black; text-shadow: #52616D 0.01em 0.01em 0.02em; }
 
 .rectangle { max-height: 500px; }
 
@@ -1408,6 +1408,9 @@ position: absolute;
 
 #job-icons > * { text-align: center; }
 #job-icons img { max-height: 175px; }
+#job-icons li { background: white; padding: 0; }
+#job-icons li a { display: block; padding: 11px 17px; }
+#job-icons li:not(:last-child) { border-right: solid 1px #4C696C; }
 
 .footer { background-color: #2C343B; text-transform: uppercase; color: #EFEFEF; position: fixed; bottom: 0; right: 0; left: 0; }
 .footer ul { margin-bottom: 0; }

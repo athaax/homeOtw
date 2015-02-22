@@ -38,11 +38,13 @@ class Portfolio_Controller extends Page_Controller {
 	 */
 	 
 	private  static $allowed_actions = array (
-		"getProject"
+		"getProject",
+		"getProjects"
 	);
 	
 	private static $url_handlers = array(
-		'getproject/$ID' => 'getProject'
+		'getproject/$ID' => 'getProject',
+		'getProjects' => 'getProjects'
 	);
 	
 	
@@ -68,7 +70,55 @@ class Portfolio_Controller extends Page_Controller {
 
 	}
 	
-	public function generateJsonFeed($dataObject){
+	public function getProjects($httpRequest) {
+		//$isGET = $httpRequest->isGET();
+		//print_r($isGET);
+		//$isAjax = $httpRequest->getHeaders();
+		//print_r($isAjax);
+		
+		//$this->addHeader('Content-Type', 'text/json');
+		
+		$converter = new JSONDataFormatter();
+
+		$projects = Project::get()->toArray();
+		$projects;	
+		$data = ArrayList::create($projects);
+		
+		//$bull = $projects->toArray(); //bullshit lazy loading orm BULLSHIT
+		//print_r($data);
+		foreach ($data as $ata) {
+			
+			$fuck = $ata;
+			print $fuck;
+		}
+		
+		//return json_encode($projects);
+		return $converter->convertDataObjectSet($data);
+
+		
+		//return $converter->convertDataObject($projects);
+		//print_r(gettype($project));
+		/*
+			
+		print_r($projects->dataClass);
+		$converter = new JSONDataFormatter();		
+			
+			
+			
+		$projectsArray = new ArrayList();
+		
+		foreach( $projects as $proj) {
+			$projData = $this->generateJsonFeed($proj, "single");
+			$projectsArray->push($projData);
+			
+		}
+		//print_r($projectsArray);
+		return json_encode(;
+ 		*/
+
+	}
+	
+	public function generateJsonFeed($dataObject, $single){
 		
 		/*
 		* TODO:
@@ -95,8 +145,12 @@ class Portfolio_Controller extends Page_Controller {
 		//$data["project"]["Skills"] = $dataObject->Image()->Filename;
 
 		//$data["project"]["ContributionFeed"] = $dataObject->gitHubContributionFeed();
+		if ($single = "single") {
+			return $data;
+		} else {
+			return json_encode($data);
 
- 		return json_encode($data);
+		}
  	}
 
 	
