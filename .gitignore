@@ -3,7 +3,8 @@
 html/*
 .DS_Store
 dashboard/
-vendor/
+vendor/composer/
+vendor/autoload.php
 cms/
 blog/
 betterbuttons/
