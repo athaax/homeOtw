@@ -286,6 +286,12 @@ $(document).ready(function(){
 
 (function() {
 
+    if (window.location.hostname === "localhost") {
+        var relativeBase = '/homeOtw/';
+    } else {
+        var relativeBase = '/';
+    }
+
     var app = angular.module('portfolio', ['ngRoute']);
 
     //perf
@@ -324,7 +330,7 @@ $(document).ready(function(){
             //console.log($projectID);
             //$(document).foundation('equalizer', 'reflow');
 
-            $http.get('/homeotw/portfolio/getProjects/', {cache: true}).success(function(data, status, headers, config) {
+            $http.get( relativeBase + 'portfolio/getProjects/', {cache: true}).success(function(data, status, headers, config) {
                 $scope.projects = data;
                 console.log(status);
                 console.log(data);
@@ -350,7 +356,7 @@ $(document).ready(function(){
         $scope.getSkill = function($skillID) {
         	//console.log($projectID);
         
-        	$http.get('/homeotw/portfolio/getSkill/' + $skillID).success(function(data, status, headers, config) {
+        	$http.get( relativeBase + 'portfolio/getSkill/' + $skillID).success(function(data, status, headers, config) {
         	$scope.project = data;
         	console.log('much success');
         	console.log(status);
@@ -383,7 +389,7 @@ $(document).ready(function(){
 
         $scope.getProject = function($projectID) {
 
-            $http.get('/homeotw/portfolio/getProject/' + $projectID, {cache: true}).success(function(data, status, headers, config) {
+            $http.get( relativeBase + 'portfolio/getProject/' + $projectID, {cache: true}).success(function(data, status, headers, config) {
                 $scope.project = data;
                 console.log(status);
                 console.log(data);
@@ -449,7 +455,7 @@ $(document).ready(function(){
         $scope.submitMessage = function() {
             console.log($scope.message.message);
             console.log('hit submit!');
-            $http.post('/homeotw/submit/message', {
+            $http.post( relativeBase + 'submit/message', {
                 name: $scope.message.name,
                 email: $scope.message.email,
                 message: $scope.message.message
