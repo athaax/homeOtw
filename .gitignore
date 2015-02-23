@@ -4,6 +4,8 @@ html/*
 .DS_Store
 dashboard/
 cms/
+vendor/composer
+vendor/composer.php
 blog/
 betterbuttons/
 event_calendar/
