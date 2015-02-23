@@ -14,9 +14,9 @@ app.config(['$routeProvider',
         templateUrl: 'themes/homeOtw/angularPartials/portfolioCover.html',
         controller: 'PortfolioController'
       }).
-      when('/portfolio/project', {
+      when('/portfolio/project/:projectID', {
         templateUrl: 'themes/homeOtw/angularPartials/portfolio.html',
-        controller: 'PortfolioController'
+        controller: 'ProjectController'
       }).
       when('/about', {
         templateUrl: 'themes/homeOtw/angularPartials/catchall.html',
@@ -26,42 +26,23 @@ app.config(['$routeProvider',
         templateUrl: 'themes/homeOtw/angularPartials/login.html'
       }).
       otherwise({
-         //redirectTo: '/#/'
+         redirectTo: '/#/'
       });
   }]);
 
-app.controller('PortfolioController', function($scope, $http) {
+app.controller('PortfolioController', function($scope, $location, $http) {
 	window.MY_SCOPE = $scope;
-            $(document).foundation('equalizer', 'reflow');
-
-    $scope.getProject = function($projectID) {
-    	//console.log($projectID);
-        $(document).foundation('equalizer', 'reflow');
-
-    	$http.get('http://localhost:8888/homeotw/portfolio/getProject/' + $projectID).success(function(data, status, headers, config) {
-    	$scope.project = data;
-    	console.log('much success');
-    	console.log(status);
-        console.log(data);
-        $(document).foundation('equalizer', 'reflow');
-
-
-    }).error(function(data, status, headers, config) {
-	    console.log('error');
-    	console.log(status);
-    	console.log(data);
-        });
-	};
 
     $scope.getProjects = function($projectID) {
         //console.log($projectID);
         //$(document).foundation('equalizer', 'reflow');
 
-        $http.get('http://localhost:8888/homeotw/portfolio/getProjects/').success(function(data, status, headers, config) {
+        $http.get('http://localhost:8888/homeotw/portfolio/getProjects/', {cache: true}).success(function(data, status, headers, config) {
             $scope.projects = data;
             console.log('much success');
             console.log(status);
-            window.open("data:text/json," + encodeURIComponent(data), "_blank");
+            console.log(data);
+            //window.open("data:text/json," + encodeURIComponent(data), "_blank");
             //newWindow.document.write(data);
 
         }).error(function(data, status, headers, config) {
@@ -69,12 +50,9 @@ app.controller('PortfolioController', function($scope, $http) {
             console.log(status);
             var newWindow = window.open();
             newWindow.document.write(data);
-            });
-        };
+        });
+    };
 
-
-
-    
     $scope.getSkill = function($skillID) {
     	//console.log($projectID);
     
@@ -83,23 +61,48 @@ app.controller('PortfolioController', function($scope, $http) {
     	console.log('much success');
     	console.log(status);
         //console.log(data);
-    }).error(function(data, status, headers, config) {
-	    console.log('error');
-    	console.log(status);
-    	console.log(data);
-    });
+        }).error(function(data, status, headers, config) {
+    	    console.log('error');
+        	console.log(status);
+        	console.log(data);
+        });
 	    
     };
 
 	
-	var init = function() {
+	$scope.init = function() {
         $scope.getProjects();
 
-	}
+	};
 	
-	init()
+	$scope.init();
+
 });
 
+app.controller('ProjectController', function($scope, $http, $location, $routeParams) {
+
+    //console.log($routeParams.projectID);
+
+    $scope.getProject = function($projectID) {
+
+        $http.get('http://localhost:8888/homeotw/portfolio/getProject/' + $projectID, {cache: true}).success(function(data, status, headers, config) {
+            $scope.project = data;
+            console.log(status);
+            console.log(data);
+
+        }).error(function(data, status, headers, config) {
+            console.log('error');
+            console.log(status);
+            console.log(data);
+            });
+    };
+
+    $scope.init = function() {
+        $scope.getProject($routeParams.projectID);
+    };
+
+    $scope.init();
+});
 
 app.controller('HomeController', function($scope, $http) {
     window.MY_SCOPE = $scope;

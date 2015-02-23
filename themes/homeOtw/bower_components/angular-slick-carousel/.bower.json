@@ -1,0 +1,15 @@
+{
+  "name": "angular-slick-carousel",
+  "homepage": "https://github.com/kbdaitch/angular-slick-carousel",
+  "version": "2.1.1",
+  "_release": "2.1.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.1.1",
+    "commit": "6626ab3e91933ee61b519afa318d64e09e23877f"
+  },
+  "_source": "git://github.com/kbdaitch/angular-slick-carousel.git",
+  "_target": "~2.1.1",
+  "_originalSource": "angular-slick-carousel",
+  "_direct": true
+}

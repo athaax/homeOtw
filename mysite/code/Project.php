@@ -5,7 +5,8 @@ class Project extends Page {
 		"Contribution" => "HTMLText",
 		"GitHub" => "Varchar(100)",
 		"RepoName" => "Varchar(100)",
-		"Website" => "Varchar(100)"
+		"Website" => "Varchar(100)",
+		"imagepath" => "Varchar(100)"
 	);
 
 	private static $has_one = array(

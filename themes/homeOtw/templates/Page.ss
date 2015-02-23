@@ -31,7 +31,7 @@
 
 		<script src="{$ThemeDir}/bower_components/angular/angular.min.js"></script>
 		<script src="{$ThemeDir}/bower_components/angular-route/angular-route.min.js"></script>
-		<script src="$ThemeDir/build/build.js"></script>
+		<script src="$ThemeDir/build/build-src.js"></script>
 
 	</body>
 </html>

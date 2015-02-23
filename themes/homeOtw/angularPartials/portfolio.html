@@ -1,27 +1,29 @@
 
-<div class="row" id="portfolio-body" class="hero-content">
+<div class="row" id="portfolio-body" class="hero-content" style="max-width: 1200px; margin: 0 auto;">
 	<div class="medium-12 columns">
 		<div class="row" data-equalizer>
 	    	<div class="medium-6 large-5 columns" data-equalizer-watch>
 				<section style="text-align: center;" >
-					<h1> {{project.project.title}} </h1>
-					<ul class="button-group round" style="display: inline-block;">
-						<li><a href="{{project.project.website}}" class="radius small button">View Live</a></li>
-						<li><a href="{{project.project.github}}" class="radius small button">View on GitHub</a></li>
+					<h2> {{project.Title}} </h2>
+					<ul class="button-group small round" style="display: inline-block;">
+						<li><a href="{{project.website}}" class="radius small button">View Live</a></li>
+						<li><a href="{{project.github}}" class="radius small button">View on GitHub</a></li>
     				</ul>
+				</section>
+				<section class="panel">
+					<h4 class="headline">Contributions</h4>
+					<p> {{project.Contribution}} </p>
 				</section>
 			</div>
 			<div class="medium-6 large-7 columns" >
-		    	<img src="{{project.project.image}}" alt="Image for {{project.project.title}}" />
+		    	<img src="{{project.imagepath}}" alt="Image for {{project.title}}" />
 		    </div>
 	    </div> <!-- end row -->
+	    <!--
 		<div class='row'  >
 	        <div class="medium-7 columns">
-	        	<section class="panel">
-					<h3 class="headline">Contributions</h2>
-					<p> {{project.project.Contribution}} </p>
-				</section>
-	        	<!--
+
+	        	<!- -
 				<section class="panel"  data-equalizer-watch>
 					<h2 class="headline"> Skills </h2>
 					<ul class="skill-list">
@@ -30,15 +32,16 @@
 					  </li>
 					</ul>
 				</section >
-				-->
+				- ->
 			</div>
 			<div class="medium-5 columns" >
 				<section class="panel"  >
 					<h3 class="headline"> Background </h2>
-					<p> {{project.project.Content}} </p>
+					<p> {{project.Content}} </p>
 				</section>
 			</div>
 		</div>	
+		-->
 		<div class="row">
 			<div class="medium-8 columns end">
 			<!--

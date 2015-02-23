@@ -52,8 +52,35 @@ class Portfolio_Controller extends Page_Controller {
 		parent::init();
 	}
 	
+	public function getProjects($httpRequest) {
+		
+		$converter = new JSONDataFormatter();
+
+		$input = Project::get(); //returns DataList
+		//$projects = new DataList("Project");
 	
+		$projectsNArray = $input->toArray(); //returns array
+		//$projectsArray = $projectsNArray->toArray();
+		$projectsArrayList = ArrayList::create($projectsNArray); //returns ArrayList
+		$newArrayList = new ArrayList();
+		
+		foreach ($projectsArrayList as $proj) {
+			if ($imglink = $proj->Image()->Filename) {
+				$proj->setField("imagepath", $imglink);
+				$proj->testField = "tesing";
+				$newArrayList->push($proj);
+			} else {
+				$proj->setField("imagepath", "missing");
+				$newArrayList->push($proj);
+			}
+		}
+				
+		$result = $converter->convertDataObjectSet($newArrayList); // should return a valid JSON string
+		
+		return $result; 
 	
+	}
+
 	public function getProject($httpRequest) {
 		//$isGET = $httpRequest->isGET();
 		//print_r($isGET);
@@ -61,63 +88,23 @@ class Portfolio_Controller extends Page_Controller {
 		//print_r($isAjax);
 		
 		$project_id = $httpRequest->param('ID');
-		$project = Project::get()->filter(array(
-			'ID' => $project_id
-			))->First();
-		
-		//print_r(gettype($project));
- 		return $this->generateJsonFeed($project);
-
-	}
-	
-	public function getProjects($httpRequest) {
-		//$isGET = $httpRequest->isGET();
-		//print_r($isGET);
-		//$isAjax = $httpRequest->getHeaders();
-		//print_r($isAjax);
-		
-		//$this->addHeader('Content-Type', 'text/json');
-		
 		$converter = new JSONDataFormatter();
-
-		$projects = Project::get()->toArray();
-		$projects;	
-		$data = ArrayList::create($projects);
 		
-		//$bull = $projects->toArray(); //bullshit lazy loading orm BULLSHIT
-		//print_r($data);
-		foreach ($data as $ata) {
-			
-			$fuck = $ata;
-			print $fuck;
-		}
+		$project = Project::get()->filter(array(
+			'ID' => $project_id ))->First();
 		
-		//return json_encode($projects);
-		return $converter->convertDataObjectSet($data);
-
 		
-		//return $converter->convertDataObject($projects);
-		//print_r(gettype($project));
-		/*
+		if ($imglink = $project->Image()->Filename) {
+				$project->setField("imagepath", $imglink);
+			} else {
+				$project->setField("imagepath", "missing");
+			}
+		$project->setField("Content", $project->noHTML('Content'));
+		$project->setField("Contribution", $project->noHTML('Contribution'));
 			
-		print_r($projects->dataClass);
-		$converter = new JSONDataFormatter();		
-			
-			
-			
-		$projectsArray = new ArrayList();
-		
-		foreach( $projects as $proj) {
-			$projData = $this->generateJsonFeed($proj, "single");
-			$projectsArray->push($projData);
-			
-		}
-		//print_r($projectsArray);
-		return json_encode(;
- 		*/
-
+		return $converter->convertDataObject($project);
 	}
-	
+		
 	public function generateJsonFeed($dataObject, $single){
 		
 		/*
