@@ -324,7 +324,7 @@ $(document).ready(function(){
             //console.log($projectID);
             //$(document).foundation('equalizer', 'reflow');
 
-            $http.get('http://localhost:8888/homeotw/portfolio/getProjects/', {cache: true}).success(function(data, status, headers, config) {
+            $http.get(window.location.hostname + '/homeotw/portfolio/getProjects/', {cache: true}).success(function(data, status, headers, config) {
                 $scope.projects = data;
                 console.log(status);
                 console.log(data);
@@ -350,7 +350,7 @@ $(document).ready(function(){
         $scope.getSkill = function($skillID) {
         	//console.log($projectID);
         
-        	$http.get('http://localhost:8888/homeotw/portfolio/getSkill/' + $skillID).success(function(data, status, headers, config) {
+        	$http.get(window.location.hostname + '/homeotw/portfolio/getSkill/' + $skillID).success(function(data, status, headers, config) {
         	$scope.project = data;
         	console.log('much success');
         	console.log(status);
@@ -383,7 +383,7 @@ $(document).ready(function(){
 
         $scope.getProject = function($projectID) {
 
-            $http.get('http://localhost:8888/homeotw/portfolio/getProject/' + $projectID, {cache: true}).success(function(data, status, headers, config) {
+            $http.get(window.location.hostname + '/homeotw/portfolio/getProject/' + $projectID, {cache: true}).success(function(data, status, headers, config) {
                 $scope.project = data;
                 console.log(status);
                 console.log(data);
@@ -449,7 +449,7 @@ $(document).ready(function(){
         $scope.submitMessage = function() {
             console.log($scope.message.message);
             console.log('hit submit!');
-            $http.post('http://localhost:8888/homeotw/submit/message', {
+            $http.post(window.location.hostname + 'homeotw/submit/message', {
                 name: $scope.message.name,
                 email: $scope.message.email,
                 message: $scope.message.message
