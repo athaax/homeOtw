@@ -1361,8 +1361,6 @@ min-height: 100%;
 
 .slickPortfolio { text-align: center; }
 
-#slickPortfolioRow { background: #eff5f3; }
-
 .menu-item-back { background-color: #4C696C; color: white; }
 
 .slick-prev, .slick-next { background: none; color: #c44741; padding: 3px 5px; margin: none; }
@@ -1405,11 +1403,17 @@ position: absolute;
 
 .heading { border-bottom: 3px inset #a53239; }
 
-.diamonds { background: url("../images/subtlepatterns/whitediamond_@2x.png") center center repeat; }
+.diamonds { background: url("../images/subtlepatterns/gplaypattern_@2X.png") center center fixed repeat; }
+
+.diagmonds { background: white; }
+
+.dialmonds { background: url("../images/subtlepatterns/polonez_car.png") center center repeat fixed; }
+
+.main-section { background: url("../images/subtlepatterns/gplaypattern.png") center center fixed repeat; }
+
+.full-height { height: auto; min-height: 100%; }
 
 .outlined { border: solid 1px black; }
-
-.full-height { height: 100%; }
 
 .headline { border-bottom: whitesmoke 1px solid; }
 @media only screen and (max-width: 40em) { .headline { line-height: 1.9; } }
@@ -1438,6 +1442,7 @@ position: absolute;
 .skill-image { max-height: 180px; max-width: 180px; display: block; margin: auto; padding: 7px 0; }
 .skill-image img { height: auto; max-width: 100%; border-radius: 50%; }
 
+#portfolio-body { min-height: 400px; }
 #portfolio-body > .row { margin-bottom: 10px; }
 
 #job-icons > * { text-align: center; }

@@ -4,4 +4,5 @@ After: framework/routes
 ---
 Director:
   rules:
-    'api//$Action/$ID': 'API_Controller'
+    'api//$Action/$ID': 'API_Controller',
+    'submit//$Action': 'ContactSubmissionController'

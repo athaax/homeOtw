@@ -205,7 +205,7 @@ $(function() {
 function reflow(pathvar, status) {
 	$(document).foundation('equalizer', 'reflow');
 }
-
+/* LOADS GOODREADS SCRIPT 
 window.loadScript = function loadScript( url, callback ) {
   var script = document.createElement( "script" )
   script.type = "text/javascript";
@@ -232,25 +232,28 @@ window.loadScript('https://www.goodreads.com/review/custom_widget/3575393.curren
  function() {
 	$(document).foundation('equalizer', 'reflow');
 });
+*/
+
 
 $("#portfolioMenuItem").click(function() {
-	$(this).toggleClass("menu-item-back");
-	$("#slickPortfolioRow").toggleClass("hide");
+	$(this).addClass("menu-item-back");
+	$("#slickPortfolioRow").addClass("hide");
 	
 	if ( $("#aboutMenuItem").hasClass("menu-item-back")) {
 
-		$("#aboutMenuItem").toggleClass("menu-item-back");
+		$("#aboutMenuItem").removeClass("menu-item-back");
 	}
 
 });
 
 $("#aboutMenuItem").click(function() {
-	$(this).toggleClass("menu-item-back");
+	
+	$(this).addClass("menu-item-back");
 	if ( $("#slickPortfolioRow").hasClass("hide")) {
 
 	} else {
 		$("#slickPortfolioRow").toggleClass("hide");
-		$("#portfolioMenuItem").toggleClass("menu-item-back");
+		$("#portfolioMenuItem").removeClass("menu-item-back");
 
 
 	}
@@ -261,15 +264,19 @@ $("#aboutMenuItem").click(function() {
 
                 
 $(document).ready(function(){
+	// TODO, use slick filtering to create filter based on tags
     $('.slickPortfolio').slick({
-        centerMode: true,
+        centerMode: false,
         centerPadding: '0px',
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 5,
+        slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,
-        prevArrow: "<button type='button' class='slick-prev'> &larr; </button>",
-        nextArrow: "<button type='button' class='slick-next'> &rarr; </button>"
+        lazyLoad: 'ondemand',
+        //prevArrow: "<button type='button' class='slick-prev'> &larr; </button>",
+        //nextArrow: "<button type='button' class='slick-next'> &rarr; </button>"
+        prevArrow: "",
+        nextArrow: ""
     });
 });
 
@@ -310,7 +317,8 @@ $(document).ready(function(){
       }]);
 
     app.controller('PortfolioController', function($scope, $location, $http) {
-    	window.MY_SCOPE = $scope;
+    	window.PortfolioScope = $scope;
+        $("#slickPortfolioRow").removeClass("hide");
 
         $scope.getProjects = function($projectID) {
             //console.log($projectID);
@@ -357,7 +365,7 @@ $(document).ready(function(){
 
     	
     	$scope.init = function() {
-            $scope.getProjects();
+            //$scope.getProjects();
 
     	};
     	
@@ -366,6 +374,10 @@ $(document).ready(function(){
     });
 
     app.controller('ProjectController', function($scope, $http, $location, $routeParams) {
+        window.ProjectScope = $scope;
+
+        //make sure portfolio slider stays open on project routes
+        $("#slickPortfolioRow").removeClass("hide");
 
         //console.log($routeParams.projectID);
 
@@ -391,29 +403,31 @@ $(document).ready(function(){
     });
 
     app.controller('HomeController', function($scope, $http) {
-        window.MY_SCOPE = $scope;
+        window.HomeScope = $scope;
        // $(document).foundation();
         $(document).foundation('equalizer', 'reflow');
         $(".navButton").removeClass("active");
         $("#homeButton").addClass("active");
+        /* get currently reading books in DOM :)
         window.loadScript('https://www.goodreads.com/review/custom_widget/3575393.currently-reading?cover_position=left&cover_size=medium&num_books=5&order=a&shelf=currently-reading&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=date_added&widget_bg_color=FFFFFF&widget_bg_transparent=&widget_border_width=1&widget_id=1424323252&widget_text_color=000000&widget_title_size=medium&widget_width=medium',
          function() {
             $(document).foundation('equalizer', 'reflow');
         });
+        */
        // check if all async requests are done. 
-
-
-
-
 
     });
 
     app.controller("FindMeController", function($scope, $http) {
-        window.MY_SCOPE = $scope;
-        $(document).foundation('tooltip', 'reflow');
-        console.log('findmecalled');
-        $(".navButton").removeClass("active");
-        $("#aboutButton").addClass("active");
+        window.FindMeScope = $scope;
+        if (window.twitterIsLoaded) {
+            twttr.widgets.load();
+        } else {
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+            window.twitterIsLoaded = true;
+        }
+
+        /*
         $scope.getActivityFeed = function() {
 
             $http.get('http://localhost:8888/homeotw/api/getActivityFeed/twitter')
@@ -430,6 +444,30 @@ $(document).ready(function(){
 
                 });
         };
+        */
+
+        $scope.submitMessage = function() {
+            console.log($scope.message.message);
+            console.log('hit submit!');
+            $http.post('http://localhost:8888/homeotw/submit/message', {
+                name: $scope.message.name,
+                email: $scope.message.email,
+                message: $scope.message.message
+                })
+                .success( function(data, status, headers, config) {
+                    $scope.reply = data;
+                    console.log(status);
+                    console.log(data);
+                    //var newWindow = window.open();
+                    //newWindow.document.write(data);
+                    $scope.message = [];
+                })
+                .error( function( data, status, headers, config) {
+                    console.log(status);
+                    console.log(data);
+
+                });
+        }
         
         $scope.init = function() {
 

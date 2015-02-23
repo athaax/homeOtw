@@ -1,22 +1,22 @@
 
-<div class="row" id="portfolio-body" class="hero-content" style="max-width: 1200px; margin: 0 auto;">
+<div class="row " id="portfolio-body" style="max-width: 1200px; margin: 0 auto; ">
 	<div class="medium-12 columns">
 		<div class="row" data-equalizer>
 	    	<div class="medium-6 large-5 columns" data-equalizer-watch>
 				<section style="text-align: center;" >
-					<h2> {{project.Title}} </h2>
-					<ul class="button-group small round" style="display: inline-block;">
+					<h2 ng-show="project.Title"> {{project.Title}} </h2>
+					<ul class="button-group small round" style="display: inline-block;" ng-show="project.website || project.github">
 						<li><a href="{{project.website}}" class="radius small button">View Live</a></li>
 						<li><a href="{{project.github}}" class="radius small button">View on GitHub</a></li>
     				</ul>
 				</section>
-				<section class="panel">
+				<section class="panel" ng-show="project.Contribution">
 					<h4 class="headline">Contributions</h4>
 					<p> {{project.Contribution}} </p>
 				</section>
 			</div>
-			<div class="medium-6 large-7 columns" >
-		    	<img src="{{project.imagepath}}" alt="Image for {{project.title}}" />
+			<div class="medium-6 large-7 columns"  ng-show"project.imagepath" >
+		    	<img ng-show"project.imagepath" src="{{project.imagepath}}" alt="{{project.title}}" />
 		    </div>
 	    </div> <!-- end row -->
 	    <!--

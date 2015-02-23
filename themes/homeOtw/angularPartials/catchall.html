@@ -10,9 +10,9 @@
 		</h3>
 		<aside id="twitterWidg">
 			<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/athaax" data-widget-id="568263214022930432">Tweets by @athaax</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
- 	twttr.widgets.load();</script>
+			<script>
 
+			</script>
 		</aside>
 
 		<script>
@@ -48,33 +48,38 @@
 	<div class="medium-7 columns ">
 		<h3 class="headline">Get in Touch!</h3>
 		<div class="panel">
-			<p>I'd love to hear from you. If you're interested in working on a web/mobile app, designing a personal website for your self or business, or other opportunities. Follow me on twitter and/or github. Thanks!</p>
+			<p>I'd love to hear from you. Contact me if you're interested in working on a web/mobile app, creating a website for your self or business, or other opportunities. Follow me on twitter and/or github. Thanks!</p>
 			
 			<div class="section-container tabs" data-section>
 				<section class="section">
 				  <h5 class="title "><a href="#panel1">Contact Me</a></h5>
 				  <div class="content" data-slug="panel1">
-				    <form>
+
+				    <form name="messageMeForm" ng-submit="submitMessage()">
 				      <div class="row collapse">
 				        <div class="large-2 columns">
 				          <label class="inline">Your Name</label>
 				        </div>
 				        <div class="large-10 columns">
-				          <input type="text" id="yourName" placeholder="Jane Smith">
+				          <input type="text" ng-model="message.name" id="yourName" required placeholder="Your Lovely Name">
 				        </div>
 				      </div>
 				      <div class="row collapse">
 				        <div class="large-2 columns">
-				          <label class="inline"> Your Email</label>
+				          <label class="inline" > Your Email</label>
 				        </div>
 				        <div class="large-10 columns">
-				          <input type="text" id="yourEmail" placeholder="jane@smithco.com">
+				          <input ng-model="message.email" type="email" id="yourEmail" required placeholder="Your Witty Email">
 				        </div>
 				      </div>
 				      <label>What's up?</label>
-				      <textarea rows="4"></textarea>
+				      <textarea rows="4" required ng-model="message.message"></textarea>
 				      <button type="submit" class="radius button">Submit</button>
+						<div ng-show"reply">
+				     	 <div class="panel callout"  >{{reply}}</div>
+				     	 </div>
 				    </form>
+
 				  </div>
 				</section>
 			</div>

@@ -43,8 +43,6 @@ html {
 }
 
 body {
-	//background: url('../images/subtlepatterns/whitediamond_@2x.png') center center fixed;
-	//background: url('../images/subtlepatterns/diagmonds_@2x.png') center center fixed;
 	//background-color: $heavysugar;
 	//background-color: rgba(77, 170, 171, 0.61);
 	background-color: $white-smoke;
@@ -139,7 +137,7 @@ h1 {
 }
 
 #slickPortfolioRow {
-	background: $heavysugar;
+	
 }
 
 .menu-item-back {
@@ -198,6 +196,7 @@ h1 {
 
 }
 
+
 .text-shadow {
 	color: black; 
 	text-shadow: $parisblue 0.01em 0.01em 0.02em;
@@ -244,24 +243,39 @@ h1 {
 	border-bottom: 3px inset $calipoppy;
 }
 .diamonds {
-	background: url('../images/subtlepatterns/whitediamond_@2x.png') center center repeat;
+		background: url('../images/subtlepatterns/gplaypattern_@2X.png') center center fixed repeat;
+
 }
 
-
-.outlined {
-	border: solid 1px black;
+.diagmonds {
+	//background: url('../images/subtlepatterns/old_mathematics.png') center center repeat fixed;
+	background: $white;
 }
+
+.dialmonds {
+	background: url('../images/subtlepatterns/polonez_car.png') center center repeat fixed;
+}
+
 
 .main-section {
 	//padding: 1.5em;
 	//margin-top: 1em;
 	//max-width: 1200px;
 	//margin: 0 auto;
+	background: url('../images/subtlepatterns/gplaypattern.png') center center fixed repeat;
+
+
 }
 
 .full-height {
-	height: 100%;
+	height: auto;
+	min-height: 100%;
 }
+
+.outlined {
+	border: solid 1px black;
+}
+
 
 
 
@@ -385,6 +399,7 @@ h1 {
 }
 
 #portfolio-body {
+	min-height: 400px;
 	> .row {
 		margin-bottom: 10px;
 	}

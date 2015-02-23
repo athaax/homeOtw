@@ -191,7 +191,7 @@ $(function() {
 function reflow(pathvar, status) {
 	$(document).foundation('equalizer', 'reflow');
 }
-
+/* LOADS GOODREADS SCRIPT 
 window.loadScript = function loadScript( url, callback ) {
   var script = document.createElement( "script" )
   script.type = "text/javascript";
@@ -218,25 +218,28 @@ window.loadScript('https://www.goodreads.com/review/custom_widget/3575393.curren
  function() {
 	$(document).foundation('equalizer', 'reflow');
 });
+*/
+
 
 $("#portfolioMenuItem").click(function() {
-	$(this).toggleClass("menu-item-back");
-	$("#slickPortfolioRow").toggleClass("hide");
+	$(this).addClass("menu-item-back");
+	$("#slickPortfolioRow").addClass("hide");
 	
 	if ( $("#aboutMenuItem").hasClass("menu-item-back")) {
 
-		$("#aboutMenuItem").toggleClass("menu-item-back");
+		$("#aboutMenuItem").removeClass("menu-item-back");
 	}
 
 });
 
 $("#aboutMenuItem").click(function() {
-	$(this).toggleClass("menu-item-back");
+	
+	$(this).addClass("menu-item-back");
 	if ( $("#slickPortfolioRow").hasClass("hide")) {
 
 	} else {
 		$("#slickPortfolioRow").toggleClass("hide");
-		$("#portfolioMenuItem").toggleClass("menu-item-back");
+		$("#portfolioMenuItem").removeClass("menu-item-back");
 
 
 	}
@@ -247,15 +250,19 @@ $("#aboutMenuItem").click(function() {
 
                 
 $(document).ready(function(){
+	// TODO, use slick filtering to create filter based on tags
     $('.slickPortfolio').slick({
-        centerMode: true,
+        centerMode: false,
         centerPadding: '0px',
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 5,
+        slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,
-        prevArrow: "<button type='button' class='slick-prev'> &larr; </button>",
-        nextArrow: "<button type='button' class='slick-next'> &rarr; </button>"
+        lazyLoad: 'ondemand',
+        //prevArrow: "<button type='button' class='slick-prev'> &larr; </button>",
+        //nextArrow: "<button type='button' class='slick-next'> &rarr; </button>"
+        prevArrow: "",
+        nextArrow: ""
     });
 });
 

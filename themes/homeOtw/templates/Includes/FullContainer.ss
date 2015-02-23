@@ -126,8 +126,9 @@
 						</div>
 
 					</div> 
-					<div class="full row collapse hide" id="slickPortfolioRow">
+					<div class="full row collapse hide diagmonds" id="slickPortfolioRow">
 						<div class="small-12 columns">
+							<%-- TODO add loading image --%>
 							<div class="slickPortfolio" >
 
 								<%--
@@ -140,7 +141,10 @@
 												    
 						        <% loop $Projects %>
 									<div>
-						    			<a href="#portfolio/project/$ID">$Image.SetHeight(333)</a>
+						    			<a href="#portfolio/project/$ID">
+						    				<img src="" data-lazy="$Image.URL" />
+						    				<%--$Image.SetHeight(333)--%>
+						    			</a>
 						    		</div>
 						    	<% end_loop %>
 							</div>
@@ -150,7 +154,7 @@
 
 	   				<ng-view> </ng-view>
 
-	   				<div class=" row " style="min-height: 100px; max-width: 1200px;">
+	   				<div class="row " style="min-height: 100px; max-width: 1200px;">
 						<div class="small-12 medium-5 end columns  ">
 							
 							<blockquote class="goodquote">
