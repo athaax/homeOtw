@@ -43,13 +43,13 @@ class GitHubFeed extends ActivityFeed {
 			$commit->PublishedAt->setValue( time() );
 		}
 
-		$attributes = [
+		$attributes = array(
 			'ID' => 'id',
 			'Updated' => 'updated',
 			'Title' => 'title',
 			'Content' => 'content'
 			
-		];
+		);
 		
 		foreach ($attributes as $key => $att) {		
 			
