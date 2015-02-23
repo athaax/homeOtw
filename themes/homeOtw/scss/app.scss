@@ -18,6 +18,7 @@
 @import "foundation/components/reveal";
 @import "foundation/components/panels";
 @import "foundation/components/inline-lists";
+@import "foundation/components/tabs";
 
 
 //@import "monroe";
@@ -133,6 +134,27 @@ h1 {
 
 }
 
+.slickPortfolio {
+	text-align: center;
+}
+
+#slickPortfolioRow {
+	background: $heavysugar;
+}
+
+.menu-item-back {
+	background-color: #4C696C;
+	color: white;
+}
+
+.slick-prev, .slick-next {
+	background: none;
+	color: $parisred;
+	padding: 3px 5px;
+	margin: none; 
+	
+}
+
 .responsive {
 	width: 100%;
 	height: auto;
@@ -155,13 +177,20 @@ h1 {
 }
 
 .tb-padding {
-	padding-top: 2em;
-	padding-bottom: 2em;	
+	padding-top: .5em;
+	padding-bottom: .75em;
+	@media #{$medium-up} { 
+		padding-top: 2em;
+		padding-bottom: 2em;	
+	}
+
 }
 
 .lr-padding {
-	padding-left: 2em;
-	padding-right: 2em;
+	@media #{$medium-up} { 
+		padding-top: 2em;
+		padding-bottom: 2em;	
+	}
 }
 
 .translucent {

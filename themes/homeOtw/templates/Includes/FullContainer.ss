@@ -118,48 +118,32 @@
 								
 								<!-- <li><img class="shadow" src="http://placehold.it/1000x400&text=[%20img%201%20]"/></li> -->
 								<li><a><span style='color:black; text-align:center;'>Blog</span></a></li>
-								<li><a href="#portfolio"><span style='color:black; text-align:center;'>Portfolio</span></a></li>
-								<li><a href="#about"><span  style='color:black;'>Find Me</span></a></li>
+								<li><a href="#portfolio" id="portfolioMenuItem" ><span style='color:black; text-align:center;'>Portfolio</span></a></li>
+								<li><a href="#about" id="aboutMenuItem"><span  style='color:black;'>Find Me</span></a></li>
 								
 							</ul>	 
 							
 						</div>
 
 					</div> 
+					<div class="full row collapse hide" id="slickPortfolioRow">
+						<div class="small-12 columns">
+							<div class="slickPortfolio" >
 
-					<ul class="tabs" data-tab>
-  <li class="tab-title active"><a href="#panel1">Tab 1</a></li>
-  <li class="tab-title"><a href="#panel2">Tab 2</a></li>
-  <li class="tab-title"><a href="#panel3">Tab 3</a></li>
-  <li class="tab-title"><a href="#panel4">Tab 4</a></li>
-</ul>
-<div class="tabs-content">
-  <div class="content active" id="panel1">
-    <p>This is the first panel of the basic tab example. You can place all sorts of content here including a grid.</p>
-  </div>
-  <div class="content" id="panel2">
-    <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
-  </div>
-  <div class="content" id="panel3">
-    <p>This is the third panel of the basic tab example. This is the third panel of the basic tab example.</p>
-  </div>
-  <div class="content" id="panel4">
-    <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.</p>
-  </div>
-</div>
-
-
-					<div class="row">
-						<div class="large-12 columns">
-						 	<h4>Work</h4>
-
-							  <ul class="clearing-thumbs small-block-grid-2 medium-block-grid-4 " data-clearing>
-							    <li ng-repeat="proj in projects.items">
-							      <a href="#portfolio/project/{{proj.ID}}" ng-click="getProject({{proj.ID}})">
-							      <img data-caption="{{proj.Title}}" ng-src="{{proj.imagepath}}"></a>
-							    </li>
-							   
-							  </ul>
+								<%--
+							  	<div ng-repeat="proj in projects.items">
+							  		<a href="#portfolio/project/{{proj.ID}}" ng-click="getProject({{proj.ID}})">
+							      	<img style="max-width: 300px;" data-caption="{{proj.Title}}" ng-src="{{proj.imagepath}}" />
+							      	</a>
+							    </div>
+							    --%>
+												    
+						        <% loop $Projects %>
+									<div>
+						    			<a href="#portfolio/project/$ID">$Image.SetHeight(333)</a>
+						    		</div>
+						    	<% end_loop %>
+							</div>
 						</div>
 					</div>
 

@@ -188,8 +188,6 @@ $(function() {
 
 });
 
-
-console.log('sanity check');
 function reflow(pathvar, status) {
 	$(document).foundation('equalizer', 'reflow');
 }
@@ -220,6 +218,47 @@ window.loadScript('https://www.goodreads.com/review/custom_widget/3575393.curren
  function() {
 	$(document).foundation('equalizer', 'reflow');
 });
+
+$("#portfolioMenuItem").click(function() {
+	$(this).toggleClass("menu-item-back");
+	$("#slickPortfolioRow").toggleClass("hide");
+	
+	if ( $("#aboutMenuItem").hasClass("menu-item-back")) {
+
+		$("#aboutMenuItem").toggleClass("menu-item-back");
+	}
+
+});
+
+$("#aboutMenuItem").click(function() {
+	$(this).toggleClass("menu-item-back");
+	if ( $("#slickPortfolioRow").hasClass("hide")) {
+
+	} else {
+		$("#slickPortfolioRow").toggleClass("hide");
+		$("#portfolioMenuItem").toggleClass("menu-item-back");
+
+
+	}
+});
+
+
+
+
+                
+$(document).ready(function(){
+    $('.slickPortfolio').slick({
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        prevArrow: "<button type='button' class='slick-prev'> &larr; </button>",
+        nextArrow: "<button type='button' class='slick-next'> &rarr; </button>"
+    });
+});
+
 
 
 
