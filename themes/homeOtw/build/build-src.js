@@ -449,7 +449,7 @@ $(document).ready(function(){
         $scope.submitMessage = function() {
             console.log($scope.message.message);
             console.log('hit submit!');
-            $http.post(window.location.hostname + 'homeotw/submit/message', {
+            $http.post('/homeotw/submit/message', {
                 name: $scope.message.name,
                 email: $scope.message.email,
                 message: $scope.message.message
