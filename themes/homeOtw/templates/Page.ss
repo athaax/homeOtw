@@ -17,7 +17,7 @@
 
 		<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico?ver=2" />
 		<link rel="stylesheet" href="$ThemeDir/css/app.css" />
-		<link rel="stylesheet" href="$ThemeDir/bower_components/angular-slick-carousel/app/vendor/slick/slick.css" /> <%-- styles need for slick. optional theme if I want... --%>
+		<link rel="stylesheet" href="$ThemeDir/bower_components/slick-carousel/slick/slick.css" /> <%-- styles need for slick. optional theme if I want... --%>
 		<%-- <link rel="stylesheet" href="$ThemeDir/css/MetroJs.css" /> --%>
 
 	</head>
@@ -33,7 +33,7 @@
 		<script src="{$ThemeDir}/bower_components/angular/angular.min.js"></script>
 		<script src="{$ThemeDir}/bower_components/angular-route/angular-route.min.js"></script>
 		<%-- <script src="{$ThemeDir}/bower_components/angular-slick-carousel/app/angular-slick-carousel/slick.min.js"></script> TODO learn https://github.com/kbdaitch/angular-slick-carousel --%>
-		<script src="{$ThemeDir}/bower_components/angular-slick-carousel/app/vendor/slick/slick.min.js"></script> 
+		<script src="{$ThemeDir}/bower_components/slick-carousel/slick/slick.min.js"></script> 
 		<script src="$ThemeDir/build/build-src.js"></script>
 
 	</body>

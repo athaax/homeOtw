@@ -38,7 +38,7 @@
             //console.log($projectID);
             //$(document).foundation('equalizer', 'reflow');
 
-            $http.get(window.location.hostname + '/homeotw/portfolio/getProjects/', {cache: true}).success(function(data, status, headers, config) {
+            $http.get('/homeotw/portfolio/getProjects/', {cache: true}).success(function(data, status, headers, config) {
                 $scope.projects = data;
                 console.log(status);
                 console.log(data);
@@ -64,7 +64,7 @@
         $scope.getSkill = function($skillID) {
         	//console.log($projectID);
         
-        	$http.get(window.location.hostname + '/homeotw/portfolio/getSkill/' + $skillID).success(function(data, status, headers, config) {
+        	$http.get('/homeotw/portfolio/getSkill/' + $skillID).success(function(data, status, headers, config) {
         	$scope.project = data;
         	console.log('much success');
         	console.log(status);
@@ -97,7 +97,7 @@
 
         $scope.getProject = function($projectID) {
 
-            $http.get(window.location.hostname + '/homeotw/portfolio/getProject/' + $projectID, {cache: true}).success(function(data, status, headers, config) {
+            $http.get('/homeotw/portfolio/getProject/' + $projectID, {cache: true}).success(function(data, status, headers, config) {
                 $scope.project = data;
                 console.log(status);
                 console.log(data);
