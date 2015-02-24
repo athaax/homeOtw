@@ -16,7 +16,7 @@
 								    <section class="">
 									    <h2><a href="$BaseHref">Hello</a></h2>							  	
 						  				<p><strong>I'm Jonathan</strong>, I'm a front and back-end web developer. I like neat code and clean design.</p>
-						  				<p>I love building on the web, I think it's the best way to tap into the richness of the information age. I'm about making rich apps that are beautiful, useful, and user-friendly.
+						  				<p>I love building on the web, I think it's the best way to tap into the richness of the information age. I'm about making rich apps that are beautiful, user-friendly, and useful. 
 						  				</p> 
 						  				<p>I graduated from the University of Iowa in 2014 with a B.A. in English and Informatics with a cognate in Human-Computer interaction. I spent about a year and half as an intern web developer, where I worked on a suite of university websites, both programming and pixel-pushing. I also had a brief escapade doing journalism. Turns out, English and journalism lend themselves well to web development, where communication, writing, analysis, and research are important to making robust web <i>solutions</i>. 
 						  				</p>
