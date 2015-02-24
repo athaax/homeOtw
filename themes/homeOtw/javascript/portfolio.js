@@ -38,7 +38,7 @@
 
     app.controller('PortfolioController', function($scope, $location, $http) {
     	window.PortfolioScope = $scope;
-        $("#slickPortfolioRow").removeClass("hide");
+        $("#slickPortfolioRow").show();
 
         $scope.getProjects = function($projectID) {
             //console.log($projectID);
@@ -97,7 +97,7 @@
         window.ProjectScope = $scope;
 
         //make sure portfolio slider stays open on project routes
-        $("#slickPortfolioRow").removeClass("hide");
+        $("#slickPortfolioRow").show();
 
         //console.log($routeParams.projectID);
 
@@ -124,6 +124,7 @@
 
     app.controller('HomeController', function($scope, $http) {
         window.HomeScope = $scope;
+        $("#slickPortfolioRow").hide();
        // $(document).foundation();
         $(document).foundation('equalizer', 'reflow');
         $(".navButton").removeClass("active");
@@ -140,6 +141,9 @@
 
     app.controller("FindMeController", function($scope, $http) {
         window.FindMeScope = $scope;
+
+        $("#slickPortfolioRow").hide();
+
         if (window.twitterIsLoaded) {
             twttr.widgets.load();
         } else {

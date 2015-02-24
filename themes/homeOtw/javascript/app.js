@@ -222,27 +222,45 @@ window.loadScript('https://www.goodreads.com/review/custom_widget/3575393.curren
 
 
 $("#portfolioMenuItem").click(function() {
-	$(this).addClass("menu-item-back");
-	$("#slickPortfolioRow").addClass("hide");
-	
-	if ( $("#aboutMenuItem").hasClass("menu-item-back")) {
+    
+    $("#angularNav").find("a").removeClass("menu-item-back");
+    $(this).addClass("menu-item-back");
 
+    
+
+    /*
+	$(this).addClass("menu-item-back");
+    $(this).find("span").css("color", "white");
+	$("#slickPortfolioRow").addClass("hide");
+
+	if ( $("#aboutMenuItem").hasClass("menu-item-back")) {
 		$("#aboutMenuItem").removeClass("menu-item-back");
 	}
 
+    do {
+        $(this).append("<img src='http://www.dinotopia.com/wp-content/uploads/preloader_transparent.gif' class='loading responsive' alt='loading' />");
+
+    } while ($("#slickPortfolioRow").hasClass("hide")) {
+        continue;
+    }
+    $(this).remove("image.loading");
+    */
 });
 
 $("#aboutMenuItem").click(function() {
-	
+    
+    $("#angularNav").find("a").removeClass("menu-item-back");
+    $(this).addClass("menu-item-back");
+
+	/*
 	$(this).addClass("menu-item-back");
 	if ( $("#slickPortfolioRow").hasClass("hide")) {
 
 	} else {
 		$("#slickPortfolioRow").toggleClass("hide");
 		$("#portfolioMenuItem").removeClass("menu-item-back");
-
-
 	}
+    */
 });
 
 

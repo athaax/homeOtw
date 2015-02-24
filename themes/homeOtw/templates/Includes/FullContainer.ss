@@ -90,10 +90,11 @@
 							<div class="row" style="max-width: 1200px; margin: 0 auto;">
 								<div class="medium-8 columns">
 								    <section class="">
-									    <h4>Hello</h4>
-							  			<p>I'm Jonathan, I'm a front and back-end web developer. I aim for neat code and clean design. I love building on the web, I think it's the best way to tap into the richness of the information age. Making rich apps that are beautiful, useful, and user-friendly is my goal.  </p> 
-							  			<p>I graduated from the University of Iowa in 2014 with a B.A. in English and Informatics with a cognate in Human-Computer interaction. I spent about a year and half as an intern web developer there, where I worked on a suite of university websites, both programming and pixel-pushing. I also spent some time doing journalism. Turns out, English and journalism lend themselves well to web development, where communication, writing, analysis, and research are important to making robust web <i>solutions</i>. 
-							  			</p>
+									    <h2><a href="$BaseHref">Hello</a></h2>							  	
+						  				<p><strong>I'm Jonathan</strong>, I'm a front and back-end web developer. I aim for neat code and clean design. I love building on the web, I think it's the best way to tap into the richness of the information age. Making rich apps that are beautiful, useful, and user-friendly is my goal.  
+						  				</p> 
+						  				<p>I graduated from the University of Iowa in 2014 with a B.A. in English and Informatics with a cognate in Human-Computer interaction. I spent about a year and half as an intern web developer there, where I worked on a suite of university websites, both programming and pixel-pushing. I also spent some time doing journalism. Turns out, English and journalism lend themselves well to web development, where communication, writing, analysis, and research are important to making robust web <i>solutions</i>. 
+						  				</p>
 								    </section>
 							  
 								</div>
@@ -114,19 +115,19 @@
 
 					<div class="full row collapse heading" data-equalizer>
 						<div class="small-12 column" data-equalizer-watch>
-							<ul class="small-block-grid-3" id="job-icons">
+							<ul class="small-block-grid-3" id="angularNav">
 								
 								<!-- <li><img class="shadow" src="http://placehold.it/1000x400&text=[%20img%201%20]"/></li> -->
-								<li><a><span style='color:black; text-align:center;'>Blog</span></a></li>
-								<li><a href="#portfolio" id="portfolioMenuItem" ><span style='color:black; text-align:center;'>Portfolio</span></a></li>
-								<li><a href="#about" id="aboutMenuItem"><span  style='color:black;'>Find Me</span></a></li>
+								<li><a><span data-tooltip aria-haspopup="true" class="has-tip tip-top" title="coming soon! stay tuned :D">Blog</span></a></li>
+								<li><a href="#portfolio" id="portfolioMenuItem" ><span>Portfolio</span></a></li>
+								<li><a href="#about" id="aboutMenuItem"><span>Find Me</span></a></li>
 								
 							</ul>	 
 							
 						</div>
 
 					</div> 
-					<div class="full row collapse hide diagmonds" id="slickPortfolioRow">
+					<div class="full row collapse diagmonds" id="slickPortfolioRow">
 						<div class="small-12 columns">
 							<%-- TODO add loading image --%>
 							<div class="slickPortfolio" >
@@ -142,7 +143,7 @@
 						        <% loop $Projects %>
 									<div>
 						    			<a href="#portfolio/project/$ID">
-						    				<img src="" data-lazy="$Image.URL" />
+						    				<img data-lazy="$Image.URL" />
 						    				<%--$Image.SetHeight(333)--%>
 						    			</a>
 						    		</div>

@@ -13,6 +13,7 @@
 @import "foundation/components/top-bar";
 @import "foundation/components/type";
 @import "foundation/components/forms";
+@import "foundation/components/tooltips";
 @import "foundation/components/breadcrumbs";
 @import "foundation/components/offcanvas";
 @import "foundation/components/reveal";
@@ -405,7 +406,7 @@ h1 {
 	}
 }
 
-#job-icons {
+#angularNav {
 	> * {
 	text-align: center;
 	}
@@ -427,9 +428,13 @@ h1 {
 			padding: 11px 17px;
 		}
 	}
+	
+	span {
+		color: black;
+	}
 
 	li:not(:last-child) {
-		border-right: solid 1px $solitude;	
+		border-right: solid 1px $parisblack;	
 	}
 	
 }
