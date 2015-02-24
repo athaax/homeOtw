@@ -46,24 +46,17 @@
 
             $http.get( relativeBase + 'portfolio/getProjects/', {cache: true}).success(function(data, status, headers, config) {
                 $scope.projects = data;
-                console.log(status);
-                console.log(data);
+                //console.log(status);
+                //console.log(data);
                 //window.open("data:text/json," + encodeURIComponent(data), "_blank");
                 //newWindow.document.write(data);
-                
-                $(document).ready(function(){
-                    $('.slickPortfolio').slick({
-                        centerMode: true
-                        
-                    });
-                });
-                
+
 
             }).error(function(data, status, headers, config) {
-                console.log('error');
-                console.log(status);
-                var newWindow = window.open();
-                newWindow.document.write(data);
+                //console.log('error');
+                //console.log(status);
+                //var newWindow = window.open();
+                //newWindow.document.write(data);
             });
         };
 
@@ -72,13 +65,13 @@
         
         	$http.get( relativeBase + 'portfolio/getSkill/' + $skillID).success(function(data, status, headers, config) {
         	$scope.project = data;
-        	console.log('much success');
-        	console.log(status);
+        	//console.log('much success');
+        	//console.log(status);
             //console.log(data);
             }).error(function(data, status, headers, config) {
-        	    console.log('error');
-            	console.log(status);
-            	console.log(data);
+        	    //console.log('error');
+            	//console.log(status);
+            	//console.log(data);
             });
     	    
         };
@@ -105,13 +98,13 @@
 
             $http.get( relativeBase + 'portfolio/getProject/' + $projectID, {cache: true}).success(function(data, status, headers, config) {
                 $scope.project = data;
-                console.log(status);
-                console.log(data);
+                //console.log(status);
+                //console.log(data);
 
             }).error(function(data, status, headers, config) {
-                console.log('error');
-                console.log(status);
-                console.log(data);
+                //console.log('error');
+                //console.log(status);
+                //console.log(data);
                 });
         };
 
@@ -171,8 +164,8 @@
         */
 
         $scope.submitMessage = function() {
-            console.log($scope.message.message);
-            console.log('hit submit!');
+            //console.log($scope.message.message);
+            //console.log('hit submit!');
             $http.post( relativeBase + 'submit/message', {
                 name: $scope.message.name,
                 email: $scope.message.email,
@@ -180,15 +173,15 @@
                 })
                 .success( function(data, status, headers, config) {
                     $scope.reply = data;
-                    console.log(status);
-                    console.log(data);
+                    //console.log(status);
+                    //console.log(data);
                     //var newWindow = window.open();
                     //newWindow.document.write(data);
                     $scope.message = [];
                 })
                 .error( function( data, status, headers, config) {
-                    console.log(status);
-                    console.log(data);
+                    //console.log(status);
+                    //console.log(data);
 
                 });
         }
