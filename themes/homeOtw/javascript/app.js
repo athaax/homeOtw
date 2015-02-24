@@ -226,7 +226,7 @@ $("#portfolioMenuItem").click(function() {
     $("#angularNav").find("a").removeClass("menu-item-back");
     $(this).addClass("menu-item-back");
 
-    
+
 
     /*
 	$(this).addClass("menu-item-back");
@@ -275,7 +275,7 @@ $(document).ready(function(){
         slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 3300,
         lazyLoad: 'ondemand',
         //prevArrow: "<button type='button' class='slick-prev'> &larr; </button>",
         //nextArrow: "<button type='button' class='slick-next'> &rarr; </button>"

@@ -1,85 +1,9 @@
 
-	<div id="login-form-modal" class="reveal-modal medium" data-reveal>
-		<h2>Login</h2>
-		$LoginForm
-		<a class="close-reveal-modal">&#215;</a>
-	</div>
-		<%--
-	  	<nav class="top-bar" data-topbar role="navigation">
-		  	<ul class="title-area">
-				<li class="name">
-				  <!-- <h1><a href="#">My Site</a></h1> -->
-				</li>
-				 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-		  	</ul>
-
-		 	<section class="top-bar-section">
-				<!-- Right Nav Section -->
-				<ul class="right">
-					<li class="navButton" id="workButton"><a >Work</a></li>
-					<li class="navButton" id="aboutButton"><a href="#about">Find Me</a></li>
-				  	<li class="navButton" id="homeButton"><a href="#/">Jonathan</a></li>
-
-					<li class="has-dropdown hide-for-medium-up">
-						<a href="#">Jonathan</a>
-						<ul class="dropdown">
-						  <li><a >Portfolio</a></li>
-						  <li class="left-off-canvas-toggle" href=""><a>Find Me</a></li>
-						</ul>
-					</li>
-
-				</ul>
-
-				<!-- Left Nav Section -->
-				<ul class="left">
-				  <li><a href="#">Left Nav Button</a></li>
-				</ul>
-	 		</section>
-		</nav>
-		--%>
-  		<!--
-	    <nav class="tab-bar" >
-
-	      <section class="left-small">
-	        <a class="left-off-canvas-toggle menu-icon" href=""><span></span></a>
-	      </section>
-
-	      <section class="middle tab-bar-section">
-	
-				
-			  	<ul class="title-area inline-list right show-for-medium-up">
-				    <li class="nav-name">
-				      <h1><a href="#/">Jonathan</a></h1>
-				    </li>
-				    <li class="nav-name">
-				      <h1><a href="#" class="left-off-canvas-toggle" ng-click="">Portfolio</a></h1>
-				    </li>
-				    <li class="nav-name">
-				      <h1><a href="#about">Find Me</a></h1>
-				    </li>
-			  	</ul>
-
-
-
-	      </section>
-
-
-	    </nav>
-		-->
-		<%--
-	    <aside class="left-off-canvas-menu">
-	      <ul class="off-canvas-list" ng-controller="PortfolioController as portfolio">
-	        <li><label>Portfolio </label></li>
-	        <% loop $Projects %>
-				<%--<li><a href="#" ng-click="getProject($ID)">$Title</a></li>- -%>
-	          <li><a href="#portfolio/project" ng-click="getProject($ID)">$Image</a></li>
-			<% end_loop %>
-
-	      </ul>
-	      <hr>
-	    </aside>
-	    --%>
+		<div id="login-form-modal" class="reveal-modal medium" data-reveal>
+			<h2>Login</h2>
+			$LoginForm
+			<a class="close-reveal-modal">&#215;</a>
+		</div>
 	    <%-- begin main-section --%>
 	    <section class="main-section full-height" >
 	    	<main class="full row collapse">
@@ -91,9 +15,10 @@
 								<div class="medium-8 columns">
 								    <section class="">
 									    <h2><a href="$BaseHref">Hello</a></h2>							  	
-						  				<p><strong>I'm Jonathan</strong>, I'm a front and back-end web developer. I aim for neat code and clean design. I love building on the web, I think it's the best way to tap into the richness of the information age. Making rich apps that are beautiful, useful, and user-friendly is my goal.  
+						  				<p><strong>I'm Jonathan</strong>, I'm a front and back-end web developer. I like neat code and clean design.</p>
+						  				<p>I love building on the web, I think it's the best way to tap into the richness of the information age. I'm about making rich apps that are beautiful, useful, and user-friendly.
 						  				</p> 
-						  				<p>I graduated from the University of Iowa in 2014 with a B.A. in English and Informatics with a cognate in Human-Computer interaction. I spent about a year and half as an intern web developer there, where I worked on a suite of university websites, both programming and pixel-pushing. I also spent some time doing journalism. Turns out, English and journalism lend themselves well to web development, where communication, writing, analysis, and research are important to making robust web <i>solutions</i>. 
+						  				<p>I graduated from the University of Iowa in 2014 with a B.A. in English and Informatics with a cognate in Human-Computer interaction. I spent about a year and half as an intern web developer, where I worked on a suite of university websites, both programming and pixel-pushing. I also had a brief escapade doing journalism. Turns out, English and journalism lend themselves well to web development, where communication, writing, analysis, and research are important to making robust web <i>solutions</i>. 
 						  				</p>
 								    </section>
 							  
